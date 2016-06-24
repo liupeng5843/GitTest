@@ -1,0 +1,6 @@
+[
+  {"name":"strRead","connectionString":"Server=58.215.139.195;Database=comic_library;Uid=read4slave;Pwd=!QASW@3ed;pooling=true;CharSet=utf8mb4;Allow User Variables=True;"},
+  {"name":"strCon","connectionString":"Server=58.215.139.195;Database=comic_library;Uid=root;Pwd=!QASW@3ed;pooling=true;CharSet= utf8;Allow User Variables=True;"},
+  {"name":"libRead","connectionString":"Server=58.215.139.195;Database=comic_library;Uid=read4slave;Pwd=!QASW@3ed;pooling=true;CharSet=utf8mb4;Allow User Variables=True;"},
+  {"name":"libCon","connectionString":"Server=58.215.139.195;Database=comic_library;Uid=root;Pwd=!QASW@3ed;pooling=true;CharSet=utf8mb4;Allow User Variables=True;"}
+]

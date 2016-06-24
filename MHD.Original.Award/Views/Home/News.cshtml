@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "中国动漫金龙奖 × 漫画岛";
+
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+}
+
+<!-- banner start -->
+<div id="banner" class="banner">
+    <div class="banner_image">
+        <ul>
+            <li><a href="@string.Format("{0}/{1}/{2}", host, "AuthorComic", "CreateComicView")"><span class="img_3"></span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- banner end -->
+
+<div class="tabs_jlj">
+    <div class="tab_hd">
+        <ul class="wrap cf">
+            <li><a href="@Url.Action("Index","Home")" class="tb1"></a></li>
+            <li class="active"><a href="@Url.Action("News", "Home")" class="tb2"></a></li>
+            <li><a href="@Url.Action("Vote","Home")" class="tb-ex-1"></a></li>
+            @*<li><a href=# class="tb-ex-2"></a></li>*@
+            <li><a href="@Url.Action("Faq","Home")" class="tb3"></a></li>
+        </ul>
+    </div>
+    <div class="tab_bd">
+
+        <div class="main_tab2">
+
+            <div class="item_cont item_c4">
+
+                <div class="news_top box"></div>
+                <div class="list_news box">
+                    <ul class="list">
+                        <li>
+                            <div class="pic"><img src="/img/jlj_temp.jpg" alt=""></div>
+                            <div class="text">
+                                <h2><span class="date">2016-01-28</span><a style="color:#333" href="@Url.Action("Content","Home")">第十三届金龙奖全球征稿正式启动</a></h2>
+                                <div class="desc"><a style="color:#333" href="@Url.Action("Content","Home")">本次大赛的获奖者均将获得相应的奖金、获奖证书和其获奖证获奖证书和其获奖证获奖证书和其获证获大赛的获奖者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！奖证书和其获......</a></div>
+                                <div class="more"><a href="@Url.Action("Content","Home")">[阅读全文]</a></div>
+                            </div>
+                        </li>
+                        @*<li>
+                                <div class="pic"><img src="/img/pic_news2.jpg" alt=""></div>
+                                <div class="text">
+                                    <h2>第十三届金龙奖全球征稿正式启动</h2>
+                                    <div class="desc">本次大赛的获奖者均将获得相应的奖金、获奖证书和其获奖证获奖证书和其获奖证获奖证书和其获证获大赛的获奖者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！奖证书和其获</div>
+                                    <div class="more"><a href="@Url.Action("Content","Home")">[阅读全文]</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="/img/pic_news3.jpg" alt=""></div>
+                                <div class="text">
+                                    <h2>第十三届金龙奖全球征稿正式启动</h2>
+                                    <div class="desc">本次大赛的获奖者均将获得相应的奖金、获奖证书和其获奖证获奖证书和其获奖证获奖证书和其获证获大赛的获奖者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！奖证书和其获</div>
+                                    <div class="more"><a href="@Url.Action("Content","Home")">[阅读全文]</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="/img/pic_news4.jpg" alt=""></div>
+                                <div class="text">
+                                    <h2>第十三届金龙奖全球征稿正式启动</h2>
+                                    <div class="desc">本次大赛的获奖者均将获得相应的奖金、获奖证书和其获奖证获奖证书和其获奖证获奖证书和其获证获大赛的获奖者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！奖证书和其获</div>
+                                    <div class="more"><a href="@Url.Action("Content","Home")">[阅读全文]</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="/img/pic_news5.jpg" alt=""></div>
+                                <div class="text">
+                                    <h2>第十三届金龙奖全球征稿正式启动</h2>
+                                    <div class="desc">本次大赛的获奖者均将获得相应的奖金、获奖证书和其获奖证获奖证书和其获奖证获奖证书和其获证获大赛的获奖者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！者均将获得相应的奖金.梦想的力量！成就你的漫画梦想咯！奖证书和其获</div>
+                                    <div class="more"><a href="@Url.Action("Content","Home")">[阅读全文]</a></div>
+                                </div>
+                            </li>*@
+                    </ul>
+                    @*<div class="pages">
+                            <a href="">首页</a>
+                            <a href="">上一页</a>
+                            <span class="active">1</span>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                            <span class="ellipsis">...</span>
+                            <a href="">7</a>
+                            <a href="">下一页</a>
+                            <a href="">尾页</a>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

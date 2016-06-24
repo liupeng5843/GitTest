@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+@model  MHD.Original.Award.ViewModels.SearchBookListViewModel
+@using EFDal.Models.Enums
+@{
+    ViewBag.Title = "中国动漫金龙奖 × 漫画岛";
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+    var userId = Model.CurrentUserId == null ? 0 : ViewBag.UserId;
+    var keywords = Model.Keywords == null ? "" : ViewBag.Keywords;
+    var pageNumber = Model.PageCount == null ? 1 : ViewBag.PageNumber;
+    var type = (int)Model.AwardType;
+}
+
+@{
+    foreach (var book in Model.VoteBookList)
+    {
+        <div class="row-col">
+            <a href="@Url.Action("M_GetBookDetailById", "ComicBooks", new { bookId = book.BookId, userId = userId })">
+                <div class="col-pic" style="background-image: url('@book.BookCoverUrl')"></div>
+                <div class="col-mask"></div>
+            </a>
+            <p class="font-22 col-title">@book.BookName</p>
+            <p class="font-20 col-num">票数：<span class="vote-score">@book.TotalScore</span></p>
+            <div class="font-24 col-btn-solid" hidden><span class="icon-love-solid"></span>已投票</div>
+            <div class="book-vote font-24 col-btn"><span class="icon-love"></span>投票</div>
+
+            <input type="hidden" class="book-hid-brief" value=@book.Brief />
+            <input type="hidden" class="book-hid-id" value=@book.BookId />
+            <input type="hidden" class="book-hid-name" value=@book.BookName />
+            <input type="hidden" class="book-hid-coverurl" value=@book.BookCoverUrl />
+        </div>
+    }
+}
+<script src="~/js/jquery.js"></script>
+<script>
+    $(".book-vote").on('click', function (e) {
+        //var bookId = this.getAttribute("value");
+        var parent = $($(this).parent());
+        var bookId = parent.children('.book-hid-id').val();
+        var url = '@Url.Action("CreateVote", "ComicBooks")?bookId=' + bookId;
+        if (BookVote(url) == 0) {
+            $(this).hide();
+            $(this).prev().show();
+            var currentScore = new Number(parent.find('.vote-score').text());
+            parent.find('.vote-score').text(currentScore + 1 + '');
+        }
+    });
+</script>

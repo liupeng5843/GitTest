@@ -1,0 +1,407 @@
+﻿@{
+
+    ViewBag.Title = "M_Index";
+    Layout = null;
+    var lastWeekNumber = (DateTime.Now.Month - 5) * 4 + ((DateTime.Now.Day - 1) / 7 > 3 ? 3 : ((DateTime.Now.Day - 1) / 7));
+    var lastMonthNumber = DateTime.Now.Month - 1 > 5 ? DateTime.Now.Month - 1 : 5;
+}
+@using EFDal.Models.Enums;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="adress=no">
+    <meta name="flexible" content="initial-dpr=1">
+    <!--移动适配框架，必须优先载入-->
+    <script src="~/Content/js/flexible.min.js"></script>
+    <!--移动适配框架，必须优先载入-->
+    <link href="~/Content/css/mobile.css" rel="stylesheet">
+</head>
+<body>
+    <a id="go" href="#top">
+        <div class="go-top"><span class="icon-arrow-up"></span></div>
+    </a>
+    <a href="#talk">
+        <div class="go-talk"><span class="icon-talk"></span></div>
+    </a>
+
+    <!--主体-->
+    <div class="font-22 scroll-text">
+        <p class="text-main">
+            @*<span>《某某某1》得到了 哈哈哈 的投票</span>
+                <span>《某某某2》得到了 哈哈哈 的投票</span>
+                <span>《某某某3》得到了 哈哈哈 的投票</span>
+                <span>《某某某4》得到了 哈哈哈 的投票</span>
+                <span>《某某某5》得到了 哈哈哈 的投票</span>*@
+        </p>
+    </div>
+
+    <a href="#rule">
+        <header class="vote-header"></header>
+    </a>
+
+    <header class="index-header-pic"></header>
+    <div class="index-bg"></div>
+    <header class="index-title">
+        <div class="title-bg"></div>
+    </header>
+    <header class="index-header">
+        <div class="index-tab">
+            <div class="font-24 tab-item tab-active" style="display: none;">中国漫画大奖</div>
+            <div class="font-24 tab-item tab-active tab-fix" id="beststory-book-btn">最佳剧情漫画奖</div>
+            <div class="font-24 tab-item" id="bestinset-book-btn">最佳插画奖</div>
+            <div class="font-24 tab-item tab-none" id="bestdrawing-book-btn">最佳绘本奖</div>
+        </div>
+    </header>
+    <section class="index-section">
+        <div class="section-row" id="books-content">
+            @Html.Action("M_BookListPartView", "ComicBooks", new { type = DragonAwardType.BestStory, pageNumber = 1, count = 6 })
+        </div>
+    </section>
+    <a href="@Url.Action("M_Vote", "ComicBooks")"><section class="vote-btn"></section></a>
+
+
+    <!--本周作品-->
+    <div class="index-bg"></div>
+    <section class="index-top5">
+        <div class="title-pic-1"></div>
+        @*<a href="#">
+                <div class="font-24 title-text">更多<span class="title-arrow"></span></div>
+            </a>*@
+    </section>
+
+    <section class="top5-header">
+        <div class="top5-tab">
+            <div class="font-24 tab-item tab-active current-week-btn" style="display: none;">中国漫画大奖</div>
+            <div class="font-24 tab-item tab-active tab-fix current-week-btn" data-hid-type="beststory">最佳剧情漫画奖</div>
+            <div class="font-24 tab-item  current-week-btn" data-hid-type="bestinset">最佳插画奖</div>
+            <div class="font-24 tab-item tab-none current-week-btn" data-hid-type="bestdrawing">最佳绘本奖</div>
+        </div>
+    </section>
+
+    <section class="top5-section">
+        <div class="section-row" id="current-week-content">
+            @Html.Action("M_GetCurrentWeekRankListByType", "ComicBooks", new { awardType = DragonAwardType.BestStory, count = 5 })
+        </div>
+    </section>
+
+    <!--六月作品-->
+    <div class="index-bg"></div>
+    <section class="index-top5">
+        <div class="title-pic-2"></div>
+        <a href="@Url.Action("M_MonthRankList", new { type = DragonAwardType.BestStory, count = 10 })">
+        <div class="font-24 title-text">更多<span class="title-arrow"></span></div>
+        </a>
+    </section>
+
+    <section class="top5-header">
+        <div class="top5-tab">
+            <div class="font-24 tab-item tab-active" style="display: none;">中国漫画大奖</div>
+            <div class="font-24 tab-item tab-active tab-fix" id="beststory-day-btn">最佳剧情漫画奖</div>
+            <div class="font-24 tab-item" id="bestinset-day-btn">最佳插画奖</div>
+            <div class="font-24 tab-item tab-none" id="bestdrawing-day-btn">最佳绘本奖</div>
+        </div>
+    </section>
+
+    <section class="top5-section">
+        <div class="section-row" id="day-content">
+            @Html.Action("M_GetLastDayRankList", "ComicBooks", new { type = DragonAwardType.BestStory })
+        </div>
+    </section>
+
+    <div class="index-bg"></div>
+    <section class="index-top5">
+        <div class="title-pic-3"></div>
+        @*<a href="#">
+                <div class="font-24 title-text">更多<span class="title-arrow"></span></div>
+            </a>*@
+    </section>
+
+    <section class="top5-header">
+        <div class="top5-tab">
+            <div class="font-24 tab-item tab-active" style="display: none;">中国漫画大奖</div>
+            <div class="font-24 tab-item tab-active tab-fix" id="beststory-week-btn">最佳剧情漫画奖</div>
+            <div class="font-24 tab-item" id="bestinset-week-btn">最佳插画奖</div>
+            <div class="font-24 tab-item tab-none" id="bestdrawing-week-btn">最佳绘本奖</div>
+        </div>
+    </section>
+
+    <section class="top5-section">
+        <div class="section-row" id="week-content">
+            @Html.Action("M_GetBookWeekRankListByType", "ComicBooks", new { awardType = DragonAwardType.BestStory, weekNumber = lastWeekNumber })
+        </div>
+    </section>
+
+    <div class="index-bg"></div>
+    <div class="index-title" id="rule">
+        <div class="title-bg-1"></div>
+    </div>
+    <section class="top5-rule">
+        <p class="font-22 rule-text">
+            <span class="rule-num">1</span>周赛制-每月按分类进行作品人气投票，前三周，作品将在周一进行上线并发起投票，投票期为7天，逾期将停止投票通道；【每周前三
+            将得到漫画岛重点推广】
+        </p>
+        <p class="font-22 rule-text"><span class="rule-num">2</span>前三周的作品将会在最后一周统一开启投票通道（即每部作品拥有同等的14天投票时间）</p>
+        <p class="font-22 rule-text"><span class="rule-num">3</span>月榜每月第一名冠军可以得到由漫画岛原创平台给出的人气作品“一等奖”，5000元的奖金福利。</p>
+    </section>
+    <div class="index-bg"></div>
+    <div class="index-title" id="talk">
+        <div class="title-bg-2"></div>
+    </div>
+
+    @*<footer id="footer">
+            <img src="~/Content/img/m/rule.jpg" style="width: 10rem;">
+        </footer>*@
+    <div class="mobile-comment-box">
+        <section class="top5-talk" id="comment-box">
+            <div class="talk-input">
+                <p class="font-26 talk-review">回复<span id="talk-review">HO元气娘：</span><span class="icon-close"></span></p>
+                <textarea id="comment-content" data-hid-parentid="0"></textarea>
+                <div class="font-30 talk-submit" id="create-comment">发表评论</div>
+            </div>
+            @Html.Action("M_GetCommentList", "Comments", new { pageNumber = 1 })
+        </section>
+
+        <div class="all-btn">
+            <div class="font-24 footer-btn" style="display: block" id="reload-more">显示更多</div>
+            <div class="font-24 footer-btn-all" style="display: none">已显示全部</div>
+        </div>
+    </div>
+
+    @*<section class="item_cont item_c3" id="vote-comment">
+               <div id="comment-box">
+                   @Html.Action("M_GetCommentList", "Comments", new { pageNumber = 1 })
+               </div>
+        </section>*@
+
+    <div id="mask"></div>
+    <div class="font-20 alert-diy">
+        <p class="font-22 alert-title" id="alert-title"></p>
+        <p class="font-20 alert-text" id="alert-text"></p>
+        <div class="font-20 alert-ok" id="alert-ok"></div>
+    </div>
+
+    <!--脚本开始-->
+    <script src="~/Content/js/jquery.js"></script>
+    <script src="~/Content/js/tool.js"></script>
+    <script>
+        ShowVoteRecord();
+        //返回顶部按钮
+        window.onscroll = function () {
+            var offset = $('body').scrollTop();
+            if (offset > 250) {
+                $('#go').show();
+            } else {
+                $('#go').hide();
+            }
+        };
+
+        $(".tab-item").click(function () {
+            $(this).siblings().removeClass('tab-active');
+            $(this).addClass('tab-active');
+        });
+
+        //弹层函数
+        var alert_diy = $('#mask,.alert-diy');
+        var alert_title = $('#alert-title');
+        var alert_text = $('#alert-text');
+        var alert_ok = $('#alert-ok');
+
+        $('#mask').click(function () {
+            alert_diy.hide();
+        });
+
+        function alert_custom(title, text, ok) {
+            alert_title.text(title);
+            alert_text.text(text);
+            alert_ok.text(ok);
+            alert_diy.show();
+        }
+
+        //投票弹层
+        //$('.col-btn').click(function () {
+        //    alert_custom('恭喜您', '投票成功', '确定');
+        //    alert_ok.unbind().click(function () {
+        //        alert_diy.hide();
+        //    });
+        //});
+
+        //获取页面
+        function getHtml(url) {
+            var htmlStr = ""
+            $.ajax({
+                url: url,
+                type: 'get',
+                async: false,
+                success: function (data) {
+                    htmlStr = data;
+                }
+            });
+            return htmlStr;
+        }
+
+        $("#beststory-book-btn").on("click", function () {
+            var url = '@Url.Action("M_BookListPartView", "ComicBooks")' + '?type=' + '@DragonAwardType.BestStory' + '&pageNumber=1&count=6';
+            $("#books-content").html(getHtml(url));
+            UpdateVoteStatus();
+        });
+
+        $("#bestinset-book-btn").on("click", function () {
+            var url = '@Url.Action("M_BookListPartView", "ComicBooks")' + '?type=' + '@DragonAwardType.BestInset' + '&pageNumber=1&count=6';
+            $("#books-content").html(getHtml(url));
+            UpdateVoteStatus();
+        });
+
+        $("#bestdrawing-book-btn").on("click", function () {
+            var url = '@Url.Action("M_BookListPartView", "ComicBooks")' + '?type=' + '@DragonAwardType.BestDrawing' + '&pageNumber=1&count=6';
+            $("#books-content").html(getHtml(url));
+            UpdateVoteStatus();
+        });
+
+        $("#beststory-day-btn").on("click", function () {
+            var url = '@Url.Action("M_GetLastDayRankList", "ComicBooks")' + '?type=' + '@DragonAwardType.BestStory';
+            $("#day-content").html(getHtml(url));
+        });
+
+        $("#bestinset-day-btn").on("click", function () {
+            var url = '@Url.Action("M_GetLastDayRankList", "ComicBooks")' + '?type=' + '@DragonAwardType.BestInset';
+            $("#day-content").html(getHtml(url));
+        });
+
+        $("#bestdrawing-day-btn").on("click", function () {
+            var url = '@Url.Action("M_GetLastDayRankList", "ComicBooks")' + '?type=' + '@DragonAwardType.BestDrawing';
+            $("#day-content").html(getHtml(url));
+        });
+
+        $("#beststory-week-btn").on("click", function () {
+            var url = '@Url.Action("M_GetBookWeekRankListByType", "ComicBooks")' + '?awardType=' + '@DragonAwardType.BestStory' + '&weekNumber=' + '@lastWeekNumber';
+            $("#week-content").html(getHtml(url));
+        });
+
+        $("#bestinset-week-btn").on("click", function () {
+            var url = '@Url.Action("M_GetBookWeekRankListByType", "ComicBooks")' + '?awardType=' + '@DragonAwardType.BestInset' + '&weekNumber=' + '@lastWeekNumber';
+            $("#week-content").html(getHtml(url));
+        });
+
+        $("#bestdrawing-week-btn").on("click", function () {
+            var url = '@Url.Action("M_GetBookWeekRankListByType", "ComicBooks")' + '?awardType=' + '@DragonAwardType.BestDrawing' + '&weekNumber=' + '@lastWeekNumber';
+            $("#week-content").html(getHtml(url));
+        });
+        //current book
+        $(".current-week-btn").on("click", function () {
+            var type = $(this).attr('data-hid-type');
+            var url = '@Url.Action("M_GetCurrentWeekRankListByType", "ComicBooks")?awardType=' + type;
+            $("#current-week-content").html(getHtml(url));
+        });
+        //已投票限制
+        function UpdateVoteStatus() {
+            var voteList = getCookie('CBIDS').split(',');
+            var bookIdElemList = $(".book-hid-id");
+
+            for (var i = 0; i < bookIdElemList.length; i++) {
+                var bookId = $(bookIdElemList[i]).val();
+                if ($.inArray(bookId, voteList) > -1) {
+                    $(bookIdElemList[i]).parent().children('.col-btn').hide();
+                    $(bookIdElemList[i]).parent().children('.col-btn-solid').show();
+                }
+            }
+        }
+        UpdateVoteStatus();
+
+        var currentPageNumber = 1;
+        $("#reload-more").on('click', function () {
+            var url = '@Url.Action("M_GetCommentList", "Comments")?pageNumber=' + (currentPageNumber + 1);
+            $.ajax({
+                url: url,
+                type: 'get',
+                async: false,
+                success: function (data) {
+                    if (data.indexOf('</div>') < 0) {
+                        $("#reload-more").text("已显示全部");
+                    } else {
+                        currentPageNumber = currentPageNumber + 1;
+                        $("#comment-box").append(data);
+                    }
+                }
+            });
+        });
+
+        //评论区
+        function CreateComment(comment) {
+            $.ajax({
+                url: '@Url.Action("CreateComment","Comments")',
+                type: 'post',
+                async: false,
+                data: comment,
+                success: function (data) {
+                    if (data.code == 0) {
+                        var commentObj = data.comment;
+                        alert_custom("恭喜您", "", "评论成功");
+                        window.location.reload();
+                    } else if (data.code == -1) {
+                        alert_custom("操作频繁", "", "稍后重试");
+                        return false;
+                    }
+                }
+            })
+        }
+
+        $('#create-comment').on('click', function () {
+            var content = $('#comment-content').val();
+            var parentId = $('#comment-content').attr('data-hid-parentid');
+            if (content.trim() == "") {
+                alert_custom("不能发表空评论", "", "确定");
+                return false;
+            }
+            var comment = {
+                content: content,
+                parentid: parentId,
+            };
+            CreateComment(comment);
+        });
+
+        $('.show-child').on('click', function () {
+            $($(this).prevAll()).show();
+            $(this).hide();
+        });
+
+        //评论回复模拟，仅仅只是模拟~~~
+
+        $('.talk-reply').live('click', function () {
+            window.location.hash = '#comment-content';
+            var parentId = $(this).attr('data-hid-id');
+            var userName = $(this).attr('data-hid-username');
+            $('#comment-content').attr('data-hid-parentid', parentId);
+            $("#talk-review").text(userName + ':');
+            $('.talk-review').show();
+            $('#comment-content').addClass('textarea-review').focus();
+        });
+
+        $('.icon-close').click(function () {
+            $('#comment-content').attr('data-hid-parentid', 0);
+            $('.talk-review').hide();
+            $('#comment-content').removeClass('textarea-review');
+        });
+
+
+        //获取投票信息
+        function ShowVoteRecord() {
+            var records = "";
+            $.ajax({
+                url: '@Url.Action("GetVoteRecords","Comments")',
+                type: "get",
+                async: false,
+                success: function (result) {
+                    records = result.records;
+                    $(".text-main").html(records);
+                }
+            });
+        }
+        window.setInterval(ShowVoteRecord, 17000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+﻿@model MHD.Original.Award.ViewModels.ChapterViewModel
+@{
+    Layout = null;
+    ViewBag.Title = "章节";
+    var userId = ViewBag.UserId == null ? 0 : ViewBag.UserId;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="adress=no">
+    <meta name="flexible" content="initial-dpr=1">
+    <!--移动适配框架，必须优先载入-->
+    <script src="~/Content/js/flexible.min.js"></script>
+    <!--移动适配框架，必须优先载入-->
+    <link href="~/Content/css/mobile.css" rel="stylesheet">
+</head>
+<body style="background-color: #282828;">
+    <header class="reader-top">
+        <a href="@Url.Action("M_GetBookDetailById", "ComicBooks", new { bookId = Model.BookId, userId = userId })">
+            <header class="top-back"></header>
+            <p class="top-title font-26">@Model.Name</p>
+        </a>
+    </header>
+    <section class="reader-content">
+        @{
+            <div>@Model.Name</div>
+            foreach (var page in Model.PageList)
+            {
+                <img src=@page.PageUrl />
+            }
+        }
+    </section>
+    <div class="right-nav">
+        <span id="nav-top">至顶端</span>
+        <span id="nav-bottom">至底端</span>
+        @if (Model.PrevPartId > 0)
+        {
+            <a href="@Url.Action("M_GetChapter", "ComicBooks", new { chapterId = Model.PrevPartId })"><span>上一话</span></a>
+        }
+        @if (Model.NextPartId > 0)
+        {
+            <a href="@Url.Action("M_GetChapter", "ComicBooks", new { chapterId = Model.NextPartId })"><span>下一话</span></a>
+        }
+        <!--<a href="#">上一话</a>-->
+        <!--<a href="#">下一话</a>-->
+        @*<span id="nav-back">返回</span>*@
+    </div>
+    <div id="bottom"></div>
+</body>
+</html>
+
+<script src="~/Content/js/jquery.js"></script>
+<script src="~/Content/js/tool.js"></script>
+<script>
+    //手机版跳转
+    var testResult = browserRedirect();
+    if (testResult == 'pc') {
+        window.location.href = '@Url.Action("GetChapter", "ComicBooks", new { chapterId = Model.Id, userId = userId })';
+    } else {
+        console.log(testResult);
+    }
+    //手机版跳转
+    $(function () {
+        function scrollTop() {
+            $('body').scrollTop(0);
+        }
+
+        function scrollBottom() {
+            var height = $('html').height();
+            $('body').scrollTop(height);
+        }
+
+        $('#nav-top').click(scrollTop);
+        $('#nav-bottom').click(scrollBottom);
+        //$('#nav-back,.top-back').click(function () {
+        //    history.back()
+        //});
+    });
+</script>

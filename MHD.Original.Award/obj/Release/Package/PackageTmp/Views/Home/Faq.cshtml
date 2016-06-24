@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "中国动漫金龙奖 × 漫画岛";
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+}
+
+<!-- banner start -->
+<div id="banner" class="banner">
+    <div class="banner_image">
+        <ul>
+            <li><a href="@string.Format("{0}/{1}/{2}", host, "AuthorComic", "CreateComicView")"><span class="img_3"></span></a></li>
+        </ul>
+    </div>
+</div>
+<!-- banner end -->
+
+<div class="tabs_jlj">
+    <div class="tab_hd">
+        <ul class="wrap cf">
+            <li><a href="@Url.Action("Index","Home")" class="tb1"></a></li>
+            <li><a href="@Url.Action("News", "Home")" class="tb2"></a></li>
+            <li><a href="@Url.Action("Vote","Home")" class="tb-ex-1"></a></li>
+            @*<li><a href=# class="tb-ex-2"></a></li>*@
+            <li class="active"><a href="@Url.Action("Faq","Home")" class="tb3"></a></li>
+        </ul>
+    </div>
+    <div class="tab_bd">
+
+        <div class="main_tab2">
+
+            <div class="item_cont item_c4">
+
+                <div class="faq_top box">
+                </div>
+                @*<div style="float:right">
+                            <a target="_blank" href="http://sighttp.qq.com/authd?IDKEY=c6dcc7569373c87adf8d1434790afeb89a61fadd2d7a1347"><img border="0" src="http://wpa.qq.com/imgd?IDKEY=c6dcc7569373c87adf8d1434790afeb89a61fadd2d7a1347&pic=53" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2489797364&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/imgd?IDKEY=c6dcc7569373c87adf8d1434790afeb89a61fadd2d7a1347&pic=53" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
+                    </div>*@
+                <div style="float:right">
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2489797364&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2489797364:53" alt="点击这里给我发消息" title="点击这里给我发消息" /></a>
+                </div>
+                <div class="list_faq box">
+                    <dl>
+                        <dt><span class="tit">奖项说明</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            <p>奖项分为：中国漫画大奖、最具人气漫画奖（漫画岛特约）、漫画综合大奖、特别奖、单项奖、广州奖（行业奖）、组织奖。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="tit">参赛漫画作品要求</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            <p>1、新媒体作品：基于计算机或移动设备的作品，应符合手机动漫行业标准等规范。</p>
+                            <p>2、纸张作品：基于A4尺寸（210mm×297mm）创作的作品，画稿四周请保留各2cm空白，画面要求清晰、标明页数。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="tit">作品上传内容</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            <p>1、电子投稿：电子文件须提交JPEG格式，要求如下</p>
+                            <p>① JPEG格式：RGB图。彩色稿件，分辨率300 DPI；</p>
+                            <p>② 黑白稿件、灰度图，分辨率600 DPI。</p>
+                            <p>2、原稿投稿：画稿要求使用正规绘图纸（水彩纸或水粉纸）、漫画原稿纸或复印纸，请使用黑色墨水笔或油性笔描线，不收铅笔和圆珠笔稿件。</p>
+                            <p>3、对白请直接写在对话框上，原稿请注意字迹工整。</p>
+                            <p>4、阅读顺序可根据个人习惯选择从左到右或从右到左，只是需要在作品首页注明。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="tit">投稿方式</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            @*<p>漫画作品原稿、打印稿或者复印稿，请依照以下方式投稿：</p>
+                                <p>信函邮寄（不接受快递到付方式）广州市先烈中路80号汇华商贸大厦附楼7层中国动漫金龙奖组委会收（510070）信封注明“cacc”等字样及参赛类别</p>*@
+                            <p>1、官方线上唯一征稿平台漫画岛：cacc.manhuadao.cn  </p>
+                            <p>2、线上QQ直传：522000432</p>
+                            <p>3、漫画作品原稿、打印稿或者复印稿，请依照以下方式投稿</p>
+                            <p>A.信函邮寄（不接受快递到付方式），信封注明“CACC”等字样及参赛类别</p>
+                            <p>B.请于信函中一并附上打印的参赛表格一份，并详细填写表格内容</p>
+                            <p>C.邮寄地址：广州市先烈中路80号汇华商贸大厦附楼7层中国动漫金龙奖组委会收（邮编号码：510070）</p>
+                            <p>TEL：020-37616078、020-87608715-117</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="tit">网站上传投稿流程</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            <div class="img"><img src="/img/dd_img.png" alt=""></div>
+                        </dd>
+                    </dl>
+
+                    <dl>
+                        <dt><span class="tit">参赛漫画尺度要求</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            <p>有违以下规定的参赛作品，将被取消参赛资格：</p>
+                            <p>1、含有与中华人民共和国法律法规相抵触的内容；</p>
+                            <p>2、含有色情、暴力、血腥等不良内容；</p>
+                            <p>3、涉嫌临摹、剽窃、侵犯他人著作权；</p>
+                            <p>4、违反金龙奖比赛其它规定。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="tit">参赛注意事项</span><em class="collapse"><span>+</span> 展开</em></dt>
+                        <dd>
+                            <p>1、参赛者请勿将作品装订成册（中国漫画大奖除外）；参赛动画不能在作品之中打公司水印或“样片”等字样；</p>
+                            <p>2、《金龙奖参赛报名表》必须填写完整，并且随作品一起邮寄或发送，否则当无效作品处理；网站上传作品必须线上完成个人资料登记；如因报名资料不详或不准确所造成的损失由参赛者本人负责；</p>
+                            <p>3、院校或相关单位统一组织参赛的，必须由院校或相关单位统一填写《金龙奖组稿参赛登记表》，每一件作品均需单独填写并提交《金龙奖参赛报名表》。</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
