@@ -1,0 +1,24 @@
+2015-07-16 16:07:14.3550|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Messages/3479d845a8244246ba16bafdc82e9b2e/Logs/Attachments/9ef004c40f23673c47e8609b7ef5b336 UserAgent:Fiddler]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-07-16 16:19:29.9774|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Messages/3479d845a8244246ba16bafdc82e9b2e/Logs/Attachments/9ef004c40f23673c47e8609b7ef5b336 UserAgent:Fiddler]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()

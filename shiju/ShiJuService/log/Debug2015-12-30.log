@@ -1,0 +1,141 @@
+2015-12-30 15:45:44.4265|Debug|ShiJu.Service.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-12-30 15:45:44.4421|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:44.4784|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:44 +08:00  |
+2015-12-30 15:45:44.5085|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: 9  |
+2015-12-30 15:45:44.5085|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.0451|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-12-30 15:45:46.0451|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.0451|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:46 +08:00  |
+2015-12-30 15:45:46.0763|Debug|ShiJu.Service.Heart|-- Completed in 30 ms with result: SqlDataReader  |
+2015-12-30 15:45:46.0763|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.1700|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-12-30 15:45:46.1700|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.1700|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-12-30 15:45:46.1700|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:46 +08:00  |
+2015-12-30 15:45:46.2013|Debug|ShiJu.Service.Heart|-- Completed in 34 ms with result: SqlDataReader  |
+2015-12-30 15:45:46.2013|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.2638|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-12-30 15:45:46.2638|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.2638|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:46 +08:00  |
+2015-12-30 15:45:46.2950|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-12-30 15:45:46.2950|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.2950|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-12-30 15:45:46.2950|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.3108|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-12-30 15:45:46.3108|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:46 +08:00  |
+2015-12-30 15:45:46.3263|Debug|ShiJu.Service.Heart|-- Completed in 25 ms with result: SqlDataReader  |
+2015-12-30 15:45:46.3420|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.4200|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-12-30 15:45:46.4200|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:46.4200|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-12-30 15:45:46.4200|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:46 +08:00  |
+2015-12-30 15:45:46.4356|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-12-30 15:45:46.4356|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:47.6230|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:45:47.6230|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:47.6230|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:45:47.6230|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:47 +08:00  |
+2015-12-30 15:45:47.6855|Debug|ShiJu.Service.Heart|-- Completed in 51 ms with result: SqlDataReader  |
+2015-12-30 15:45:47.6855|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:47.7324|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:45:47.7324|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:45:47.7324|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:45:47.7324|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:45:47 +08:00  |
+2015-12-30 15:45:47.7720|Debug|ShiJu.Service.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-12-30 15:45:47.7720|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:47:26.4027|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:47:26.4607|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:47:26.5047|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:47:26.5047|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:47:26 +08:00  |
+2015-12-30 15:47:26.5557|Debug|ShiJu.Service.Heart|-- Completed in 49 ms with result: SqlDataReader  |
+2015-12-30 15:47:26.5967|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:57:22.8834|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:57:22.9394|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:57:22.9394|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:57:22.9394|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:57:22 +08:00  |
+2015-12-30 15:57:22.9954|Debug|ShiJu.Service.Heart|-- Completed in 54 ms with result: SqlDataReader  |
+2015-12-30 15:57:22.9954|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:57:33.8664|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:57:33.8674|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:57:33.8674|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:57:33.8674|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:57:33 +08:00  |
+2015-12-30 15:57:33.9374|Debug|ShiJu.Service.Heart|-- Completed in 67 ms with result: SqlDataReader  |
+2015-12-30 15:57:33.9374|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:04.0102|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:58:04.0652|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:04.0652|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:58:04.0652|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:58:04 +08:00  |
+2015-12-30 15:58:04.1161|Debug|ShiJu.Service.Heart|-- Completed in 50 ms with result: SqlDataReader  |
+2015-12-30 15:58:04.1161|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:08.5735|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:58:08.5935|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:08.5935|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:58:08.5975|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:58:08 +08:00  |
+2015-12-30 15:58:08.6615|Debug|ShiJu.Service.Heart|-- Completed in 61 ms with result: SqlDataReader  |
+2015-12-30 15:58:08.6615|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:11.0185|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:58:11.0195|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:11.0195|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:58:11.0195|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:58:11 +08:00  |
+2015-12-30 15:58:11.1205|Debug|ShiJu.Service.Heart|-- Completed in 95 ms with result: SqlDataReader  |
+2015-12-30 15:58:11.1205|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:20.1323|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:58:20.1473|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:20.1473|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:58:20.1643|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:58:20 +08:00  |
+2015-12-30 15:58:20.2313|Debug|ShiJu.Service.Heart|-- Completed in 66 ms with result: SqlDataReader  |
+2015-12-30 15:58:20.2313|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:21.7676|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:58:21.7676|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:21.7676|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:58:21.7676|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:58:21 +08:00  |
+2015-12-30 15:58:21.8188|Debug|ShiJu.Service.Heart|-- Completed in 47 ms with result: SqlDataReader  |
+2015-12-30 15:58:21.8188|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:23.5175|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 15:58:23.5205|Debug|ShiJu.Service.Heart|  |
+2015-12-30 15:58:23.5205|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 15:58:23.5205|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 15:58:23 +08:00  |
+2015-12-30 15:58:23.6326|Debug|ShiJu.Service.Heart|-- Completed in 110 ms with result: SqlDataReader  |
+2015-12-30 15:58:23.6326|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:02:17.2416|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:02:17.2665|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:02:17.2665|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:02:17.2665|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:02:17 +08:00  |
+2015-12-30 16:02:17.3465|Debug|ShiJu.Service.Heart|-- Completed in 77 ms with result: SqlDataReader  |
+2015-12-30 16:02:17.3465|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:02:18.9942|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:02:19.0242|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:02:19.0242|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:02:19.0242|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:02:19 +08:00  |
+2015-12-30 16:02:19.0932|Debug|ShiJu.Service.Heart|-- Completed in 66 ms with result: SqlDataReader  |
+2015-12-30 16:02:19.0932|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:03:30.4377|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:03:30.5117|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:03:30.5117|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:03:30.5117|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:03:30 +08:00  |
+2015-12-30 16:03:30.5607|Debug|ShiJu.Service.Heart|-- Completed in 38 ms with result: SqlDataReader  |
+2015-12-30 16:03:30.5607|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:04:50.6031|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:04:50.6258|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:04:50.6468|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:04:50.6468|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:04:50 +08:00  |
+2015-12-30 16:04:50.7158|Debug|ShiJu.Service.Heart|-- Completed in 62 ms with result: SqlDataReader  |
+2015-12-30 16:04:50.7158|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:05:55.7178|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:05:55.9008|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:05:55.9008|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:05:55.9008|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:05:55 +08:00  |
+2015-12-30 16:05:56.2378|Debug|ShiJu.Service.Heart|-- Completed in 335 ms with result: SqlDataReader  |
+2015-12-30 16:05:56.2378|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:06:19.8884|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:06:19.9674|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:06:19.9674|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:06:19.9674|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:06:19 +08:00  |
+2015-12-30 16:06:20.1074|Debug|ShiJu.Service.Heart|-- Completed in 139 ms with result: SqlDataReader  |
+2015-12-30 16:06:20.1074|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:08:41.2781|Debug|ShiJu.Service.Heart|SELECT TOP (2)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[NeedNotification] AS [NeedNotification],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE [Extent1].[Id] = @p0|
+2015-12-30 16:08:41.3041|Debug|ShiJu.Service.Heart|  |
+2015-12-30 16:08:41.3381|Debug|ShiJu.Service.Heart|-- p0: 'd1c6f089-9d54-4eb7-a893-05ee340b1a0e' (Type = Guid)  |
+2015-12-30 16:08:41.3611|Debug|ShiJu.Service.Heart|-- Executing at 2015/12/30 16:08:41 +08:00  |
+2015-12-30 16:08:41.4691|Debug|ShiJu.Service.Heart|-- Completed in 107 ms with result: SqlDataReader  |
+2015-12-30 16:08:41.4691|Debug|ShiJu.Service.Heart|  |

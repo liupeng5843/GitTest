@@ -1,0 +1,91 @@
+2015-08-31 16:53:32.9679|Error|WindowsServer.Web.GlobalExceptionHandler|Uncaught exception is detected.[ClientIP:::1 RawUrl:/Users/DisplayParty UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: The parameters dictionary contains a null entry for parameter 'userId' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult GetUserDetail(System.Guid)' in 'ShiJu.Service.Controllers.UsersController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+   at System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__36(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass30.<BeginInvokeActionMethodWithFilters>b__2f(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<>c__DisplayClass28.<BeginInvokeAction>b__19()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<BeginInvokeAction>b__1b(IAsyncResult asyncResult)
+2015-08-31 16:54:53.2150|Error|WindowsServer.Web.GlobalExceptionHandler|Uncaught exception is detected.[ClientIP:::1 RawUrl:/Parties/0FC33F41-9318-4267-B943-3834A09E80BB/Display UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Runtime.Serialization.Json.JavaScriptReader.ReadCore() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptReader.cs:line 39
+   at System.Runtime.Serialization.Json.JavaScriptReader.Read() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptReader.cs:line 27
+   at System.Runtime.Serialization.Json.JavaScriptObjectDeserializer.BasicDeserialize() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptObjectDeserializer.cs:line 126
+   at System.Json.JsonValue.Load(TextReader textReader) in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\JsonValue.cs:line 29
+   at System.Json.JsonValue.Parse(String jsonString) in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\JsonValue.cs:line 102
+   at ASP._Page_Views_Users_DisplayParty_cshtml.Execute() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Views\Users\DisplayParty.cshtml:line 96
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<>c__DisplayClass28.<BeginInvokeAction>b__19()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<BeginInvokeAction>b__1b(IAsyncResult asyncResult)
+2015-08-31 16:57:45.2761|Error|WindowsServer.Web.GlobalExceptionHandler|Uncaught exception is detected.[ClientIP:::1 RawUrl:/Parties/0FC33F41-9318-4267-B943-3834A09E80BB/Display UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Runtime.Serialization.Json.JavaScriptReader.ReadCore() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptReader.cs:line 39
+   at System.Runtime.Serialization.Json.JavaScriptReader.Read() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptReader.cs:line 27
+   at System.Runtime.Serialization.Json.JavaScriptObjectDeserializer.BasicDeserialize() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptObjectDeserializer.cs:line 126
+   at System.Json.JsonValue.Load(TextReader textReader) in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\JsonValue.cs:line 29
+   at System.Json.JsonValue.Parse(String jsonString) in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\JsonValue.cs:line 102
+   at ASP._Page_Views_Users_DisplayParty_cshtml.Execute() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Views\Users\DisplayParty.cshtml:line 96
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<>c__DisplayClass28.<BeginInvokeAction>b__19()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<BeginInvokeAction>b__1b(IAsyncResult asyncResult)
+2015-08-31 17:00:05.4009|Error|WindowsServer.Web.GlobalExceptionHandler|Uncaught exception is detected.[ClientIP:::1 RawUrl:/Parties/0FC33F41-9318-4267-B943-3834A09E80BB/Display UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Runtime.Serialization.Json.JavaScriptReader.ReadCore() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptReader.cs:line 39
+   at System.Runtime.Serialization.Json.JavaScriptReader.Read() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptReader.cs:line 27
+   at System.Runtime.Serialization.Json.JavaScriptObjectDeserializer.BasicDeserialize() in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\Serialization\JavaScriptObjectDeserializer.cs:line 126
+   at System.Json.JsonValue.Load(TextReader textReader) in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\JsonValue.cs:line 29
+   at System.Json.JsonValue.Parse(String jsonString) in d:\TFS\YPWare\Dev\Server\WindowsServer\ServerCommon\Json\SystemJson\JsonValue.cs:line 102
+   at ASP._Page_Views_Users_DisplayParty_cshtml.Execute() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Views\Users\DisplayParty.cshtml:line 96
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.StartPage.RunPage()
+   at System.Web.WebPages.StartPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<>c__DisplayClass28.<BeginInvokeAction>b__19()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<BeginInvokeAction>b__1b(IAsyncResult asyncResult)

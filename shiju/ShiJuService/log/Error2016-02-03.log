@@ -1,0 +1,4 @@
+2016-02-03 10:05:28.1668|Error|ShiJu.Service.Controllers.UserGreetingsController|Error on sending message to 15542330223|System.NullReferenceException: Object reference not set to an instance of an object.
+   at ShiJu.Service.Controllers.UserGreetingsController.Greet(Guid sourceUserId, Nullable`1 targetUserId, String targetPhoneNumber) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\UserGreetingsController.cs:line 130
+2016-02-03 10:11:33.4880|Error|ShiJu.Service.Controllers.UserGreetingsController|Error on sending message to 15542330223|System.NullReferenceException: Object reference not set to an instance of an object.
+   at ShiJu.Service.Controllers.UserGreetingsController.Greet(Guid sourceUserId, Nullable`1 targetUserId, String targetPhoneNumber) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\UserGreetingsController.cs:line 130

@@ -1,0 +1,1096 @@
+2015-10-13 10:44:42.3035|Debug|ShiJu.Service.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-10-13 10:44:42.3035|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:42.3035|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:42 +08:00  |
+2015-10-13 10:44:42.3425|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: 9  |
+2015-10-13 10:44:42.3425|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.6205|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-10-13 10:44:43.6205|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.6205|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:43 +08:00  |
+2015-10-13 10:44:43.6485|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-10-13 10:44:43.6485|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.7185|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 10:44:43.7185|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.7225|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 10:44:43.7225|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:43 +08:00  |
+2015-10-13 10:44:43.7395|Debug|ShiJu.Service.Heart|-- Completed in 16 ms with result: SqlDataReader  |
+2015-10-13 10:44:43.7395|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.7775|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-10-13 10:44:43.7775|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.7775|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:43 +08:00  |
+2015-10-13 10:44:43.7935|Debug|ShiJu.Service.Heart|-- Completed in 15 ms with result: SqlDataReader  |
+2015-10-13 10:44:43.7935|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.7935|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 10:44:43.7935|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.7935|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 10:44:43.7935|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:43 +08:00  |
+2015-10-13 10:44:43.8205|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 10:44:43.8205|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.8755|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-10-13 10:44:43.8755|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:43.8755|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 10:44:43.8755|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:43 +08:00  |
+2015-10-13 10:44:43.9005|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 10:44:43.9005|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:44.4805|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[UserId] AS [UserId],       [Extent1].[Type] AS [Type],       [Extent1].[Name] AS [Name],       [Extent1].[Password] AS [Password],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Accounts] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 10:44:44.4805|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:44:44.4805|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 10:44:44.4805|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:44:44 +08:00  |
+2015-10-13 10:44:44.5045|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 10:44:44.5045|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:31.4607|Debug|ShiJu.Service.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-10-13 10:46:31.4607|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:31.4607|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:31 +08:00  |
+2015-10-13 10:46:31.5077|Debug|ShiJu.Service.Heart|-- Completed in 43 ms with result: 9  |
+2015-10-13 10:46:31.5077|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.6447|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-10-13 10:46:32.6447|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.6447|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:32 +08:00  |
+2015-10-13 10:46:32.6747|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-10-13 10:46:32.6747|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.7507|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 10:46:32.7507|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.7567|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 10:46:32.7567|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:32 +08:00  |
+2015-10-13 10:46:32.7797|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 10:46:32.7797|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.8087|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-10-13 10:46:32.8087|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.8087|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:32 +08:00  |
+2015-10-13 10:46:32.8287|Debug|ShiJu.Service.Heart|-- Completed in 18 ms with result: SqlDataReader  |
+2015-10-13 10:46:32.8287|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.8317|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 10:46:32.8317|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.8317|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 10:46:32.8317|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:32 +08:00  |
+2015-10-13 10:46:32.8497|Debug|ShiJu.Service.Heart|-- Completed in 17 ms with result: SqlDataReader  |
+2015-10-13 10:46:32.8497|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.9117|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-10-13 10:46:32.9117|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:32.9117|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 10:46:32.9117|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:32 +08:00  |
+2015-10-13 10:46:32.9437|Debug|ShiJu.Service.Heart|-- Completed in 31 ms with result: SqlDataReader  |
+2015-10-13 10:46:32.9437|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:33.4827|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[UserId] AS [UserId],       [Extent1].[Type] AS [Type],       [Extent1].[Name] AS [Name],       [Extent1].[Password] AS [Password],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Accounts] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL) AND ((( CAST( [Extent1].[Type] AS bigint) = @p__linq__1) AND ( NOT (( CAST( [Extent1].[Type] AS bigint) IS NULL) OR (@p__linq__1 IS NULL)))) OR (( CAST( [Extent1].[Type] AS bigint) IS NULL) AND (@p__linq__1 IS NULL)))|
+2015-10-13 10:46:33.4827|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:33.4877|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 10:46:33.4877|Debug|ShiJu.Service.Heart|-- p__linq__1: '0' (Type = Int64)  |
+2015-10-13 10:46:33.4877|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:33 +08:00  |
+2015-10-13 10:46:33.5177|Debug|ShiJu.Service.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-10-13 10:46:33.5177|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:33.6827|Debug|ShiJu.Service.Heart|DELETE [dbo].[Accounts]  WHERE ([Id] = @0)|
+2015-10-13 10:46:33.6827|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:33.6827|Debug|ShiJu.Service.Heart|-- @0: '693bbf38-f96f-4aa5-a7de-91a0942ffb50' (Type = Guid)  |
+2015-10-13 10:46:33.6827|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:33 +08:00  |
+2015-10-13 10:46:33.7517|Debug|ShiJu.Service.Heart|-- Completed in 65 ms with result: 1  |
+2015-10-13 10:46:33.7517|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:48.4976|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[UserId] AS [UserId],       [Extent1].[Type] AS [Type],       [Extent1].[Name] AS [Name],       [Extent1].[Password] AS [Password],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Accounts] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 10:46:48.4976|Debug|ShiJu.Service.Heart|  |
+2015-10-13 10:46:48.4976|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 10:46:48.4976|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 10:46:48 +08:00  |
+2015-10-13 10:46:48.7195|Debug|ShiJu.Service.Heart|-- Completed in 220 ms with result: SqlDataReader  |
+2015-10-13 10:46:48.7195|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:19.5847|Debug|ShiJu.Service.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-10-13 13:56:19.6217|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:19.6217|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:19 +08:00  |
+2015-10-13 13:56:19.7137|Debug|ShiJu.Service.Heart|-- Completed in 84 ms with result: 9  |
+2015-10-13 13:56:19.7137|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.7447|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-10-13 13:56:21.7447|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.7447|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:21 +08:00  |
+2015-10-13 13:56:21.7787|Debug|ShiJu.Service.Heart|-- Completed in 33 ms with result: SqlDataReader  |
+2015-10-13 13:56:21.7787|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.8797|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 13:56:21.8797|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.8797|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 13:56:21.8797|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:21 +08:00  |
+2015-10-13 13:56:21.9067|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 13:56:21.9067|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.9517|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-10-13 13:56:21.9517|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.9517|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:21 +08:00  |
+2015-10-13 13:56:21.9757|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 13:56:21.9757|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.9757|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 13:56:21.9877|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:21.9877|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 13:56:21.9877|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:21 +08:00  |
+2015-10-13 13:56:22.0177|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 13:56:22.0237|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:22.0907|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-10-13 13:56:22.0907|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:22.0907|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-10-13 13:56:22.0907|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:22 +08:00  |
+2015-10-13 13:56:22.1277|Debug|ShiJu.Service.Heart|-- Completed in 35 ms with result: SqlDataReader  |
+2015-10-13 13:56:22.1277|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:22.9857|Debug|ShiJu.Service.Heart|SELECT       [Distinct1].[C1] AS [C1]      FROM ( SELECT DISTINCT           [UnionAll1].[FriendUserId] AS [C1]          FROM  (SELECT               [Extent1].[FriendUserId] AS [FriendUserId]              FROM [dbo].[Friends] AS [Extent1]              WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)          UNION ALL              SELECT               [Extent2].[UserId] AS [UserId]              FROM [dbo].[Friends] AS [Extent2]              WHERE ([Extent2].[FriendUserId] = @p__linq__1) AND (@p__linq__1 IS NOT NULL)) AS [UnionAll1]      )  AS [Distinct1]|
+2015-10-13 13:56:22.9857|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:56:22.9857|Debug|ShiJu.Service.Heart|-- p__linq__0: '0c60615a-eacb-40b7-a0dd-4a246e340472' (Type = Guid)  |
+2015-10-13 13:56:22.9857|Debug|ShiJu.Service.Heart|-- p__linq__1: '0c60615a-eacb-40b7-a0dd-4a246e340472' (Type = Guid)  |
+2015-10-13 13:56:22.9857|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:56:22 +08:00  |
+2015-10-13 13:56:23.0337|Debug|ShiJu.Service.Heart|-- Completed in 46 ms with result: SqlDataReader  |
+2015-10-13 13:56:23.0337|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:57:25.6902|Debug|ShiJu.Service.Heart|SELECT       [Project1].[Id] AS [Id],       [Project1].[CreatorUserId] AS [CreatorUserId],       [Project1].[Sponsor] AS [Sponsor],       [Project1].[BeginTime] AS [BeginTime],       [Project1].[EndTime] AS [EndTime],       [Project1].[Title] AS [Title],       [Project1].[Description] AS [Description],       [Project1].[Address] AS [Address],       [Project1].[Images] AS [Images],       [Project1].[Kind] AS [Kind],       [Project1].[MaxUserCount] AS [MaxUserCount],       [Project1].[DirectFriendVisible] AS [DirectFriendVisible],       [Project1].[IsPublic] AS [IsPublic],       [Project1].[LikeCount] AS [LikeCount],       [Project1].[CommentCount] AS [CommentCount],       [Project1].[VoteTitle] AS [VoteTitle],       [Project1].[VoteChoicesJson] AS [VoteChoicesJson],       [Project1].[VoteResult0Count] AS [VoteResult0Count],       [Project1].[VoteResult1Count] AS [VoteResult1Count],       [Project1].[VoteResult2Count] AS [VoteResult2Count],       [Project1].[VoteResult3Count] AS [VoteResult3Count],       [Project1].[VoteResult4Count] AS [VoteResult4Count],       [Project1].[IsDisabled] AS [IsDisabled],       [Project1].[CreatedTime] AS [CreatedTime]      FROM ( SELECT           [Extent1].[Id] AS [Id],           [Extent1].[CreatorUserId] AS [CreatorUserId],           [Extent1].[Sponsor] AS [Sponsor],           [Extent1].[BeginTime] AS [BeginTime],           [Extent1].[EndTime] AS [EndTime],           [Extent1].[Title] AS [Title],           [Extent1].[Description] AS [Description],           [Extent1].[Address] AS [Address],           [Extent1].[Images] AS [Images],           [Extent1].[Kind] AS [Kind],           [Extent1].[MaxUserCount] AS [MaxUserCount],           [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],           [Extent1].[IsPublic] AS [IsPublic],           [Extent1].[LikeCount] AS [LikeCount],           [Extent1].[CommentCount] AS [CommentCount],           [Extent1].[VoteTitle] AS [VoteTitle],           [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],           [Extent1].[VoteResult0Count] AS [VoteResult0Count],           [Extent1].[VoteResult1Count] AS [VoteResult1Count],           [Extent1].[VoteResult2Count] AS [VoteResult2Count],           [Extent1].[VoteResult3Count] AS [VoteResult3Count],           [Extent1].[VoteResult4Count] AS [VoteResult4Count],           [Extent1].[IsDisabled] AS [IsDisabled],           [Extent1].[CreatedTime] AS [CreatedTime]          FROM [dbo].[Parties] AS [Extent1]          WHERE ([Extent1].[CreatorUserId] IN (cast('00000000-0000-0000-0000-000000000000' as uniqueidentifier))) AND (1 = [Extent1].[DirectFriendVisible]) AND ([Extent1].[BeginTime] > @p__linq__0) AND ([Extent1].[IsDisabled] <> cast(1 as bit))      )  AS [Project1]      ORDER BY [Project1].[CreatedTime] ASC|
+2015-10-13 13:57:25.6902|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:57:25.6902|Debug|ShiJu.Service.Heart|-- p__linq__0: '2015/10/7 0:00:00' (Type = DateTime2)  |
+2015-10-13 13:57:25.6902|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:57:25 +08:00  |
+2015-10-13 13:57:25.7552|Debug|ShiJu.Service.Heart|-- Completed in 50 ms with result: SqlDataReader  |
+2015-10-13 13:57:25.7552|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:32.7782|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[PartyId] AS [PartyId]      FROM [dbo].[Participants] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 13:58:32.7782|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:32.7782|Debug|ShiJu.Service.Heart|-- p__linq__0: '0c60615a-eacb-40b7-a0dd-4a246e340472' (Type = Guid)  |
+2015-10-13 13:58:32.7782|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:58:32 +08:00  |
+2015-10-13 13:58:33.1262|Debug|ShiJu.Service.Heart|-- Completed in 346 ms with result: SqlDataReader  |
+2015-10-13 13:58:33.1272|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:33.1662|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsPublic] AS [IsPublic],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE [Extent1].[Id] IN (cast('53667226-fa18-4b77-bf5d-013c90ab4bde' as uniqueidentifier))|
+2015-10-13 13:58:33.1662|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:33.1662|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:58:33 +08:00  |
+2015-10-13 13:58:34.0862|Debug|ShiJu.Service.Heart|-- Completed in 918 ms with result: SqlDataReader  |
+2015-10-13 13:58:34.0862|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:34.1852|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 13:58:34.1852|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:34.1852|Debug|ShiJu.Service.Heart|-- p__linq__0: '53667226-fa18-4b77-bf5d-013c90ab4bde' (Type = Guid)  |
+2015-10-13 13:58:34.1852|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:58:34 +08:00  |
+2015-10-13 13:58:34.2392|Debug|ShiJu.Service.Heart|-- Completed in 53 ms with result: SqlDataReader  |
+2015-10-13 13:58:34.2392|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:34.2592|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 13:58:34.2592|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:58:34.2592|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 13:58:34.2592|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:58:34 +08:00  |
+2015-10-13 13:58:34.3532|Debug|ShiJu.Service.Heart|-- Completed in 93 ms with result: SqlDataReader  |
+2015-10-13 13:58:34.3532|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:59:09.0857|Debug|ShiJu.Service.Heart|SELECT       [Distinct1].[C1] AS [C1]      FROM ( SELECT DISTINCT           [UnionAll1].[FriendUserId] AS [C1]          FROM  (SELECT               [Extent1].[FriendUserId] AS [FriendUserId]              FROM [dbo].[Friends] AS [Extent1]              WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)          UNION ALL              SELECT               [Extent2].[UserId] AS [UserId]              FROM [dbo].[Friends] AS [Extent2]              WHERE ([Extent2].[FriendUserId] = @p__linq__1) AND (@p__linq__1 IS NOT NULL)) AS [UnionAll1]      )  AS [Distinct1]|
+2015-10-13 13:59:09.0857|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:59:09.0857|Debug|ShiJu.Service.Heart|-- p__linq__0: '0c60615a-eacb-40b7-a0dd-4a246e340472' (Type = Guid)  |
+2015-10-13 13:59:09.0857|Debug|ShiJu.Service.Heart|-- p__linq__1: '0c60615a-eacb-40b7-a0dd-4a246e340472' (Type = Guid)  |
+2015-10-13 13:59:09.0857|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:59:09 +08:00  |
+2015-10-13 13:59:09.1637|Debug|ShiJu.Service.Heart|-- Completed in 75 ms with result: SqlDataReader  |
+2015-10-13 13:59:09.1637|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:59:23.8046|Debug|ShiJu.Service.Heart|SELECT       [Project1].[Id] AS [Id],       [Project1].[CreatorUserId] AS [CreatorUserId],       [Project1].[Sponsor] AS [Sponsor],       [Project1].[BeginTime] AS [BeginTime],       [Project1].[EndTime] AS [EndTime],       [Project1].[Title] AS [Title],       [Project1].[Description] AS [Description],       [Project1].[Address] AS [Address],       [Project1].[Images] AS [Images],       [Project1].[Kind] AS [Kind],       [Project1].[MaxUserCount] AS [MaxUserCount],       [Project1].[DirectFriendVisible] AS [DirectFriendVisible],       [Project1].[IsPublic] AS [IsPublic],       [Project1].[LikeCount] AS [LikeCount],       [Project1].[CommentCount] AS [CommentCount],       [Project1].[VoteTitle] AS [VoteTitle],       [Project1].[VoteChoicesJson] AS [VoteChoicesJson],       [Project1].[VoteResult0Count] AS [VoteResult0Count],       [Project1].[VoteResult1Count] AS [VoteResult1Count],       [Project1].[VoteResult2Count] AS [VoteResult2Count],       [Project1].[VoteResult3Count] AS [VoteResult3Count],       [Project1].[VoteResult4Count] AS [VoteResult4Count],       [Project1].[IsDisabled] AS [IsDisabled],       [Project1].[CreatedTime] AS [CreatedTime]      FROM ( SELECT           [Extent1].[Id] AS [Id],           [Extent1].[CreatorUserId] AS [CreatorUserId],           [Extent1].[Sponsor] AS [Sponsor],           [Extent1].[BeginTime] AS [BeginTime],           [Extent1].[EndTime] AS [EndTime],           [Extent1].[Title] AS [Title],           [Extent1].[Description] AS [Description],           [Extent1].[Address] AS [Address],           [Extent1].[Images] AS [Images],           [Extent1].[Kind] AS [Kind],           [Extent1].[MaxUserCount] AS [MaxUserCount],           [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],           [Extent1].[IsPublic] AS [IsPublic],           [Extent1].[LikeCount] AS [LikeCount],           [Extent1].[CommentCount] AS [CommentCount],           [Extent1].[VoteTitle] AS [VoteTitle],           [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],           [Extent1].[VoteResult0Count] AS [VoteResult0Count],           [Extent1].[VoteResult1Count] AS [VoteResult1Count],           [Extent1].[VoteResult2Count] AS [VoteResult2Count],           [Extent1].[VoteResult3Count] AS [VoteResult3Count],           [Extent1].[VoteResult4Count] AS [VoteResult4Count],           [Extent1].[IsDisabled] AS [IsDisabled],           [Extent1].[CreatedTime] AS [CreatedTime]          FROM [dbo].[Parties] AS [Extent1]          WHERE ([Extent1].[CreatorUserId] IN (cast('00000000-0000-0000-0000-000000000000' as uniqueidentifier))) AND (1 = [Extent1].[DirectFriendVisible]) AND ([Extent1].[BeginTime] > @p__linq__0) AND ([Extent1].[IsDisabled] <> cast(1 as bit))      )  AS [Project1]      ORDER BY [Project1].[CreatedTime] ASC|
+2015-10-13 13:59:23.8046|Debug|ShiJu.Service.Heart|  |
+2015-10-13 13:59:23.8046|Debug|ShiJu.Service.Heart|-- p__linq__0: '2015/9/20 0:00:00' (Type = DateTime2)  |
+2015-10-13 13:59:23.8046|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 13:59:23 +08:00  |
+2015-10-13 13:59:23.8866|Debug|ShiJu.Service.Heart|-- Completed in 80 ms with result: SqlDataReader  |
+2015-10-13 13:59:23.8866|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.1239|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[PartyId] AS [PartyId]      FROM [dbo].[Participants] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:00:48.1289|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.1289|Debug|ShiJu.Service.Heart|-- p__linq__0: '0c60615a-eacb-40b7-a0dd-4a246e340472' (Type = Guid)  |
+2015-10-13 14:00:48.1289|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:00:48 +08:00  |
+2015-10-13 14:00:48.4079|Debug|ShiJu.Service.Heart|-- Completed in 269 ms with result: SqlDataReader  |
+2015-10-13 14:00:48.4079|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.6189|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsPublic] AS [IsPublic],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE [Extent1].[Id] IN (cast('53667226-fa18-4b77-bf5d-013c90ab4bde' as uniqueidentifier))|
+2015-10-13 14:00:48.6189|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.6189|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:00:48 +08:00  |
+2015-10-13 14:00:48.7149|Debug|ShiJu.Service.Heart|-- Completed in 92 ms with result: SqlDataReader  |
+2015-10-13 14:00:48.7149|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.7149|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:00:48.7149|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.7199|Debug|ShiJu.Service.Heart|-- p__linq__0: '53667226-fa18-4b77-bf5d-013c90ab4bde' (Type = Guid)  |
+2015-10-13 14:00:48.7199|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:00:48 +08:00  |
+2015-10-13 14:00:48.8299|Debug|ShiJu.Service.Heart|-- Completed in 108 ms with result: SqlDataReader  |
+2015-10-13 14:00:48.8299|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.8299|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:00:48.8299|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:48.8299|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:00:48.8299|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:00:48 +08:00  |
+2015-10-13 14:00:48.9029|Debug|ShiJu.Service.Heart|-- Completed in 67 ms with result: SqlDataReader  |
+2015-10-13 14:00:48.9029|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:57.6268|Debug|ShiJu.Service.Heart|SELECT       [Distinct1].[C1] AS [C1]      FROM ( SELECT DISTINCT           [UnionAll1].[FriendUserId] AS [C1]          FROM  (SELECT               [Extent1].[FriendUserId] AS [FriendUserId]              FROM [dbo].[Friends] AS [Extent1]              WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)          UNION ALL              SELECT               [Extent2].[UserId] AS [UserId]              FROM [dbo].[Friends] AS [Extent2]              WHERE ([Extent2].[FriendUserId] = @p__linq__1) AND (@p__linq__1 IS NOT NULL)) AS [UnionAll1]      )  AS [Distinct1]|
+2015-10-13 14:00:57.6268|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:00:57.6268|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ba2946b6-5462-434c-9bd0-400af9b8bbc6' (Type = Guid)  |
+2015-10-13 14:00:57.6268|Debug|ShiJu.Service.Heart|-- p__linq__1: 'ba2946b6-5462-434c-9bd0-400af9b8bbc6' (Type = Guid)  |
+2015-10-13 14:00:57.6268|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:00:57 +08:00  |
+2015-10-13 14:00:57.9728|Debug|ShiJu.Service.Heart|-- Completed in 342 ms with result: SqlDataReader  |
+2015-10-13 14:00:57.9728|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:01:25.8285|Debug|ShiJu.Service.Heart|SELECT       [Project1].[Id] AS [Id],       [Project1].[CreatorUserId] AS [CreatorUserId],       [Project1].[Sponsor] AS [Sponsor],       [Project1].[BeginTime] AS [BeginTime],       [Project1].[EndTime] AS [EndTime],       [Project1].[Title] AS [Title],       [Project1].[Description] AS [Description],       [Project1].[Address] AS [Address],       [Project1].[Images] AS [Images],       [Project1].[Kind] AS [Kind],       [Project1].[MaxUserCount] AS [MaxUserCount],       [Project1].[DirectFriendVisible] AS [DirectFriendVisible],       [Project1].[IsPublic] AS [IsPublic],       [Project1].[LikeCount] AS [LikeCount],       [Project1].[CommentCount] AS [CommentCount],       [Project1].[VoteTitle] AS [VoteTitle],       [Project1].[VoteChoicesJson] AS [VoteChoicesJson],       [Project1].[VoteResult0Count] AS [VoteResult0Count],       [Project1].[VoteResult1Count] AS [VoteResult1Count],       [Project1].[VoteResult2Count] AS [VoteResult2Count],       [Project1].[VoteResult3Count] AS [VoteResult3Count],       [Project1].[VoteResult4Count] AS [VoteResult4Count],       [Project1].[IsDisabled] AS [IsDisabled],       [Project1].[CreatedTime] AS [CreatedTime]      FROM ( SELECT           [Extent1].[Id] AS [Id],           [Extent1].[CreatorUserId] AS [CreatorUserId],           [Extent1].[Sponsor] AS [Sponsor],           [Extent1].[BeginTime] AS [BeginTime],           [Extent1].[EndTime] AS [EndTime],           [Extent1].[Title] AS [Title],           [Extent1].[Description] AS [Description],           [Extent1].[Address] AS [Address],           [Extent1].[Images] AS [Images],           [Extent1].[Kind] AS [Kind],           [Extent1].[MaxUserCount] AS [MaxUserCount],           [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],           [Extent1].[IsPublic] AS [IsPublic],           [Extent1].[LikeCount] AS [LikeCount],           [Extent1].[CommentCount] AS [CommentCount],           [Extent1].[VoteTitle] AS [VoteTitle],           [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],           [Extent1].[VoteResult0Count] AS [VoteResult0Count],           [Extent1].[VoteResult1Count] AS [VoteResult1Count],           [Extent1].[VoteResult2Count] AS [VoteResult2Count],           [Extent1].[VoteResult3Count] AS [VoteResult3Count],           [Extent1].[VoteResult4Count] AS [VoteResult4Count],           [Extent1].[IsDisabled] AS [IsDisabled],           [Extent1].[CreatedTime] AS [CreatedTime]          FROM [dbo].[Parties] AS [Extent1]          WHERE ([Extent1].[CreatorUserId] IN (cast('59ff2878-a300-40f9-add3-afb2d3ad2b65' as uniqueidentifier), cast('b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' as uniqueidentifier), cast('00000000-0000-0000-0000-000000000000' as uniqueidentifier))) AND (1 = [Extent1].[DirectFriendVisible]) AND ([Extent1].[BeginTime] > @p__linq__0) AND ([Extent1].[IsDisabled] <> cast(1 as bit))      )  AS [Project1]      ORDER BY [Project1].[CreatedTime] ASC|
+2015-10-13 14:01:25.8285|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:01:25.8285|Debug|ShiJu.Service.Heart|-- p__linq__0: '2015/9/20 0:00:00' (Type = DateTime2)  |
+2015-10-13 14:01:25.8285|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:01:25 +08:00  |
+2015-10-13 14:01:26.4065|Debug|ShiJu.Service.Heart|-- Completed in 576 ms with result: SqlDataReader  |
+2015-10-13 14:01:26.4065|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:01:39.1932|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[PartyId] AS [PartyId]      FROM [dbo].[Participants] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:01:39.1932|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:01:39.1932|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ba2946b6-5462-434c-9bd0-400af9b8bbc6' (Type = Guid)  |
+2015-10-13 14:01:39.1932|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:01:39 +08:00  |
+2015-10-13 14:01:39.2632|Debug|ShiJu.Service.Heart|-- Completed in 69 ms with result: SqlDataReader  |
+2015-10-13 14:01:39.2632|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:01:48.7961|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsPublic] AS [IsPublic],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE [Extent1].[Id] IN (cast('174a3dd4-fc75-48ad-8c77-0e1725a99300' as uniqueidentifier), cast('bc20d8d9-0de1-4bdc-8fe8-8d75115e0580' as uniqueidentifier), cast('ad7fa38f-7287-4016-ab6c-927c7e7b2671' as uniqueidentifier), cast('282e2a6d-657c-4537-9aa2-9731736dd213' as uniqueidentifier), cast('fd0ab483-934c-4127-96ec-98c8122122e4' as uniqueidentifier), cast('36416157-2dff-4463-8324-c0784cafd4f6' as uniqueidentifier), cast('41e5a2de-2298-48ef-8972-ec3232fc8534' as uniqueidentifier))|
+2015-10-13 14:01:48.7961|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:01:48.8001|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:01:48 +08:00  |
+2015-10-13 14:01:48.8891|Debug|ShiJu.Service.Heart|-- Completed in 70 ms with result: SqlDataReader  |
+2015-10-13 14:01:48.8901|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.1996|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.1996|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.1996|Debug|ShiJu.Service.Heart|-- p__linq__0: '53667226-fa18-4b77-bf5d-013c90ab4bde' (Type = Guid)  |
+2015-10-13 14:02:34.1996|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.4696|Debug|ShiJu.Service.Heart|-- Completed in 267 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.4696|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.4696|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.4696|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.4696|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a941a01f-5272-4603-ae18-8fc7d9d9aa8e' (Type = Guid)  |
+2015-10-13 14:02:34.4696|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.5956|Debug|ShiJu.Service.Heart|-- Completed in 118 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.5956|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.5956|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.5956|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.5956|Debug|ShiJu.Service.Heart|-- p__linq__0: '5d479728-7555-4526-bfbb-9747b1afdccc' (Type = Guid)  |
+2015-10-13 14:02:34.5956|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.6506|Debug|ShiJu.Service.Heart|-- Completed in 46 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.6506|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.6626|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.6626|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.6626|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a1bd3150-60c9-482d-8705-f469fe920ac3' (Type = Guid)  |
+2015-10-13 14:02:34.6626|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.7086|Debug|ShiJu.Service.Heart|-- Completed in 44 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.7086|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.7086|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.7086|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.7086|Debug|ShiJu.Service.Heart|-- p__linq__0: '1b720207-419c-4bac-a874-3c208d5fbe2c' (Type = Guid)  |
+2015-10-13 14:02:34.7086|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.8076|Debug|ShiJu.Service.Heart|-- Completed in 92 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.8076|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.8126|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.8126|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.8126|Debug|ShiJu.Service.Heart|-- p__linq__0: '729a2fc8-a045-4a3d-b9e2-8be9ca4ac831' (Type = Guid)  |
+2015-10-13 14:02:34.8126|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.8456|Debug|ShiJu.Service.Heart|-- Completed in 31 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.8456|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.8456|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.8456|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.8456|Debug|ShiJu.Service.Heart|-- p__linq__0: 'bdd2cdc7-42a9-4ead-bc93-cbc05e188de3' (Type = Guid)  |
+2015-10-13 14:02:34.8456|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.8876|Debug|ShiJu.Service.Heart|-- Completed in 38 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.8876|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.8906|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.8906|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.8906|Debug|ShiJu.Service.Heart|-- p__linq__0: 'd6885750-6f18-4581-9fd5-ad4799656f4c' (Type = Guid)  |
+2015-10-13 14:02:34.8906|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.9316|Debug|ShiJu.Service.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.9316|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.9316|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.9316|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.9316|Debug|ShiJu.Service.Heart|-- p__linq__0: '5c56058a-fc95-4e2d-8c5a-0722f23ae5f1' (Type = Guid)  |
+2015-10-13 14:02:34.9316|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:34.9826|Debug|ShiJu.Service.Heart|-- Completed in 48 ms with result: SqlDataReader  |
+2015-10-13 14:02:34.9836|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.9836|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:34.9836|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:34.9836|Debug|ShiJu.Service.Heart|-- p__linq__0: '4d06d241-a763-4449-8150-ffb8f2b44d8a' (Type = Guid)  |
+2015-10-13 14:02:34.9836|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:34 +08:00  |
+2015-10-13 14:02:35.0246|Debug|ShiJu.Service.Heart|-- Completed in 37 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.0246|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.0246|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.0246|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.0246|Debug|ShiJu.Service.Heart|-- p__linq__0: '8ece24c3-926b-49ba-905f-cd5e74749b0a' (Type = Guid)  |
+2015-10-13 14:02:35.0246|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.0636|Debug|ShiJu.Service.Heart|-- Completed in 34 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.0636|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.0636|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.0636|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.0636|Debug|ShiJu.Service.Heart|-- p__linq__0: '42c42152-fea2-46b7-a39b-f2275266621c' (Type = Guid)  |
+2015-10-13 14:02:35.0636|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.2426|Debug|ShiJu.Service.Heart|-- Completed in 176 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.2426|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.2426|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.2426|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.2426|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a47fdd7c-23e2-4c93-ae5a-46833a836730' (Type = Guid)  |
+2015-10-13 14:02:35.2426|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.2926|Debug|ShiJu.Service.Heart|-- Completed in 46 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.2926|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.2926|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.2926|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.2926|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a9a334d0-36cd-4efc-9edf-7ee605113845' (Type = Guid)  |
+2015-10-13 14:02:35.2926|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.3426|Debug|ShiJu.Service.Heart|-- Completed in 46 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.3426|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.3436|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.3436|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.3436|Debug|ShiJu.Service.Heart|-- p__linq__0: 'e17b8f97-408c-49dd-9b64-6c3e8e5b061b' (Type = Guid)  |
+2015-10-13 14:02:35.3436|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.3806|Debug|ShiJu.Service.Heart|-- Completed in 35 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.3806|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.3806|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.3806|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.3806|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a5b1be04-3d16-4029-839c-7c4800a9961a' (Type = Guid)  |
+2015-10-13 14:02:35.3806|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.4126|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.4126|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.4126|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.4126|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.4126|Debug|ShiJu.Service.Heart|-- p__linq__0: 'be7ad054-98c7-4e14-9d6a-f11836573e26' (Type = Guid)  |
+2015-10-13 14:02:35.4126|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.4486|Debug|ShiJu.Service.Heart|-- Completed in 33 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.4486|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.4486|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.4486|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.4486|Debug|ShiJu.Service.Heart|-- p__linq__0: '806a04ac-7137-4014-9172-047db676ec73' (Type = Guid)  |
+2015-10-13 14:02:35.4486|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.4916|Debug|ShiJu.Service.Heart|-- Completed in 40 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.4916|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.4916|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.4916|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.4916|Debug|ShiJu.Service.Heart|-- p__linq__0: '88a88dbd-f0d0-4f84-97b7-d442daa0bffb' (Type = Guid)  |
+2015-10-13 14:02:35.4916|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.5246|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.5246|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.5246|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.5246|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.5246|Debug|ShiJu.Service.Heart|-- p__linq__0: '98f03e33-1a2c-48b1-bebd-340c6f275ae8' (Type = Guid)  |
+2015-10-13 14:02:35.5246|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.5576|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.5576|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.5576|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.5576|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.5616|Debug|ShiJu.Service.Heart|-- p__linq__0: '2b54dd02-fcbe-4b7d-ac32-757dd9fd80d5' (Type = Guid)  |
+2015-10-13 14:02:35.5616|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.6336|Debug|ShiJu.Service.Heart|-- Completed in 72 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.6336|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.6336|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.6336|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.6336|Debug|ShiJu.Service.Heart|-- p__linq__0: 'fa3ca4a3-6990-4a21-8421-0174b273e0c2' (Type = Guid)  |
+2015-10-13 14:02:35.6336|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.6766|Debug|ShiJu.Service.Heart|-- Completed in 38 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.6766|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.6766|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.6766|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.6766|Debug|ShiJu.Service.Heart|-- p__linq__0: '2f27836a-2b66-4a21-be70-db770c15c6c6' (Type = Guid)  |
+2015-10-13 14:02:35.6766|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.7056|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.7056|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7056|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.7056|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7056|Debug|ShiJu.Service.Heart|-- p__linq__0: '0e579b86-0694-479c-8ba0-4fa5e937dd43' (Type = Guid)  |
+2015-10-13 14:02:35.7056|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.7316|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.7316|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7336|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.7336|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7336|Debug|ShiJu.Service.Heart|-- p__linq__0: '8eff8201-5dcb-4b1f-af1d-c75934d359b9' (Type = Guid)  |
+2015-10-13 14:02:35.7336|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.7586|Debug|ShiJu.Service.Heart|-- Completed in 25 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.7586|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7586|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.7586|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7586|Debug|ShiJu.Service.Heart|-- p__linq__0: '282e2a6d-657c-4537-9aa2-9731736dd213' (Type = Guid)  |
+2015-10-13 14:02:35.7586|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.7866|Debug|ShiJu.Service.Heart|-- Completed in 25 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.7866|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7866|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.7866|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.7866|Debug|ShiJu.Service.Heart|-- p__linq__0: '372504e0-4eee-48de-8e9a-b030b4f1d190' (Type = Guid)  |
+2015-10-13 14:02:35.7866|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.8206|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.8206|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8206|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.8206|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8206|Debug|ShiJu.Service.Heart|-- p__linq__0: '1a95fd26-047e-43ec-bf74-44fb5c88a755' (Type = Guid)  |
+2015-10-13 14:02:35.8206|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.8436|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.8436|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8436|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.8436|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8436|Debug|ShiJu.Service.Heart|-- p__linq__0: '41e5a2de-2298-48ef-8972-ec3232fc8534' (Type = Guid)  |
+2015-10-13 14:02:35.8436|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.8666|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.8666|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8666|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.8666|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8666|Debug|ShiJu.Service.Heart|-- p__linq__0: 'bc20d8d9-0de1-4bdc-8fe8-8d75115e0580' (Type = Guid)  |
+2015-10-13 14:02:35.8666|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.8906|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.8906|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8906|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.8906|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.8906|Debug|ShiJu.Service.Heart|-- p__linq__0: 'e98235e5-e6d1-4064-af5d-c648c6caa90c' (Type = Guid)  |
+2015-10-13 14:02:35.8906|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.9156|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.9156|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.9156|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.9156|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.9156|Debug|ShiJu.Service.Heart|-- p__linq__0: '6179263a-d297-4ccb-9fec-1c2b00ea7114' (Type = Guid)  |
+2015-10-13 14:02:35.9156|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.9566|Debug|ShiJu.Service.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.9566|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.9566|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.9566|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.9566|Debug|ShiJu.Service.Heart|-- p__linq__0: '65b6039a-6f74-44b0-80dd-2841b9e9123d' (Type = Guid)  |
+2015-10-13 14:02:35.9566|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:35.9786|Debug|ShiJu.Service.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-10-13 14:02:35.9786|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.9786|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:35.9786|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:35.9786|Debug|ShiJu.Service.Heart|-- p__linq__0: '3f8eb1d9-f596-4133-870c-a1d23735a103' (Type = Guid)  |
+2015-10-13 14:02:35.9786|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:35 +08:00  |
+2015-10-13 14:02:36.0026|Debug|ShiJu.Service.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.0026|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0026|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.0026|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0026|Debug|ShiJu.Service.Heart|-- p__linq__0: '301486f7-cd6f-4601-9b2c-b7bc7bfe15b1' (Type = Guid)  |
+2015-10-13 14:02:36.0026|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.0276|Debug|ShiJu.Service.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.0276|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0316|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.0316|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0316|Debug|ShiJu.Service.Heart|-- p__linq__0: '544ad9cf-67be-4447-8d1a-2ee410dd9537' (Type = Guid)  |
+2015-10-13 14:02:36.0316|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.0516|Debug|ShiJu.Service.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.0516|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0516|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.0516|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0516|Debug|ShiJu.Service.Heart|-- p__linq__0: '84e8a08c-70a1-466f-aed2-e082a7025ba8' (Type = Guid)  |
+2015-10-13 14:02:36.0516|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.0816|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.0816|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0816|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.0816|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.0816|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ad7fa38f-7287-4016-ab6c-927c7e7b2671' (Type = Guid)  |
+2015-10-13 14:02:36.0816|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.1056|Debug|ShiJu.Service.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.1056|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1056|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.1056|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1056|Debug|ShiJu.Service.Heart|-- p__linq__0: 'fd0ab483-934c-4127-96ec-98c8122122e4' (Type = Guid)  |
+2015-10-13 14:02:36.1056|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.1276|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.1276|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1276|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.1276|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1276|Debug|ShiJu.Service.Heart|-- p__linq__0: '36416157-2dff-4463-8324-c0784cafd4f6' (Type = Guid)  |
+2015-10-13 14:02:36.1276|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.1516|Debug|ShiJu.Service.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.1516|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1516|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.1516|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1516|Debug|ShiJu.Service.Heart|-- p__linq__0: '174a3dd4-fc75-48ad-8c77-0e1725a99300' (Type = Guid)  |
+2015-10-13 14:02:36.1516|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.1726|Debug|ShiJu.Service.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.1726|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1726|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.1726|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1726|Debug|ShiJu.Service.Heart|-- p__linq__0: '174a3dd4-fc75-48ad-8c77-0e1725a99300' (Type = Guid)  |
+2015-10-13 14:02:36.1726|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.1986|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.1986|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1986|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.1986|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.1986|Debug|ShiJu.Service.Heart|-- p__linq__0: 'bc20d8d9-0de1-4bdc-8fe8-8d75115e0580' (Type = Guid)  |
+2015-10-13 14:02:36.2026|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.2366|Debug|ShiJu.Service.Heart|-- Completed in 34 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.2366|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.2366|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.2366|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.2366|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ad7fa38f-7287-4016-ab6c-927c7e7b2671' (Type = Guid)  |
+2015-10-13 14:02:36.2366|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.2586|Debug|ShiJu.Service.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.2586|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.2586|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.2586|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.2586|Debug|ShiJu.Service.Heart|-- p__linq__0: '282e2a6d-657c-4537-9aa2-9731736dd213' (Type = Guid)  |
+2015-10-13 14:02:36.2586|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.2786|Debug|ShiJu.Service.Heart|-- Completed in 18 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.2786|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.2816|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.2816|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.2816|Debug|ShiJu.Service.Heart|-- p__linq__0: 'fd0ab483-934c-4127-96ec-98c8122122e4' (Type = Guid)  |
+2015-10-13 14:02:36.2816|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.3116|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.3116|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.3116|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.3116|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.3116|Debug|ShiJu.Service.Heart|-- p__linq__0: '36416157-2dff-4463-8324-c0784cafd4f6' (Type = Guid)  |
+2015-10-13 14:02:36.3116|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.3526|Debug|ShiJu.Service.Heart|-- Completed in 36 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.3526|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.3526|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:02:36.3526|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:02:36.3526|Debug|ShiJu.Service.Heart|-- p__linq__0: '41e5a2de-2298-48ef-8972-ec3232fc8534' (Type = Guid)  |
+2015-10-13 14:02:36.3526|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:02:36 +08:00  |
+2015-10-13 14:02:36.3816|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-10-13 14:02:36.3816|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.2115|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.2115|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.2115|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.2115|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.3345|Debug|ShiJu.Service.Heart|-- Completed in 120 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.3345|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.3345|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.3345|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.3345|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.3345|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.4195|Debug|ShiJu.Service.Heart|-- Completed in 79 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.4195|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.4195|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.4195|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.4195|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.4195|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.6735|Debug|ShiJu.Service.Heart|-- Completed in 240 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.6735|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.6735|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.6735|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.6735|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.6735|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.7405|Debug|ShiJu.Service.Heart|-- Completed in 62 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.7405|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.7405|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.7405|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.7405|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.7405|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.7905|Debug|ShiJu.Service.Heart|-- Completed in 46 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.7905|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.7905|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.7905|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.7935|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.7935|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.8365|Debug|ShiJu.Service.Heart|-- Completed in 42 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.8365|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.8365|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.8365|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.8365|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.8365|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.8845|Debug|ShiJu.Service.Heart|-- Completed in 44 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.8845|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.8865|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.8865|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.8865|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.8865|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:18.9375|Debug|ShiJu.Service.Heart|-- Completed in 48 ms with result: SqlDataReader  |
+2015-10-13 14:04:18.9375|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.9375|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:18.9375|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:18.9375|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:18.9375|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:18 +08:00  |
+2015-10-13 14:04:19.0199|Debug|ShiJu.Service.Heart|-- Completed in 79 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.0199|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.0199|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.0199|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.0199|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.0199|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.0605|Debug|ShiJu.Service.Heart|-- Completed in 37 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.0605|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.0605|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.0605|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.0605|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.0605|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.1115|Debug|ShiJu.Service.Heart|-- Completed in 43 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.1115|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.1115|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.1115|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.1115|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.1115|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.1535|Debug|ShiJu.Service.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.1535|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.1535|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.1535|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.1535|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.1535|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.2025|Debug|ShiJu.Service.Heart|-- Completed in 45 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.2025|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.2025|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.2025|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.2025|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.2025|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.2705|Debug|ShiJu.Service.Heart|-- Completed in 63 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.2705|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.2705|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.2705|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.2705|Debug|ShiJu.Service.Heart|-- p__linq__0: 'b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' (Type = Guid)  |
+2015-10-13 14:04:19.2705|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.3125|Debug|ShiJu.Service.Heart|-- Completed in 37 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.3125|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.3125|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.3125|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.3125|Debug|ShiJu.Service.Heart|-- p__linq__0: 'b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' (Type = Guid)  |
+2015-10-13 14:04:19.3125|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.5015|Debug|ShiJu.Service.Heart|-- Completed in 186 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.5015|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.5015|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.5015|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.5015|Debug|ShiJu.Service.Heart|-- p__linq__0: 'b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' (Type = Guid)  |
+2015-10-13 14:04:19.5015|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.5425|Debug|ShiJu.Service.Heart|-- Completed in 38 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.5435|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.5435|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.5435|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.5435|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.5435|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.7015|Debug|ShiJu.Service.Heart|-- Completed in 155 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.7015|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.7015|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.7015|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.7015|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.7015|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.7335|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.7335|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.7335|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.7335|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.7335|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.7335|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.7915|Debug|ShiJu.Service.Heart|-- Completed in 56 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.7915|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.7945|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.7945|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.7945|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.7945|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.8275|Debug|ShiJu.Service.Heart|-- Completed in 32 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.8275|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.8275|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.8275|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.8275|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.8275|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.8655|Debug|ShiJu.Service.Heart|-- Completed in 33 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.8655|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.8655|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:04:19.8655|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:04:19.8655|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:04:19.8655|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:04:19 +08:00  |
+2015-10-13 14:04:19.8975|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:04:19.8975|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:34.9749|Debug|ShiJu.Service.Heart|SELECT       [Distinct1].[C1] AS [C1]      FROM ( SELECT DISTINCT           [UnionAll1].[FriendUserId] AS [C1]          FROM  (SELECT               [Extent1].[FriendUserId] AS [FriendUserId]              FROM [dbo].[Friends] AS [Extent1]              WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)          UNION ALL              SELECT               [Extent2].[UserId] AS [UserId]              FROM [dbo].[Friends] AS [Extent2]              WHERE ([Extent2].[FriendUserId] = @p__linq__1) AND (@p__linq__1 IS NOT NULL)) AS [UnionAll1]      )  AS [Distinct1]|
+2015-10-13 14:05:34.9859|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:34.9859|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ba2946b6-5462-434c-9bd0-400af9b8bbc6' (Type = Guid)  |
+2015-10-13 14:05:35.0190|Debug|ShiJu.Service.Heart|-- p__linq__1: 'ba2946b6-5462-434c-9bd0-400af9b8bbc6' (Type = Guid)  |
+2015-10-13 14:05:35.0190|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.2839|Debug|ShiJu.Service.Heart|-- Completed in 260 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.2839|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.3049|Debug|ShiJu.Service.Heart|SELECT       [Project1].[Id] AS [Id],       [Project1].[CreatorUserId] AS [CreatorUserId],       [Project1].[Sponsor] AS [Sponsor],       [Project1].[BeginTime] AS [BeginTime],       [Project1].[EndTime] AS [EndTime],       [Project1].[Title] AS [Title],       [Project1].[Description] AS [Description],       [Project1].[Address] AS [Address],       [Project1].[Images] AS [Images],       [Project1].[Kind] AS [Kind],       [Project1].[MaxUserCount] AS [MaxUserCount],       [Project1].[DirectFriendVisible] AS [DirectFriendVisible],       [Project1].[IsPublic] AS [IsPublic],       [Project1].[LikeCount] AS [LikeCount],       [Project1].[CommentCount] AS [CommentCount],       [Project1].[VoteTitle] AS [VoteTitle],       [Project1].[VoteChoicesJson] AS [VoteChoicesJson],       [Project1].[VoteResult0Count] AS [VoteResult0Count],       [Project1].[VoteResult1Count] AS [VoteResult1Count],       [Project1].[VoteResult2Count] AS [VoteResult2Count],       [Project1].[VoteResult3Count] AS [VoteResult3Count],       [Project1].[VoteResult4Count] AS [VoteResult4Count],       [Project1].[IsDisabled] AS [IsDisabled],       [Project1].[CreatedTime] AS [CreatedTime]      FROM ( SELECT           [Extent1].[Id] AS [Id],           [Extent1].[CreatorUserId] AS [CreatorUserId],           [Extent1].[Sponsor] AS [Sponsor],           [Extent1].[BeginTime] AS [BeginTime],           [Extent1].[EndTime] AS [EndTime],           [Extent1].[Title] AS [Title],           [Extent1].[Description] AS [Description],           [Extent1].[Address] AS [Address],           [Extent1].[Images] AS [Images],           [Extent1].[Kind] AS [Kind],           [Extent1].[MaxUserCount] AS [MaxUserCount],           [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],           [Extent1].[IsPublic] AS [IsPublic],           [Extent1].[LikeCount] AS [LikeCount],           [Extent1].[CommentCount] AS [CommentCount],           [Extent1].[VoteTitle] AS [VoteTitle],           [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],           [Extent1].[VoteResult0Count] AS [VoteResult0Count],           [Extent1].[VoteResult1Count] AS [VoteResult1Count],           [Extent1].[VoteResult2Count] AS [VoteResult2Count],           [Extent1].[VoteResult3Count] AS [VoteResult3Count],           [Extent1].[VoteResult4Count] AS [VoteResult4Count],           [Extent1].[IsDisabled] AS [IsDisabled],           [Extent1].[CreatedTime] AS [CreatedTime]          FROM [dbo].[Parties] AS [Extent1]          WHERE ([Extent1].[CreatorUserId] IN (cast('59ff2878-a300-40f9-add3-afb2d3ad2b65' as uniqueidentifier), cast('b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' as uniqueidentifier), cast('00000000-0000-0000-0000-000000000000' as uniqueidentifier))) AND (1 = [Extent1].[DirectFriendVisible]) AND ([Extent1].[BeginTime] > @p__linq__0) AND ([Extent1].[IsDisabled] <> cast(1 as bit))      )  AS [Project1]      ORDER BY [Project1].[CreatedTime] ASC|
+2015-10-13 14:05:35.3049|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.3049|Debug|ShiJu.Service.Heart|-- p__linq__0: '2015/9/20 0:00:00' (Type = DateTime2)  |
+2015-10-13 14:05:35.3049|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.3939|Debug|ShiJu.Service.Heart|-- Completed in 87 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.3939|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.4050|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[PartyId] AS [PartyId]      FROM [dbo].[Participants] AS [Extent1]      WHERE ([Extent1].[UserId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:35.4050|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.4050|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ba2946b6-5462-434c-9bd0-400af9b8bbc6' (Type = Guid)  |
+2015-10-13 14:05:35.4050|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.4670|Debug|ShiJu.Service.Heart|-- Completed in 60 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.4670|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.4670|Debug|ShiJu.Service.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsPublic] AS [IsPublic],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE [Extent1].[Id] IN (cast('174a3dd4-fc75-48ad-8c77-0e1725a99300' as uniqueidentifier), cast('bc20d8d9-0de1-4bdc-8fe8-8d75115e0580' as uniqueidentifier), cast('ad7fa38f-7287-4016-ab6c-927c7e7b2671' as uniqueidentifier), cast('282e2a6d-657c-4537-9aa2-9731736dd213' as uniqueidentifier), cast('fd0ab483-934c-4127-96ec-98c8122122e4' as uniqueidentifier), cast('36416157-2dff-4463-8324-c0784cafd4f6' as uniqueidentifier), cast('41e5a2de-2298-48ef-8972-ec3232fc8534' as uniqueidentifier))|
+2015-10-13 14:05:35.4670|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.4670|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.5332|Debug|ShiJu.Service.Heart|-- Completed in 53 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.5332|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.5332|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.5332|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.5332|Debug|ShiJu.Service.Heart|-- p__linq__0: '53667226-fa18-4b77-bf5d-013c90ab4bde' (Type = Guid)  |
+2015-10-13 14:05:35.5332|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.5839|Debug|ShiJu.Service.Heart|-- Completed in 47 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.5839|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.5839|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.5839|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.5839|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a941a01f-5272-4603-ae18-8fc7d9d9aa8e' (Type = Guid)  |
+2015-10-13 14:05:35.5839|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.6339|Debug|ShiJu.Service.Heart|-- Completed in 46 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.6339|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.6369|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.6369|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.6369|Debug|ShiJu.Service.Heart|-- p__linq__0: '5d479728-7555-4526-bfbb-9747b1afdccc' (Type = Guid)  |
+2015-10-13 14:05:35.6369|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.6999|Debug|ShiJu.Service.Heart|-- Completed in 62 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.6999|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.6999|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.6999|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.6999|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a1bd3150-60c9-482d-8705-f469fe920ac3' (Type = Guid)  |
+2015-10-13 14:05:35.6999|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.7579|Debug|ShiJu.Service.Heart|-- Completed in 52 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.7579|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.7579|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.7609|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.7609|Debug|ShiJu.Service.Heart|-- p__linq__0: '1b720207-419c-4bac-a874-3c208d5fbe2c' (Type = Guid)  |
+2015-10-13 14:05:35.7609|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.8049|Debug|ShiJu.Service.Heart|-- Completed in 40 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.8049|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.8049|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.8049|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.8079|Debug|ShiJu.Service.Heart|-- p__linq__0: '729a2fc8-a045-4a3d-b9e2-8be9ca4ac831' (Type = Guid)  |
+2015-10-13 14:05:35.8079|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.8479|Debug|ShiJu.Service.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.8479|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.8479|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.8479|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.8479|Debug|ShiJu.Service.Heart|-- p__linq__0: 'bdd2cdc7-42a9-4ead-bc93-cbc05e188de3' (Type = Guid)  |
+2015-10-13 14:05:35.8479|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:35.9569|Debug|ShiJu.Service.Heart|-- Completed in 104 ms with result: SqlDataReader  |
+2015-10-13 14:05:35.9569|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.9569|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:35.9569|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:35.9569|Debug|ShiJu.Service.Heart|-- p__linq__0: 'd6885750-6f18-4581-9fd5-ad4799656f4c' (Type = Guid)  |
+2015-10-13 14:05:35.9569|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:35 +08:00  |
+2015-10-13 14:05:36.1749|Debug|ShiJu.Service.Heart|-- Completed in 212 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.1749|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.1749|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.1749|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.1749|Debug|ShiJu.Service.Heart|-- p__linq__0: '5c56058a-fc95-4e2d-8c5a-0722f23ae5f1' (Type = Guid)  |
+2015-10-13 14:05:36.1749|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.2219|Debug|ShiJu.Service.Heart|-- Completed in 41 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.2219|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.2219|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.2219|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.2219|Debug|ShiJu.Service.Heart|-- p__linq__0: '4d06d241-a763-4449-8150-ffb8f2b44d8a' (Type = Guid)  |
+2015-10-13 14:05:36.2219|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.2539|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.2539|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.2539|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.2539|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.2539|Debug|ShiJu.Service.Heart|-- p__linq__0: '8ece24c3-926b-49ba-905f-cd5e74749b0a' (Type = Guid)  |
+2015-10-13 14:05:36.2539|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.2979|Debug|ShiJu.Service.Heart|-- Completed in 40 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.2979|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.2979|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.2979|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.2979|Debug|ShiJu.Service.Heart|-- p__linq__0: '42c42152-fea2-46b7-a39b-f2275266621c' (Type = Guid)  |
+2015-10-13 14:05:36.2979|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.3339|Debug|ShiJu.Service.Heart|-- Completed in 31 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.3339|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.3339|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.3339|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.3339|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a47fdd7c-23e2-4c93-ae5a-46833a836730' (Type = Guid)  |
+2015-10-13 14:05:36.3339|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.3659|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.3659|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.3659|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.3659|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.3659|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a9a334d0-36cd-4efc-9edf-7ee605113845' (Type = Guid)  |
+2015-10-13 14:05:36.3659|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.3959|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.3959|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.3959|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.3959|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.3959|Debug|ShiJu.Service.Heart|-- p__linq__0: 'e17b8f97-408c-49dd-9b64-6c3e8e5b061b' (Type = Guid)  |
+2015-10-13 14:05:36.3959|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.4379|Debug|ShiJu.Service.Heart|-- Completed in 37 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.4379|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.4379|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.4379|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.4379|Debug|ShiJu.Service.Heart|-- p__linq__0: 'a5b1be04-3d16-4029-839c-7c4800a9961a' (Type = Guid)  |
+2015-10-13 14:05:36.4379|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.4759|Debug|ShiJu.Service.Heart|-- Completed in 34 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.4759|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.4759|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.4799|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.4799|Debug|ShiJu.Service.Heart|-- p__linq__0: 'be7ad054-98c7-4e14-9d6a-f11836573e26' (Type = Guid)  |
+2015-10-13 14:05:36.4799|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.5209|Debug|ShiJu.Service.Heart|-- Completed in 40 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.5209|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.5209|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.5209|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.5209|Debug|ShiJu.Service.Heart|-- p__linq__0: '806a04ac-7137-4014-9172-047db676ec73' (Type = Guid)  |
+2015-10-13 14:05:36.5209|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.5539|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.5539|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.5539|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.5539|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.5539|Debug|ShiJu.Service.Heart|-- p__linq__0: '88a88dbd-f0d0-4f84-97b7-d442daa0bffb' (Type = Guid)  |
+2015-10-13 14:05:36.5539|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.5859|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.5859|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.5859|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.5859|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.5859|Debug|ShiJu.Service.Heart|-- p__linq__0: '98f03e33-1a2c-48b1-bebd-340c6f275ae8' (Type = Guid)  |
+2015-10-13 14:05:36.5859|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.6259|Debug|ShiJu.Service.Heart|-- Completed in 37 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.6259|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.6259|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.6259|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.6259|Debug|ShiJu.Service.Heart|-- p__linq__0: '2b54dd02-fcbe-4b7d-ac32-757dd9fd80d5' (Type = Guid)  |
+2015-10-13 14:05:36.6259|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.6579|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.6579|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.6579|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.6579|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.6579|Debug|ShiJu.Service.Heart|-- p__linq__0: 'fa3ca4a3-6990-4a21-8421-0174b273e0c2' (Type = Guid)  |
+2015-10-13 14:05:36.6579|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.6809|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.6809|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.6829|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.6829|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.6829|Debug|ShiJu.Service.Heart|-- p__linq__0: '2f27836a-2b66-4a21-be70-db770c15c6c6' (Type = Guid)  |
+2015-10-13 14:05:36.6829|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.7079|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.7079|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7079|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.7079|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7079|Debug|ShiJu.Service.Heart|-- p__linq__0: '0e579b86-0694-479c-8ba0-4fa5e937dd43' (Type = Guid)  |
+2015-10-13 14:05:36.7079|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.7339|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.7339|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7339|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.7339|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7339|Debug|ShiJu.Service.Heart|-- p__linq__0: '8eff8201-5dcb-4b1f-af1d-c75934d359b9' (Type = Guid)  |
+2015-10-13 14:05:36.7339|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.7599|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.7599|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7609|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.7609|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7609|Debug|ShiJu.Service.Heart|-- p__linq__0: '282e2a6d-657c-4537-9aa2-9731736dd213' (Type = Guid)  |
+2015-10-13 14:05:36.7609|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.7949|Debug|ShiJu.Service.Heart|-- Completed in 32 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.7949|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7949|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.7949|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.7949|Debug|ShiJu.Service.Heart|-- p__linq__0: '372504e0-4eee-48de-8e9a-b030b4f1d190' (Type = Guid)  |
+2015-10-13 14:05:36.7949|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.8179|Debug|ShiJu.Service.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.8179|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.8179|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.8179|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.8179|Debug|ShiJu.Service.Heart|-- p__linq__0: '1a95fd26-047e-43ec-bf74-44fb5c88a755' (Type = Guid)  |
+2015-10-13 14:05:36.8179|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.8489|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.8489|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.8489|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.8489|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.8489|Debug|ShiJu.Service.Heart|-- p__linq__0: '41e5a2de-2298-48ef-8972-ec3232fc8534' (Type = Guid)  |
+2015-10-13 14:05:36.8489|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.8799|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.8799|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.8799|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.8799|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.8799|Debug|ShiJu.Service.Heart|-- p__linq__0: 'bc20d8d9-0de1-4bdc-8fe8-8d75115e0580' (Type = Guid)  |
+2015-10-13 14:05:36.8799|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.9069|Debug|ShiJu.Service.Heart|-- Completed in 25 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.9069|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.9069|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.9069|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.9069|Debug|ShiJu.Service.Heart|-- p__linq__0: 'e98235e5-e6d1-4064-af5d-c648c6caa90c' (Type = Guid)  |
+2015-10-13 14:05:36.9069|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.9539|Debug|ShiJu.Service.Heart|-- Completed in 44 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.9539|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.9539|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.9539|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.9539|Debug|ShiJu.Service.Heart|-- p__linq__0: '6179263a-d297-4ccb-9fec-1c2b00ea7114' (Type = Guid)  |
+2015-10-13 14:05:36.9539|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:36.9869|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:05:36.9869|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.9869|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:36.9869|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:36.9869|Debug|ShiJu.Service.Heart|-- p__linq__0: '65b6039a-6f74-44b0-80dd-2841b9e9123d' (Type = Guid)  |
+2015-10-13 14:05:36.9869|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:36 +08:00  |
+2015-10-13 14:05:37.0139|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.0139|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0139|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.0139|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0139|Debug|ShiJu.Service.Heart|-- p__linq__0: '3f8eb1d9-f596-4133-870c-a1d23735a103' (Type = Guid)  |
+2015-10-13 14:05:37.0139|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.0399|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.0399|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0399|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.0399|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0399|Debug|ShiJu.Service.Heart|-- p__linq__0: '301486f7-cd6f-4601-9b2c-b7bc7bfe15b1' (Type = Guid)  |
+2015-10-13 14:05:37.0399|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.0699|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.0699|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0699|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.0699|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0699|Debug|ShiJu.Service.Heart|-- p__linq__0: '544ad9cf-67be-4447-8d1a-2ee410dd9537' (Type = Guid)  |
+2015-10-13 14:05:37.0699|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.0949|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.0949|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0949|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.0949|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.0949|Debug|ShiJu.Service.Heart|-- p__linq__0: '84e8a08c-70a1-466f-aed2-e082a7025ba8' (Type = Guid)  |
+2015-10-13 14:05:37.0949|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.1189|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.1189|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.1189|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.1189|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.1189|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ad7fa38f-7287-4016-ab6c-927c7e7b2671' (Type = Guid)  |
+2015-10-13 14:05:37.1189|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.1429|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.1429|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.1429|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.1429|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.1429|Debug|ShiJu.Service.Heart|-- p__linq__0: 'fd0ab483-934c-4127-96ec-98c8122122e4' (Type = Guid)  |
+2015-10-13 14:05:37.1429|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.1669|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.1669|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.1679|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.1679|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.1679|Debug|ShiJu.Service.Heart|-- p__linq__0: '36416157-2dff-4463-8324-c0784cafd4f6' (Type = Guid)  |
+2015-10-13 14:05:37.1679|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.2109|Debug|ShiJu.Service.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.2109|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2109|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.2109|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2109|Debug|ShiJu.Service.Heart|-- p__linq__0: '174a3dd4-fc75-48ad-8c77-0e1725a99300' (Type = Guid)  |
+2015-10-13 14:05:37.2109|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.2399|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.2399|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2399|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.2399|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2399|Debug|ShiJu.Service.Heart|-- p__linq__0: '174a3dd4-fc75-48ad-8c77-0e1725a99300' (Type = Guid)  |
+2015-10-13 14:05:37.2399|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.2679|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.2679|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2679|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.2679|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2679|Debug|ShiJu.Service.Heart|-- p__linq__0: 'bc20d8d9-0de1-4bdc-8fe8-8d75115e0580' (Type = Guid)  |
+2015-10-13 14:05:37.2679|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.2909|Debug|ShiJu.Service.Heart|-- Completed in 20 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.2909|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2939|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.2939|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.2939|Debug|ShiJu.Service.Heart|-- p__linq__0: 'ad7fa38f-7287-4016-ab6c-927c7e7b2671' (Type = Guid)  |
+2015-10-13 14:05:37.2939|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.3209|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.3209|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.3209|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.3209|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.3209|Debug|ShiJu.Service.Heart|-- p__linq__0: '282e2a6d-657c-4537-9aa2-9731736dd213' (Type = Guid)  |
+2015-10-13 14:05:37.3209|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.3519|Debug|ShiJu.Service.Heart|-- Completed in 28 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.3519|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.3519|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.3519|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.3519|Debug|ShiJu.Service.Heart|-- p__linq__0: 'fd0ab483-934c-4127-96ec-98c8122122e4' (Type = Guid)  |
+2015-10-13 14:05:37.3519|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.3789|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.3789|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.3789|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.3789|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.3789|Debug|ShiJu.Service.Heart|-- p__linq__0: '36416157-2dff-4463-8324-c0784cafd4f6' (Type = Guid)  |
+2015-10-13 14:05:37.3789|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.4059|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.4059|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.4059|Debug|ShiJu.Service.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[Participants] AS [Extent1]          WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-10-13 14:05:37.4059|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:37.4059|Debug|ShiJu.Service.Heart|-- p__linq__0: '41e5a2de-2298-48ef-8972-ec3232fc8534' (Type = Guid)  |
+2015-10-13 14:05:37.4059|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:37 +08:00  |
+2015-10-13 14:05:37.4329|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:37.4329|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.7087|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.7087|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.7087|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.7087|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.7567|Debug|ShiJu.Service.Heart|-- Completed in 47 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.7567|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.7567|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.7567|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.7567|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.7567|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.7887|Debug|ShiJu.Service.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.7887|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.7887|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.7887|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.7887|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.7887|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.8297|Debug|ShiJu.Service.Heart|-- Completed in 38 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.8297|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.8297|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.8297|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.8297|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.8297|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.8687|Debug|ShiJu.Service.Heart|-- Completed in 35 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.8687|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.8707|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.8707|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.8707|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.8707|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.8957|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.8957|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.8957|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.8957|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.8957|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.8957|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.9207|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.9207|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.9207|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.9207|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.9207|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.9207|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.9457|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.9457|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.9457|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.9487|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.9487|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.9487|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:55.9757|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-10-13 14:05:55.9757|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.9757|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:55.9757|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:55.9757|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:55.9757|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:55 +08:00  |
+2015-10-13 14:05:56.0097|Debug|ShiJu.Service.Heart|-- Completed in 30 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.0097|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0117|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.0117|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0117|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.0117|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.0367|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.0367|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0367|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.0367|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0367|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.0367|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.0667|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.0667|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0667|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.0667|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0667|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.0667|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.0927|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.0927|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0927|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.0927|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.0927|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.0927|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.1287|Debug|ShiJu.Service.Heart|-- Completed in 32 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.1287|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.1287|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.1287|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.1287|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.1287|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.1567|Debug|ShiJu.Service.Heart|-- Completed in 26 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.1567|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.1567|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.1567|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.1567|Debug|ShiJu.Service.Heart|-- p__linq__0: 'b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' (Type = Guid)  |
+2015-10-13 14:05:56.1567|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.1837|Debug|ShiJu.Service.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.1837|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.1837|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.1837|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.1837|Debug|ShiJu.Service.Heart|-- p__linq__0: 'b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' (Type = Guid)  |
+2015-10-13 14:05:56.1837|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.2137|Debug|ShiJu.Service.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.2147|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.2147|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.2147|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.2147|Debug|ShiJu.Service.Heart|-- p__linq__0: 'b870a7c7-7d77-4e4c-89bf-d1b12fbc92d2' (Type = Guid)  |
+2015-10-13 14:05:56.2147|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.2457|Debug|ShiJu.Service.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.2457|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.2457|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.2457|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.2457|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.2457|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.2787|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.2787|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.2787|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.2787|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.2787|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.2787|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.3067|Debug|ShiJu.Service.Heart|-- Completed in 25 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.3077|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.3077|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.3077|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.3077|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.3077|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.3407|Debug|ShiJu.Service.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.3407|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.3407|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.3407|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.3407|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.3407|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.3797|Debug|ShiJu.Service.Heart|-- Completed in 35 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.3797|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.3797|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.3797|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.3797|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.3797|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.4077|Debug|ShiJu.Service.Heart|-- Completed in 25 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.4077|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.4077|Debug|ShiJu.Service.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-10-13 14:05:56.4077|Debug|ShiJu.Service.Heart|  |
+2015-10-13 14:05:56.4077|Debug|ShiJu.Service.Heart|-- p__linq__0: '59ff2878-a300-40f9-add3-afb2d3ad2b65' (Type = Guid)  |
+2015-10-13 14:05:56.4077|Debug|ShiJu.Service.Heart|-- Executing at 2015/10/13 14:05:56 +08:00  |
+2015-10-13 14:05:56.4307|Debug|ShiJu.Service.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-10-13 14:05:56.4307|Debug|ShiJu.Service.Heart|  |

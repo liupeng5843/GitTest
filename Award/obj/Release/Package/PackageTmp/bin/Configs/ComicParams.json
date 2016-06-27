@@ -1,0 +1,26 @@
+{
+    "TargetComicSourceId":"0",
+
+	"ComicPath":"D:\\ff2comics",
+	"ComicDomain":"mhdtest.kssws.ks-cdn.com",
+	"ComicIndex":"Images6",
+	"ComicCoverIndex":"Cover2",
+	"ComicCoverDomain":"mhdtest.kssws.ks-cdn.com",
+	"IsDownExist":"1",
+	"IsPush":"0",
+
+	"WPPushUrl":"http://192.168.1.197:12321/Api/Message/AllPut?apikey=123454321qwerewq",
+	"WPUsersPushUrl":"http://192.168.1.197:12321/Api/Message/UsersPut?apikey=123454321qwerewq",
+	
+	"imgMaxKB":"200",
+	"minQuality":"20",
+	"hResolution":"96",
+	"vResolution":"96",
+	"StartQuality":"70",
+	"NotCompress":"false",
+	"RedisInterfaceHost":"http://120.132.60.167",
+	
+	
+	"MaxThreadNum":"1",
+	"height_width_ratio":"4"
+}

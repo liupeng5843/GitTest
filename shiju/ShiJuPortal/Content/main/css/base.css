@@ -1,0 +1,119 @@
+﻿.bcw {
+    background-color: rgb(255,255,255);
+}
+
+.dn {
+    display: none;
+}
+
+.ht230 {
+    height: 230px;
+}
+
+.ht180 {
+    height: 180px;
+}
+
+.ib {
+    display: inline-block;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.ml60 {
+    margin-left: 60px;
+}
+
+.ml75 {
+    margin-left: 75px;
+}
+
+.ml180 {
+    margin-left: 180px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt40 {
+    padding-top: 40px;
+}
+
+.pt60 {
+    padding-top: 60px;
+}
+
+.pt80 {
+    padding-top: 80px;
+}
+
+.pt70 {
+    padding-top: 70px;
+}
+
+.pt100 {
+    padding-top: 100px;
+}
+
+.pt90 {
+    padding-top: 90px;
+}
+
+.tac {
+    text-align: center;
+}
+
+.vat {
+    vertical-align: top;
+}
+
+.w100p {
+    width: 100%;
+}
+
+.w120 {
+    width: 120px;
+}
+
+.w1000 {
+    width: 1000px;
+}
+
+.w770 {
+    width: 750px;
+}
+
+#ui-datepicker-div {
+    z-index: 99;
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ShiJu/Portal" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ShiJuDbContextDb-Web.config Connection String" description="" value="Data Source=10.1.1.50;Initial Catalog=Shiju;User ID=brand;Pwd=Abc123!" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJuDbContextDb']/@connectionString" />
+  </parameter>
+</parameters>

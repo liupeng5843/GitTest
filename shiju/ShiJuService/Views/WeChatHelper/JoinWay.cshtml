@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body>
+    <input style="display:none" id="ServiceBaseUrl" value=@(ViewData["ServiceBaseUrl"]) />
+    <input style="display:none" id="UnionId" value=@(ViewData["UnionId"]) />
+    <input style="display:none" id="PartyId" value=@(ViewData["PartyId"]) />
+    <input style="display:none" id="nickName" value=@ViewData["NickName"] />
+    <div class="join_way">
+        <div class="app_logo">
+            <img src="~/Content/images/newbe_icon.png" />
+        </div>
+        <p class="p1">现在就报名参加活动</p>
+        <a class="wx_join" href="javascript:;">使用微信账号注册并申请加入活动</a>
+        <p class="p2">或者，您已经拥有<span>Newbe</span>账号</p>
+        @*<a class="app_join" href="javascript:;">绑定微信并申请加入活动</a>*@
+        @Html.ActionLink("绑定微信并申请加入活动", "Bangding", "WeChatHelper", new { @class = "app_join" })
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/auto.js"></script>
+    <script>
+        (function () {
+            var serviceBaseUrl = document.getElementById("ServiceBaseUrl").value,
+                unionId = document.getElementById("UnionId").value,
+                nickName = document.getElementById("nickName").value,
+                appJoin = document.querySelector(".app_join"),
+                appJoinHref = appJoin.getAttribute("href"),
+                partyId = $("#PartyId").val();
+            if (window.localStorage) {
+                var beginTime = localStorage.getItem("beginTime");
+                var endTime = localStorage.getItem("endTime");
+            }
+            $(".wx_join").click(function () {
+                var self = $(this);
+                $.ajax({
+                    type: "POST",
+                    url: serviceBaseUrl + "User/SignInWithWechat",
+                    data: '{"WechatUnionId":"' + unionId + '"}',
+                    dataType: "JSON",
+                    async: false,
+                    success: function (d) {
+                        if (d.Code != 0 && d.Code != 1) {
+                            alert("微信创建Newbe账号失败");
+                        } else {
+                            var userId = d.User.Id;
+                            var user = d.User;
+                            if (user.NickName == "") {
+                                user.NickName = nickName;
+                                $.ajax({
+                                    type: "POST",
+                                    url: serviceBaseUrl + "Users/" + userId + "/Update",
+                                    data: '{"User":' + JSON.stringify(user) + '}',
+                                    dataType: "JSON",
+                                    success: function (data) {}
+                                });
+                            }
+                         
+                           
+                            $.ajax({
+                                type: "POST",
+                                url: serviceBaseUrl + "Parties/Participants/Create",
+                                data: '{"Participant":{"PartyId":"' + partyId + '","UserId":"' + userId + '","Status":3,"ProposedBeginTime":"' + beginTime + '","ProposedEndTime":"' + endTime + '"}}',
+                                dataType: "JSON",
+                                async: false,
+                                success: function (data) {
+                                    if (data.Code == 0) {
+                                        self.attr("href", serviceBaseUrl + "/WeChatHelper/JoinSuccess");
+                                    }
+                                    else if (data.Code == -1) {
+                                        alert("你已经加入此活动");
+                                    } else {
+                                        alert("参加活动失败");
+                                    }
+                                },
+                                error: function () {
+                                    alert("网络错误");
+                                }
+                            });
+                        }
+                    },
+                    error: function () {
+                        alert("注册失败");
+                    }
+                });
+            });
+            appJoin.setAttribute("href", appJoinHref + "&partyId=" + partyId + "&unionId=" + unionId);
+        })();
+    </script>
+</body>
+</html>

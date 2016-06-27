@@ -1,0 +1,73 @@
+2015-09-24 16:26:03.7752|Error|ShiJu.Service.Controllers.PartiesController|error occurs:|System.ArgumentException: Invalid 'HttpContent' instance provided. It does not have a content-type header value. 'HttpContent' instances must have a content-type header starting with 'multipart/'.
+Parameter name: content
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser.ValidateArguments(HttpContent content, Int64 maxMessageSize, Boolean throwOnError)
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser..ctor(HttpContent content, MultipartStreamProvider streamProvider, Int64 maxMessageSize, Int32 maxBodyPartHeaderSize)
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser..ctor(HttpContent content, MultipartStreamProvider streamProvider)
+   at System.Net.Http.HttpContentMultipartExtensions.<ReadAsMultipartAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ShiJu.Service.Controllers.PartiesController.<AddMessageAttachment>d__43.MoveNext() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\PartiesController.cs:line 419
+2015-09-24 16:26:04.5762|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Messages/909FC9C3-4660-4E47-8367-001FD2D3E13D/Logs/Attachments/Add?mimeType=mimeType UserAgent:Fiddler]|System.ArgumentException: Invalid 'HttpContent' instance provided. It does not have a content-type header value. 'HttpContent' instances must have a content-type header starting with 'multipart/'.
+Parameter name: content
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-09-24 16:26:38.8179|Error|ShiJu.Service.Controllers.PartiesController|error occurs:|System.IO.IOException: Unexpected end of MIME multipart stream. MIME multipart message is not complete.
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser.<ParseBuffer>d__0.MoveNext()
+   at System.Net.Http.HttpContentMultipartExtensions.<MultipartReadAsync>d__9.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at System.Net.Http.HttpContentMultipartExtensions.<ReadAsMultipartAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ShiJu.Service.Controllers.PartiesController.<AddMessageAttachment>d__43.MoveNext() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\PartiesController.cs:line 419
+2015-09-24 16:26:40.1039|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Messages/909FC9C3-4660-4E47-8367-001FD2D3E13D/Logs/Attachments/Add?mimeType=mimeType UserAgent:Fiddler]|System.IO.IOException: Unexpected end of MIME multipart stream. MIME multipart message is not complete.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-09-24 16:27:37.9814|Error|ShiJu.Service.Controllers.PartiesController|error occurs:|System.ArgumentException: Invalid 'HttpContent' instance provided. It does not have a 'multipart' content-type header with a 'boundary' parameter.
+Parameter name: content
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser.ValidateArguments(HttpContent content, Int64 maxMessageSize, Boolean throwOnError)
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser..ctor(HttpContent content, MultipartStreamProvider streamProvider, Int64 maxMessageSize, Int32 maxBodyPartHeaderSize)
+   at System.Net.Http.Formatting.Parsers.MimeMultipartBodyPartParser..ctor(HttpContent content, MultipartStreamProvider streamProvider)
+   at System.Net.Http.HttpContentMultipartExtensions.<ReadAsMultipartAsync>d__0`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at ShiJu.Service.Controllers.PartiesController.<AddMessageAttachment>d__43.MoveNext() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\PartiesController.cs:line 419
+2015-09-24 16:27:43.1136|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Messages/909FC9C3-4660-4E47-8367-001FD2D3E13D/Logs/Attachments/Add?mimeType=mimeType UserAgent:Fiddler]|System.ArgumentException: Invalid 'HttpContent' instance provided. It does not have a 'multipart' content-type header with a 'boundary' parameter.
+Parameter name: content
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()

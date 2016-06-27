@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body>
+    <input style="display:none" id="ServiceBaseUrl" value=@(ViewData["ServiceBaseUrl"]) />
+    <!-- 时聚号帮微信号 -->
+    <div class="app_bd_wx">
+        <p class="p1">请输入注册Newbe时</p>
+        <p class="p2">使用的手机号码</p>
+        <div class="login_box">
+            <div class="telephone">
+                <span>手机号码</span>
+                <input id="telephone" type="text" placeholder="输入要绑定的手机号码" pattern="[0-9]*" maxlength="11" />
+            </div>
+            <div class="password">
+                <span>输入密码</span>
+                <input id="password" type="password" placeholder="输入Newbe登录密码" />
+            </div>
+        </div>
+        <a class="bd" href="javascript:;">绑定微信并申请加入活动</a>
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/auto.js"></script>
+    <script>
+        (function () {
+            var serviceBaseUrl = $("#ServiceBaseUrl").val();
+            var GetRequest = function () {
+                var url = location.search;
+                var theRequest = new Object();
+                if (url.indexOf("?") != -1) {
+                    var str = url.substr(1).split("&");
+                    for (var i = 0; i < str.length; i++) {
+                        theRequest[str[i].split("=")[0]] = str[i].split("=")[1];
+                    }
+                }
+                return theRequest;
+            }
+            var Request = new Object();
+            Request = GetRequest();
+            $(".bd").click(function () {
+                var telephoneV = $("#telephone").val();
+                var passwordV = $("#password").val();
+                if (window.localStorage) {
+                    var beginTime = localStorage.getItem("beginTime");
+                    var endTime = localStorage.getItem("endTime");
+                }
+                if (telephoneV.length == 0) {
+                    alert("请输入手机号码");
+                    $("#telephone").focus();
+                    return;
+                }
+                else if (passwordV.length == 0) {
+                    alert("请输入密码");
+                    $("#password").focus();
+                    return;
+                }
+                else {
+                    $.ajax({
+                        type: "POST",
+                        url: serviceBaseUrl + "User/SignInWithPhoneNumber",
+                        data: '{ "PhoneNumber": "' + telephoneV + '", "Password": "' + passwordV + '" }',
+                        dataType: "JSON",
+                        success: function (d) {
+                            if (d.Code != 0) {
+                                alert("用户名或密码错误");
+                                $("#telephone").focus();
+                            }
+                            else {
+                                var userId = d.User.Id;
+                                $.ajax({
+                                    type: "POST",
+                                    url: serviceBaseUrl + "Users/" + userId + "/Accounts/CreateWithWechat",
+                                    data: '{"WechatUnionId": "' + Request["unionId"] + '"}',
+                                    dataType: "JSON",
+                                    success: function (data) {
+                                        if (data.Code == 0) {
+                                            $.ajax({
+                                                type: "POST",
+                                                url: serviceBaseUrl + "Parties/Participants/Create",
+                                                data: '{"Participant":{"PartyId":"' + Request["partyId"] + '","UserId":"' + userId + '","Status":3,"ProposedBeginTime":"' + beginTime + '","ProposedEndTime":"' + endTime + '"}}',
+                                                dataType: "JSON",
+                                                success: function (datas) {
+                                                    if (datas.Code == -1 || datas.Code == 0) {
+                                                        // 加入活动成功
+                                                        window.location.href = serviceBaseUrl + "WeChatHelper/JoinSuccess";
+                                                    }
+                                                    else {
+                                                        alert("加入活动失败");
+                                                    }
+                                                },
+                                                error: function () {
+                                                    alert("加入活动失败");
+                                                }
+                                            });
+                                        }
+                                        else if(data.Code == -2){
+                                            alert("此账号已绑定过微信号");
+                                        }
+                                        else {
+                                            alert("绑定失败");
+                                        }
+                                    },
+                                    error: function () {
+                                        alert("绑定失败");
+                                    }
+                                });
+                            }
+                        },
+                        error: function () {
+                            alert("登录失败");
+                        }
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

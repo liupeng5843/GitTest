@@ -1,0 +1,51 @@
+﻿@model  MHD.Original.Award.ViewModels.SearchBookListViewModel
+@using EFDal.Models.Enums
+@{
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+    var userId = Model.CurrentUserId == null ? 0 : ViewBag.UserId;
+    var keywords = Model.Keywords == null ? "" : ViewBag.Keywords;
+    var pageNumber = Model.PageCount == null ? 1 : ViewBag.PageNumber;
+    var type = (int)Model.AwardType;
+}
+
+<link href="~/Content/css/style.ex.css" rel="stylesheet" />
+
+@{
+    <input hidden  id="currrent-type" value=@type />
+    <input hidden id="currrent-page-count" value=@Model.PageCount />
+
+
+    if (Model.VoteBookList.Count == 0)
+    {
+        <div class="vote-none-pic"></div>
+        <p class="vote-none-text">没有找到符合要求的漫画哦，快去看看其他精彩漫画吧~</p>
+    }
+    else
+    {
+        foreach (var book in Model.VoteBookList)
+        {
+            <div class="vote-item">
+                <div class="item-pic"
+                     style="background-image: url('@book.BookCoverUrl')"></div>
+                <p class="vote-item-title">@book.BookName</p>
+                <p class="vote-item-info">
+                    @book.Pseudonym<span class="book-share vote-lp">
+                        <i class="vote-icon-speaker"></i>拉票
+                    </span>
+                    <input type="hidden" class="book-hid-brief" value=@book.Brief />
+                    <input type="hidden" class="book-hid-id" value=@book.BookId />
+                    <input type="hidden" class="book-hid-name" value=@book.BookName />
+                    <input type="hidden" class="book-hid-coverurl" value=@book.BookCoverUrl />
+                </p>
+                <div class="book-vote vote-item-vote-hollow"><span class="vote-icon-love-hollow"></span>投票</div>
+                <!--如果已经投票，使用类：vote-item-vote-solid、vote-icon-love-solid-->
+                <!--如果没有投票，使用类：vote-item-vote-hollow、vote-icon-love-hollow-->
+                <p class="vote-num">票数：<span>@book.TotalScore</span></p>
+            </div>
+        }
+    }
+}
+
+
+
+

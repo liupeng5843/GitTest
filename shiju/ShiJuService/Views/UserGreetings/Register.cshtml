@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body class="register_bg">
+    <div class="register">
+        <div class="header">
+            <span class="logo">
+                <img src="~/Content/images/newbe_icon02.png" />
+            </span>
+        </div>
+        <div class="content">
+            <p class="name">创建您的Newbe账号</p>
+            <input class="phoneNumber" type="text" placeholder="" value="" readonly="readonly" />
+            <input id="password" class="password" type="password" placeholder="请输入初始密码" />
+            <div class="pin">
+                <input id="pin" type="text" pattern="[0-9]*" placeholder="请输入验证码" />
+                <a id="getPIN" href="javascript:;">发送验证码</a>
+            </div>
+            <a id="registerBtn" class="registerBtn" href="javascript:;">确定</a>
+            <p class="copyright">Copyright&copy;2015-2017</p>
+            <p class="narr">Newbe All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/jquery.cookie.js"></script>
+    <script src="~/Content/js/auto.js"></script>
+    <script>
+        ;(function () {
+            var yueData = $.parseJSON($.cookie("shijuyue"));
+            var isRefuse = $.cookie("isRefuse");
+            $(".phoneNumber").attr({
+                "placeholder": yueData.targetPhoneNumber,
+                "value": yueData.targetPhoneNumber
+            });
+            // 验证码倒计时
+            var countDown = function (t) {
+                var stopCountDown;
+                if (t == 0) {
+                    $("#getPIN").text("发送验证码").removeAttr("style").on("click", function () {
+                        sendVerificationCode();
+                    });
+                }
+                else {
+                    $("#getPIN").text("重新发送(" + t + ")").css("cursor", "default").off();
+                    stopCountDown = setTimeout(function () {
+                        t--;
+                        countDown(t);
+                    }, 1000);
+                    return stopCountDown;
+                }
+            }
+            // 发送验证码方法
+            var sendVerificationCode = function () {
+                var stopTimeout = countDown(60);
+                $.ajax({
+                    type: "POST",
+                    url: yueData.baseUrl + "Security/" + yueData.targetPhoneNumber + "/GenerateVerificationCode?type=0",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.Code == -1) {
+                            clearTimeout(stopTimeout);
+                            countDown(0);
+                            $.cookie("registered", "1", { expires: 7, path: '/' });
+                            alert("该号码已注册");
+                            location.href = yueData.baseUrl + "UserGreetings/RegisterSuccess";
+                        }
+                    }
+                });
+            }
+            $("#getPIN").on("click", function () {
+                sendVerificationCode();
+            });
+            $("#registerBtn").on("click", function () {
+                var password = $("#password"),
+                    pin = $("#pin");
+                if (password.val().length == 0) {
+                    alert("密码不能为空");
+                    password.focus();
+                    return;
+                }
+                if (pin.val().length == 0) {
+                    alert("请输入验证码");
+                    pin.focus();
+                }
+                else {
+                    $.ajax({
+                        type: "POST",
+                        url: yueData.baseUrl + "Users/SignUpWithPhoneNumber",
+                        data: '{"PhoneNumber":"' + yueData.targetPhoneNumber + '","Password":"' + password.val() + '","VerificationCode":"' + pin.val() + '"}',
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.Code == -1) {
+                                alert("验证码错误");
+                            }
+                            else if (data.Code == -2) {
+                                $.cookie("registered", "1", { expires: 7, path: '/' });
+                                alert("该号码已注册");
+                                location.href = yueData.baseUrl + "UserGreetings/RegisterSuccess";
+                            }
+                            else if (data.Code == 0 && isRefuse !== "0") {// 接受约
+                                $.cookie("registered", "1", { expires: -1, path: '/' });
+                                $.ajax({ // 同意约
+                                    type: "POST",
+                                    url: yueData.baseUrl + "UserGreeting/SourceUser/" + yueData.sourceUserId + "/TargetUser/" + yueData.targetUserId + "/AcceptGreeting?greetingId=" + yueData.modelID,
+                                    dataType: "json",
+                                    success: function (data) {
+                                        if (data.Code == 0) {
+                                            countDown(0);
+                                            location.href = yueData.baseUrl + "UserGreetings/RegisterSuccess";
+                                        }
+                                    },
+                                    error: function () {
+                                        alert("网络错误");
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+2015-07-16 09:31:11.0117|Debug|Shiju.Portal.Heart|SELECT       [Extent1].[Id] AS [Id],       [Extent1].[PartyId] AS [PartyId],       [Extent1].[UserId] AS [UserId],       [Extent1].[TargetUserId] AS [TargetUserId],       [Extent1].[Text] AS [Text],       [Extent1].[AudioId] AS [AudioId],       [Extent1].[VoteResult] AS [VoteResult],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[PartyComments] AS [Extent1]      WHERE ([Extent1].[PartyId] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-07-16 09:31:11.0807|Debug|Shiju.Portal.Heart|  |
+2015-07-16 09:31:11.0807|Debug|Shiju.Portal.Heart|-- p__linq__0: '6b64cca7-d8aa-4ef8-8a35-d90a4514dded' (Type = Guid)  |
+2015-07-16 09:31:11.1126|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/16 9:31:11 +08:00  |
+2015-07-16 09:31:11.2395|Debug|Shiju.Portal.Heart|-- Completed in 8 ms with result: SqlDataReader  |
+2015-07-16 09:31:11.2395|Debug|Shiju.Portal.Heart|  |

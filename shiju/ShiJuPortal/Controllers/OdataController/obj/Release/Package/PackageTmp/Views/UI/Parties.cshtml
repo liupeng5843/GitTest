@@ -1,0 +1,315 @@
+﻿@{
+    ViewBag.Title = "活动管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="~/Content/bootstrap-3.1.1/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<script src="~/Content/bootstrap-3.1.1/js/bootstrap-datetimepicker.js"></script>*@
+<script src="@Url.Content("~/Content/Scripts/parties.js")"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<div style="padding-right: 10px; padding-bottom: 10px; position: absolute; top: 90px; z-index: 99;">
+    <input type="button" id="btn_create" class="btn btn-sm btn-default" value="创建活动">
+</div>
+<div id="paties" style="margin-top: 30px; width: 98%;"></div>
+<div id="commentsDialog">
+
+    <div id="comments"></div>
+
+    <div id="commentsDialog" role="dialog" title="评论管理" hidden style="height:900px;width:1200px;">
+        <form id="itemform">
+            <em style="color: red; ">*</em><b>图片</b>：
+            <div id="mainImageSilverLight" style="margin-left:40px;"></div>
+            <input type="hidden" name="commentMainImageId" id="commentMainImageId" />
+            <input id="foodTypeId" class="form-control" type="hidden" />
+            <label id="imageValidate" style="display:none;color:red;">请添加图片</label>
+            <table>
+                <tr>
+                    <th><a style="color:red">*</a>排序：</th>
+                    <td>
+                        <select name="position_comment" class="form-control" id="position"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><a style="color:red">*</a>名称：</th>
+                    <td>
+                        <input id="name_comment" maxlength="15" name="itemname" class="form-control" type="text" placeholder="菜品名称" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <a style="color:red">*</a>描述：
+                    </th>
+                    <td>
+                        <textarea id="description_comment" maxlength="100" name="itemdescription" class="form-control" rows="3" placeholder="描述"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="radio" id="isEnableItem_1" name="EnablePartyComment" value="true" checked="checked" />启用
+            <input type="radio" id="isEnableItem_2" name="EnablePartyComment" value="false" style="margin-left:20px;" />禁用
+            <input style="display:none" id="createdtime_comment" type="text" value="" />
+        </form>
+    </div>
+</div>
+
+
+<div id="partiesDialog" role="dialog" title="创建活动" hidden>
+    <form id="typeform">
+        <input id="Id" name="Id" type="hidden" />
+        <table>
+            <tr>
+                <th>
+                    图片：
+                </th>
+                <td>
+                    <div id="multipleSilverLight" style="margin-left:-17px;"></div>
+                    <input id="Images" name="Images" type="hidden" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    活动主题：
+                </th>
+                <td>
+                    <input id="Title"  maxlength="15" name="Title" class="form-control" type="text" placeholder="活动主题" />
+                </td>
+                <th  class="Sponsor">
+                    发起人：
+                </th>
+                <td class="Sponsor">
+                    <input id="Sponsor" maxlength="15" name="Sponsor" class="form-control" type="text" placeholder="发起人" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    开始时间：
+                </th>
+                <td>
+                    <div class='input-group date' id='addBeginTimediv' style="width:390px;">
+                        <input id='addBeginTime' name="BeginTime" type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </td>
+                <th>
+                    结束时间：
+                </th>
+                <td>
+                    <div class='input-group date' id='addEndTimediv' style="width:390px;">
+                        <input id='addEndTime' name="EndTime" type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    点赞人数：
+                </th>
+                <td>
+                    <input id="LikeCount" maxlength="15" name="LikeCount" class="form-control" type="text" placeholder="点赞人数" />
+                </td>
+                <th>
+                    评论数：
+                </th>
+                <td>
+                    <input id="CommentCount" maxlength="15" name="CommentCount" class="form-control" type="text" placeholder="评论数" />
+                </td>
+            </tr>
+            <tr>
+                <th class="participantCount">
+                    参与人数：
+                </th>
+                <td class="participantCount">
+                    <input id="ParticipantCount" maxlength="15" readonly="readonly" name="ParticipantCount" class="form-control" type="text" placeholder="发起人" />
+                </td>
+                <th class="expireCount">
+                    期望人数：
+                </th>
+                <td class="expireCount">
+                    <input id="MaxUserCount" maxlength="15" value="0" name="MaxUserCount" class="form-control" type="text" placeholder="最大参与人数" />
+                </td>
+            </tr>
+            <tr class="voteTroggle">
+                <th>
+                    投票主题：
+                </th>
+                <td>
+                    <input id="VoteTitle" name="VoteTitle" class="form-control" type="text" placeholder="投票主题" />
+                </td>
+            </tr>
+            <tr class="voteTroggle" id="voteTroggle">
+                <th>
+                    投票选项：
+                </th>
+                <td>
+                    <input id="VoteChoicesJson" name="VoteChoicesJson" class="form-control" type="hidden" />
+                    <input id="VoteCount" name="VoteCount" value="1" class="form-control" type="hidden" />
+                    <div id="vote" style="width:100%;">
+                        <div style="width:100%;height: 100px;line-height: 100px;">
+                            <b style="float: left;margin-top: 7px;">1.</b><input name="vote1" id="vote1" placeholder="请输入选项" style="margin-left:10px; width:30%;height:30px;float: left;margin-top: 40px;" type="text" />
+                            <div id="voteSilverLight1" style="width:60%;display:inline-block;height: 100px;"></div>
+                            <input id="voteImageId1" type="hidden" />
+                        </div>
+                    </div>
+                    <a href="javascript:addvote()">添加选项</a>
+                    <a href="javascript:deletevote()" id="deletevote" hidden>删除选项</a>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    地点：
+                </th>
+                <td>
+                    <input id="Address" maxlength="15" name="Address" class="form-control" type="text" placeholder="地点" />
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    简介：
+                </th>
+                <td>
+                    <textarea id="Description" maxlength="200" name="Description" class="form-control" rows="3" placeholder="简介"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    热门：
+                </th>
+                <td>
+                    <input type="radio" id="isHot1" name="IsHot" value="true" checked="checked" style="padding-left:12px;" />  是
+                    <input type="radio" id="isHot2" name="IsHot" value="false" style="margin-left:34px;" />  否
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    状态：
+                </th>
+                <td>
+                    <input type="radio" id="isEnableType1" name="IsDisabled" value="true" checked="checked" style="padding-left:12px;" />  启用
+                    <input type="radio" id="isEnableType2" name="IsDisabled" value="false" style="margin-left:20px;" />  禁用
+                </td>
+            </tr>
+        </table>
+
+        <input style="display:none" id="Createdtime" name="Createdtime" type="text" value="" />
+
+    </form>
+</div>
+
+<script type="text/javascript">
+    $.ajaxSetup({ async: false });
+    $("#paties").dataMatrix({
+        oDataUrl: baseServerUrl + "odata/PartiesOData",
+        implementationType: "bootGrid",
+        isRowNumbersVisible: true,
+        properties: [
+            { type: "string", name: "Id", displayName: "Id", isEditable: false, isKey: true, isColumnHidden: true, isSearchable: false, isSortable: false },
+            { type: "datetime", name: "CreatedTime", displayName: "创建时间", columnWidth: 150, isSortable: false, isSearchable: false },
+            { type: "string", name: "Title", displayName: "主题", isSearchable: true, isSortable: true },
+            { type: "string", name: "Description", displayName: "描述", columnWidth: 200, isSearchable: true, isSortable: true },
+            { type: "string", name: "Address", displayName: "地点", columnWidth: 200, isSearchable: true, isSortable: true },
+            { type: "string", name: "MaxUserCount", displayName: "期望人数", columnWidth: 200, isSearchable: true, isSortable: true },
+            { type: "string", name: "CommentCount", displayName: "评论数", columnWidth: 200, isSearchable: true, isSortable: true },
+            { type: "enum", typeOptions: { "enumValues": { true: "启用", false: "禁用" } }, name: "IsDisabled", displayName: "状态", isEditable: true, isSortable: false, isSearchable: false },
+            { type: "action", displayName: "操作", columnWidth: 240, isSortable: false, isSearchable: false },
+        ],
+        isHeaderBarShow: true,
+        rowCountPerPage: 40,
+        rowCountsPerPage: [40, 50, 100, -1],
+        isRowNumbersVisible: true,
+        isCreateButtonVisible: false,
+        isEditButtonVisible: false,
+        isDeleteButtonVisible: false,
+        defaultSortAscending: false,
+        isMultipleSelection: false,
+        isColumnChooserEnabled: true,
+        defaultSortPropertyName: "CreatedTime",
+        actionButtons: [
+            {
+                displayName: "编辑",
+                buttonType: DataMatrixRowActionButtonType.Link,
+                onClick: function (button, rowId) {
+                    var row = $("#paties").dataMatrix("getRow", rowId);
+                    Global.FormMethod = "put";
+                    Global.EditingEntityId = row.Id;
+                    //  initScenarioPositionSelection(false);
+                    editParty(row);
+                }
+            },
+             {
+                 displayName: "评论",
+                 buttonClass: "pd-left",
+                 buttonType: DataMatrixRowActionButtonType.Link,
+                 onClick: function (button, rowId) {
+                     var row = $("#paties").dataMatrix("getRow", rowId);
+                     Global.FormMethod = "put";
+                     Global.EditingEntityId = row.Id;
+                     showComments(row);
+                     //  initScenarioPositionSelection(false);
+                     // editScenario(row);
+                 }
+             },
+        ],
+    });
+    $.ajaxSetup({ async: true })
+    for (var i = 0; i < $("#paties-grid tr").length; i++) {
+        var td = $("td:nth(2)", $("#paties-grid tr")[i]);
+        td.prop("title", td.text());
+    }
+
+    function addvote() {
+        if (parseInt($("#VoteCount").val()) == 5) {
+            alert("最多设置五个选项");
+            return;
+        }
+        $("#vote").append('<div id="votediv' + (parseInt($("#VoteCount").val()) + 1) + '" style="width:100%;height: 100px;line-height: 100px;clear:left;"><b style="float: left;margin-top: 7px;" >' + (parseInt($("#VoteCount").val()) + 1) + '.</b><input type="text" placeholder="请输入选项" style="margin-left:10px;width:30%;height:30px;float:left;margin-top:40px;" id="Vote' + (parseInt($("#VoteCount").val()) + 1) + '"></input><div style="width:60%;display:inline-block;height: 100px;" id="voteSilverLight' + (parseInt($("#VoteCount").val()) + 1) + '"></div><input  id="voteImageId' + (parseInt($("#VoteCount").val()) + 1) + '" type="hidden"/></div>');
+        InitializeSiverlight('voteSilverLight' + (parseInt($("#VoteCount").val()) + 1), 'voteImageId' + (parseInt($("#VoteCount").val()) + 1), false);
+        $("#VoteCount").val(parseInt($("#VoteCount").val()) + 1);
+        if (parseInt($("#VoteCount").val()) > 1) {
+            $("#deletevote").show();
+        }
+    }
+
+    function deletevote() {
+        $("#votediv" + (parseInt($("#VoteCount").val()))).remove();
+        $("#VoteCount").val(parseInt($("#VoteCount").val()) - 1);
+        if (parseInt($("#VoteCount").val()) < 2) {
+            $("#deletevote").hide();
+        }
+    }
+
+    $(function () {
+        $('#addBeginTimediv').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm',
+            defaultDate: defaltStrDate,
+            locale: 'zh-cn'
+        });
+
+        $('#addEndTimediv').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm',
+            defaultDate: defaltStrDate,
+            locale: 'zh-cn'
+        });
+
+    });
+</script>
+
+
+<style>
+    td {
+        padding: 5px;
+        width: 400px;
+    }
+
+    .pd-left {
+        padding-left: 0 !important;
+    }
+
+    
+</style>
+
+

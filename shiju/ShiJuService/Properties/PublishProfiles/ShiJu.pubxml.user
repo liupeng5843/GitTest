@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAHv3XnAzdOUqUcOn1v73/yAAAAAACAAAAAAADZgAAwAAAABAAAAAcaGzfnD2+C/fgB2NEfSZ8AAAAAASAAACgAAAAEAAAALjONSj/Ul8xAguMa4Pczf0YAAAAc0eSjcfKvil+Hoad30x0dQfevUg+t/V5FAAAAPdcyY2Cu4bO1pwLLrUi8vuMR2qo</EncryptedPassword>
+    <_PublishTargetUrl>D:\Publish\ShiJu\Service</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AttributeRouting.dll">
+      <publishTime>10/10/2015 11:19:42</publishTime>
+    </File>
+    <File Include="bin/AttributeRouting.Web.dll">
+      <publishTime>10/10/2015 11:19:42</publishTime>
+    </File>
+    <File Include="bin/AttributeRouting.Web.Http.dll">
+      <publishTime>10/10/2015 11:21:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>06/23/2015 09:35:37</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>06/23/2015 09:35:36</publishTime>
+    </File>
+    <File Include="bin/jpush-api.dll">
+      <publishTime>06/02/2015 14:57:43</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.Edm.dll">
+      <publishTime>08/15/2013 21:17:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Data.OData.dll">
+      <publishTime>08/15/2013 21:17:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>06/23/2015 09:35:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.WindowsAzure.StorageClient.dll">
+      <publishTime>03/05/2015 17:15:09</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/23/2015 09:35:42</publishTime>
+    </File>
+    <File Include="bin/NLog.dll">
+      <publishTime>03/06/2015 16:33:16</publishTime>
+    </File>
+    <File Include="bin/ShiJuCommon.dll">
+      <publishTime>10/29/2015 15:44:08</publishTime>
+    </File>
+    <File Include="bin/ShiJuService.dll">
+      <publishTime>11/03/2015 14:36:30</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Spatial.dll">
+      <publishTime>08/15/2013 21:17:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.OData.dll">
+      <publishTime>04/10/2015 09:46:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>06/23/2015 09:35:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>06/23/2015 09:35:39</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>06/23/2015 09:35:40</publishTime>
+    </File>
+    <File Include="bin/ThirdPartNotification.dll">
+      <publishTime>10/26/2015 15:33:53</publishTime>
+    </File>
+    <File Include="bin/Web.NLog">
+      <publishTime>06/23/2015 09:35:49</publishTime>
+    </File>
+    <File Include="bin/WebActivator.dll">
+      <publishTime>10/10/2015 11:19:42</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/23/2015 09:35:43</publishTime>
+    </File>
+    <File Include="bin/WindowsServer.Common.dll">
+      <publishTime>10/26/2015 15:33:48</publishTime>
+    </File>
+    <File Include="bin/WindowsServer.Mvc.Common.dll">
+      <publishTime>10/26/2015 15:33:50</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>08/14/2015 14:50:01</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>08/14/2015 14:49:58</publishTime>
+    </File>
+    <File Include="Content/images/address_icon.png">
+      <publishTime>10/14/2015 10:55:31</publishTime>
+    </File>
+    <File Include="Content/images/arrow.png">
+      <publishTime>10/14/2015 10:55:32</publishTime>
+    </File>
+    <File Include="Content/images/comm_icon.png">
+      <publishTime>10/14/2015 10:55:33</publishTime>
+    </File>
+    <File Include="Content/images/date_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/dh.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/dlprompt.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/edate_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/laud_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/opction.png">
+      <publishTime>08/19/2015 15:58:53</publishTime>
+    </File>
+    <File Include="Content/images/o_five.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/o_four.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/o_three.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/people_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/photo_01.jpg">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/rice.jpg">
+      <publishTime>08/19/2015 15:58:53</publishTime>
+    </File>
+    <File Include="Content/images/rice1.jpg">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/share_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/tit_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/top_arrow.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/images/update_icon.png">
+      <publishTime>08/19/2015 15:58:54</publishTime>
+    </File>
+    <File Include="Content/images/vote_icon.png">
+      <publishTime>10/14/2015 10:55:36</publishTime>
+    </File>
+    <File Include="Content/index.css">
+      <publishTime>10/16/2015 18:42:12</publishTime>
+    </File>
+    <File Include="Content/js/index.js">
+      <publishTime>10/16/2015 20:44:10</publishTime>
+    </File>
+    <File Include="Content/js/jquery-1.11.3.min.js">
+      <publishTime>08/14/2015 16:01:22</publishTime>
+    </File>
+    <File Include="Content/js/jquery-2.1.4.min.js">
+      <publishTime>10/16/2015 18:38:22</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>08/14/2015 14:49:30</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>08/14/2015 14:49:54</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>08/14/2015 14:49:53</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>08/14/2015 14:49:48</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>08/14/2015 14:49:44</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>06/23/2015 09:35:48</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/10/2015 14:09:49</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>08/14/2015 14:49:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>08/14/2015 14:49:41</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>08/14/2015 14:50:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>08/14/2015 14:50:10</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>08/14/2015 14:50:09</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>08/14/2015 14:50:25</publishTime>
+    </File>
+    <File Include="Versions.json">
+      <publishTime>10/13/2015 14:54:46</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>08/14/2015 14:49:25</publishTime>
+    </File>
+    <File Include="Views/Users/DisplayParty - Copy.cshtml">
+      <publishTime>10/16/2015 17:51:18</publishTime>
+    </File>
+    <File Include="Views/Users/DisplayParty.cshtml">
+      <publishTime>10/16/2015 18:44:25</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/02/2015 15:56:38</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>08/19/2015 18:03:13</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/02/2015 15:56:38</publishTime>
+    </File>
+    <File Include="Web.NLog">
+      <publishTime>06/23/2015 09:35:49</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

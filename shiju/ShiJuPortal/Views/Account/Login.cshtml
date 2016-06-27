@@ -1,0 +1,162 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>管理后台</title>
+    <link href="~/Content/main/css/bootstrap_cosmo.min.css" rel="stylesheet" />
+    <link href="~/Content/main/css/NewHome.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+    <div class="col-sm-12">
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <div class="row" style="padding-top:260px;width:300px;margin:auto;">
+            <div class="col-lg-4 col-md-12 col-sm-8 col-xs-8" style="min-width: 300px;">
+
+                <form role="form" id="signinform" style="max-width:300px;margin:auto;">
+                    <div class="logo" style="font-size: 65px; color: #ffffff;">
+                        <img src="~/Content/images/logo.png" style="margin-top:20px;" />
+                    </div>
+                    <div class="form-group" style="height:20px;text-align:center;">
+                        <label class="danger" style="display:none;color:gray;">
+                            @if (ViewBag.NoPermission)
+                            {
+                                @Html.Raw("无登录权限");
+                            }
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input name="accountName" id="accountName" class="form-control" placeholder="请输入用户名" required value="" />
+                    </div>
+                    <div class="form-group">
+                        <input name="password" id="password" type="password" class="form-control" placeholder="请输入密码" required value="" />
+                    </div>
+                    <input type="hidden" name="redirectUrl" id="redirectUrl" value="@Url.Action("Users", "UI", new { menu = "menu0"})" />
+                    <div class="form-group" style="line-height:16px;display:none;">
+                        <input type="checkbox" id="savepassword" name="savepassword" value="0" style="float:left;" />
+                        <label style="color:#999999;margin-left:5px;font-size:14px;font-weight:100;margin-top:3px;" for="savepassword">使我保持登录状态</label>
+                    </div>
+                    <div class="form-group">
+                        <button id="btn-signin" type="submit" class="btn btn-primary" style="width: 100%; background-color: #5a253e">登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="~/Content/main/js/jquery-1.11.0.js"></script>
+        <script src="~/Scripts/jquerycookie.js"></script>
+        <script src="~/Scripts/jquery.base64.js"></script>
+
+        <script language="javascript">
+            $(function () {
+                if ($.cookie('SaveUname') != '' && $.cookie('SaveUname') != null)
+                {
+                    $('#accountName').val($.cookie('SaveUname'));
+                }              
+                //$('#signinform').validate();
+                $('#signinform').submit(function () {
+                    var $this = $(this),
+                        $accountName = $('[name=accountName]'),
+                        $password = $('[name=password]'),
+                        $danger = $('.danger');
+                    $savepassword = $("#savepassword");
+
+                    if ($accountName.val() == '') {
+                        $danger.text('请输入您的用户名').show();
+                        $accountName.focus();
+                        return false;
+                    }
+                    if ($password.val() == '') {
+                        $danger.text('请输入您的密码').show();
+                        $password.focus();
+                        return false;
+                    }
+
+                    $danger.hide();
+
+
+                    //Disable input and signIn button
+                    $("#signinform input, button").prop("disabled", true);
+                    $("#btn-signin").text('登录中...');
+                    $.post('@Url.Action("SignIn")',
+                    {
+                        accountName: $accountName.val(),
+                        password: $password.val(),
+                        redirectUrl: $("#redirectUrl").val()
+                    }, function (data) {
+                        if (data.Code == 0) {
+                            $danger.hide();
+                            setCookie("SaveUname", encodeURIComponent($accountName.val()), 7);
+                            var doSavePassword = $("#savepassword").prop("checked");
+                            if (doSavePassword) {
+                                setCookie("uname", encodeURIComponent($accountName.val()), 7);
+                                setCookie("upassword", $.base64.encode(($password.val())), 7);
+                            }
+                            else {
+                                clearCookie("upassword");
+                            }
+                            window.location.href = data.Url;
+                        } else {
+                            //Enable input and signIn button
+                            $("#signinform input, button").prop("disabled", false);
+                            $("#btn-signin").text('登录');
+
+                            $danger.text("用户名或密码错误").show();
+
+                            if (data.Code == -1) {
+                                $accountName.select();
+                            } else {
+                                $password.select();
+                            }
+                        }
+                    }, 'json')
+
+                    return false;
+                })
+            });
+
+            var noPermission = '@ViewBag.NoPermission';
+            var accountName = '@ViewBag.AccountName';
+
+            $(function () {
+                if (accountName) {
+                    $('[name=accountName]').val(accountName);
+                }
+
+                if (noPermission.toLowerCase() == 'true') {
+                    $danger = $('.danger');
+                    $danger.show();
+                }
+
+                if ($.cookie("uname")) {
+                    $("#accountName").val($.cookie("uname"));
+                }
+                if ($.cookie("upassword")) {
+                    $("#password").val($.base64.decode($.cookie("upassword")));
+                    $("#savepassword").prop("checked", "checked");
+                    signIn();
+                }
+            });
+
+            function setCookie(key, value, expire) {
+                if ($.cookie[key]) {
+                    $.cookie[key] = value;
+                }
+                else {
+                    $.cookie(key, value, { expires: expire, path: "/" });
+                }
+            }
+
+            function clearCookie(key) {
+                $.cookie(key, null, { path: "/" });
+            }
+
+            function signIn() {
+                $("#btn-signin").trigger("click");
+            }
+        </script>
+    </div>
+</body>
+</html>

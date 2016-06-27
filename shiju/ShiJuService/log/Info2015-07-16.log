@@ -1,0 +1,12 @@
+2015-07-16 15:53:13.6969|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-07-16 15:56:03.0973|Info|ShiJu.Service.Models.AttachmentStorage|StorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentStorage|
+2015-07-16 15:56:03.1923|Info|ShiJu.Service.Models.AttachmentStorage|PreviewStorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentPreviewStorage|
+2015-07-16 16:02:02.7289|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-07-16 16:07:13.4639|Info|ShiJu.Service.Models.AttachmentStorage|StorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentStorage|
+2015-07-16 16:07:13.6148|Info|ShiJu.Service.Models.AttachmentStorage|PreviewStorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentPreviewStorage|
+2015-07-16 16:09:33.5815|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-07-16 16:09:50.6364|Info|ShiJu.Service.Models.AttachmentStorage|StorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentStorage|
+2015-07-16 16:09:50.6694|Info|ShiJu.Service.Models.AttachmentStorage|PreviewStorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentPreviewStorage|
+2015-07-16 16:24:09.6654|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-07-16 16:24:24.8810|Info|ShiJu.Service.Models.AttachmentStorage|StorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentStorage|
+2015-07-16 16:24:24.9130|Info|ShiJu.Service.Models.AttachmentStorage|PreviewStorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentPreviewStorage|

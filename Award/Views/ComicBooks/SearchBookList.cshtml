@@ -1,0 +1,397 @@
+﻿@model  MHD.Original.Award.ViewModels.SearchBookListViewModel
+@using EFDal.Models.Enums
+@{
+    ViewBag.Title = "中国动漫金龙奖 × 漫画岛";
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+    var userId = Model.CurrentUserId == null ? 0 : ViewBag.UserId;
+    var keywords = Model.Keywords == null ? "" : ViewBag.Keywords;
+    var pageNumber = Model.PageCount == null ? 1 : ViewBag.PageNumber;
+    var isCurrentWeek = ViewBag.IsCurrentWeek;
+    var type = (int)Model.AwardType;
+    
+}
+<link href="~/Content/css/style.ex.css" rel="stylesheet" />
+
+<!-- banner start -->
+<div id="banner" class="banner" style="height: 432px;">
+    <div class="banner_image">
+        <ul>
+            <li>
+                <a href="@string.Format("{0}/{1}/{2}", host, "AuthorComic", "CreateComicView")">
+                    <span class="img_3"
+                          style="background-image: url('../Content/img/banner_jlj_ad.jpg'); height: 432px;"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- banner end -->
+
+
+<div class="tabs_jlj">
+    <div class="tab_hd">
+        <ul class="wrap cf">
+            <li><a href="@Url.Action("Index","Home")" class="tb1"></a></li>
+            <li><a href="@Url.Action("News", "Home")" class="tb2"></a></li>
+            <li class="active"><a href="@Url.Action("Vote","Home")" class="tb-ex-1"></a></li>
+            @*<li><a href=# class="tb-ex-2"></a></li>*@
+            <li><a href="@Url.Action("Faq","Home")" class="tb3"></a></li>
+        </ul>
+    </div>
+    <div class="tab_bd">
+        <div class="main_tab1">
+            <div class="item_cont item_c2" id="more-item">
+                <div class="box type1 cf">
+                    <div class="more-top-title">
+                        <div class="more-left"></div>
+                        <div class="more-title"></div>
+                        <div class="more-right"></div>
+                    </div>
+                </div>
+
+                <div class="box type1 cf bg-fff">
+                    <div class="more-tab">
+                        <div class="tab">
+                            @*<a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.ChinaComic })"><h1 class="tab-title tab-active" id="tab-title-chinacomic">中国漫画大奖</h1></a>*@
+                            <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestStory, isCurrentWeek = isCurrentWeek })"><h1 class="tab-title" id="tab-title-beststory" data-hid-type="BestStory">最佳剧情漫画奖</h1></a>
+                            <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestInset, isCurrentWeek = isCurrentWeek })"><h1 class="tab-title" id="tab-title-bestinset" data-hid-type="BestInset">最佳插画奖</h1></a>
+                            <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestDrawing, isCurrentWeek = isCurrentWeek })"><h1 class="tab-title tab-title-none" id="tab-title-bestdrawing" data-hid-type="BestDrawing">最佳绘本奖</h1></a>
+                            <!--选项卡效果，当前激活的标签使用类tab-active，并为前一个标签添加tab-title-diy来隐藏间隔横线-->
+                            @*<span class="period-btn" id="period-week-btn" data-hid-period="week" data-hid-type="BestStory">本周</span>
+                            <span class="period-btn" id="period-month-btn" data-hid-period="month" data-hid-type="BestStory">热门</span>*@
+                        </div>
+                        <div class="more-input">
+                            <input type="text" id="comic-keywords" placeholder="请输入作品/作者名">
+                            <div class="input-btn" id="comic-search"><span class="btn-icon"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="vote-row-tab">
+                        <span class="tab-item period-btn tab-active" id="period-week-btn" data-hid-period="week" data-hid-type="BestStory">本月</span>
+                        <span class="tab-item period-btn" id="period-month-btn" data-hid-period="month" data-hid-type="BestStory">热门</span>
+                    </div>
+                    <div class="vote-row">
+                        @{
+                            if (Model.VoteBookList.Count == 0)
+                            {
+                                <div class="vote-none-pic"></div>
+                                <p class="vote-none-text">没有找到符合要求的漫画哦，快去看看其他精彩漫画吧~</p>
+                            }
+                            else
+                            {
+                                foreach (var book in Model.VoteBookList)
+                                {
+                                    <div class="vote-item">
+                                        <a href="@Url.Action("GetBookDetailById", "ComicBooks", new { bookId = book.BookId, userId = userId })">
+                                            <div class="item-pic"
+                                                 style="background-image: url('@book.BookCoverUrl')"></div>
+                                        </a>
+                                        <p class="vote-item-title"><a href="@Url.Action("GetBookDetailById", "ComicBooks", new { bookId = book.BookId, userId = userId })">@book.BookName</a></p>
+                                        <p class="vote-item-info">
+                                            @book.Pseudonym<span class="book-share vote-lp">
+                                                <i class="vote-icon-speaker"></i>拉票
+                                            </span>
+                                            <input type="hidden" class="book-hid-brief" value=@book.Brief />
+                                            <input type="hidden" class="book-hid-id" value=@book.BookId />
+                                            <input type="hidden" class="book-hid-name" value=@book.BookName />
+                                            <input type="hidden" class="book-hid-coverurl" value=@book.BookCoverUrl />
+                                        </p>
+                                        <div class="vote-item-vote-solid" hidden><span class="vote-icon-love-solid"></span>已投票</div>
+                                        <div class="book-vote vote-item-vote-hollow"><span class="vote-icon-love-hollow"></span>投票</div>
+                                        <!--如果已经投票，使用类：vote-item-vote-solid、vote-icon-love-solid-->
+                                        <!--如果没有投票，使用类：vote-item-vote-hollow、vote-icon-love-hollow-->
+                                        <p class="vote-num">票数：<span class="vote-score">@book.TotalScore</span></p>
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="box type1 cf bg-fff">
+                    <p class="vote-tip">▲ 所有参赛作品均为随机排序</p>
+                </div>
+
+                <div class="pages box type1 cf bg-fff">
+                    <ul id="pagination" class="pagination-sm pagination"></ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div id="mask"></div>
+    <div class="alert-diy">
+        <p class="alert-title" id="alert-title"></p>
+        <p class="alert-text" id="alert-text"></p>
+        <div class="alert-btn">
+            <div class="alert-ok" id="alert-ok"></div>
+        </div>
+    </div>*@
+
+<div class="jiathis-diy">
+    <div class="jiathis-close"></div>
+    <p class="jiathis-title">点击下方按钮开始拉票！</p>
+    <div class="jiathis_style_32x32" style="margin: 30px 0 0 60px;">
+        <a class="jiathis_button_qzone"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_cqq"></a>
+        @*<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>*@
+    </div>
+</div>
+
+
+<!-- JiaThis Button BEGIN -->
+<div role="dialog" id="jiathis-dialog" hidden>
+    <!-- JiaThis Button BEGIN -->
+    <div class="jiathis_style_32x32">
+        <a class="jiathis_button_qzone"></a>
+        <a class="jiathis_button_tsina"></a>
+        <a class="jiathis_button_weixin"></a>
+        <a class="jiathis_button_cqq"></a>
+        @*<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>*@
+    </div>
+    <!-- JiaThis Button END -->
+</div>
+
+
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script src="~/Scripts/jquery.twbsPagination.min.js"></script>
+<script>
+    //已投票限制
+    var voteList = getCookie('CBIDS').split(',');
+    var bookIdElemList = $(".book-hid-id");
+
+    for (var i = 0; i < bookIdElemList.length; i++)
+    {
+        var bookId = $(bookIdElemList[i]).val();
+
+        if ($.inArray(bookId, voteList) > -1)
+        {
+            $(bookIdElemList[i]).parent().parent().children('.vote-item-vote-hollow').hide();
+            $(bookIdElemList[i]).parent().parent().children('.vote-item-vote-solid').show();
+        }
+    }
+
+    if('@isCurrentWeek'=='False'){
+        $('.period-btn').removeClass('tab-active');
+        $('#period-month-btn').addClass('tab-active');
+    }else{
+        $('.period-btn').removeClass('tab-active');
+        $('#period-week-btn').addClass('tab-active');
+    }
+    //点击本周
+    $("#period-week-btn").on('click',function(){
+        var type = $($(".tab-active")[0]).attr('data-hid-type');
+        var keywords = $("#comic-keywords").val();
+        if (keywords != "") {
+            var url ='@Url.Action("SearchBookList","ComicBooks")?type=0&isCurrentWeek=true&keywords=' + keywords;
+            window.location.href = url;
+        }else{
+            var url='@Url.Action("SearchBookList","ComicBooks")?type='+type+'&isCurrentWeek=true';
+            window.location.href=url;
+        }
+       
+    });
+
+    //点击热门
+    $("#period-month-btn").on('click',function(){
+        var type = $($(".tab-active")[0]).attr('data-hid-type');
+        var keywords = $("#comic-keywords").val();
+        if (keywords != "") {
+            var url ='@Url.Action("SearchBookList","ComicBooks")?type=0&isCurrentWeek=false&keywords=' + keywords;
+            window.location.href = url;
+        }else{
+            var url='@Url.Action("SearchBookList","ComicBooks")?type='+type+'&isCurrentWeek=false';
+            window.location.href=url;
+        }
+       
+    });
+
+    //手机版跳转
+    var testResult = browserRedirect();
+    if (testResult == 'phone') {
+        window.location.href = "@Url.Action("M_SearchBookList","ComicBooks",new { type = type })";
+    } else {
+        console.log(testResult);
+    }
+    //手机版跳转
+
+    window.scrollTo(0,630);
+    $('#mask,#alert-ok,#alert-cancel').click(function () {
+        $('#mask,.alert-diy').hide();
+    });
+
+    var keywords = '@Model.Keywords';
+    if (keywords != '') {
+        $("#comic-keywords").val(keywords);
+    }
+
+    $(".tab-title").removeClass("tab-active");
+    switch(@type){
+        case 0:
+            $(".tab-title").removeClass("tab-active");
+            //$("#tab-title-chinacomic").addClass("tab-active");
+            break;
+        case 1:
+            $("#tab-title-chinacomic").addClass("tab-active");
+            break;
+        case 2:
+            $("#tab-title-bestdrawing").addClass("tab-active");
+            break;
+        case 3:
+            $("#tab-title-bestinset").addClass("tab-active");
+            break;
+        case 4:
+            $("#tab-title-beststory").addClass("tab-active");
+            break;
+        default:
+            $("#tab-title-chinacomic").addClass("tab-active");
+            break;
+    }
+
+    $(".tab-title").on('click', function (e) {
+        $(".tab-title").removeClass("tab-active");
+        $(this).addClass("tab-active");
+    });
+
+    var jiathis_config = {
+        url: "http://cacc.manhuadao.cn/",
+        title: "",
+        pic: "",
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+
+    $("#comic-search").on('click', function () {
+        var keywords = $("#comic-keywords").val();
+        var type = 0;
+        if (keywords != "") {
+            var url ='@Url.Action("SearchBookList","ComicBooks")?type=' + type + '&keywords=' + keywords;
+            window.location.href = url;
+        }
+    });
+
+    $(".book-vote").on('click', function () {
+        var parent = $($(this).parent());
+        var bookId = parent.find('.book-hid-id').val();
+        //var bookId = this.getAttribute("value");
+        var url = '@Url.Action("CreateVote", "ComicBooks")?bookId=' + bookId;
+
+        var parent = $($(this).parent());
+        if(BookVote(url) == 0){
+            $(this).hide();
+            $(this).prev().show();
+            var currentScore = new Number(parent.find('.vote-score').text());
+            parent.find('.vote-score').text(currentScore + 1+'');
+        };
+    });
+
+
+    var MessageDialog = $("#jiathis-dialog").dialog({
+        autoOpen: false,
+        title: '分享',
+        width: 400,
+        height: 150,
+        modal: true,
+        resizable: false,
+        buttons: [],
+        open: function () {
+            $("#Message-ok").removeClass("ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only")
+            .addClass("btn btn-primary");
+            $("#Message-cancel").removeClass("ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only")
+            .addClass("btn btn-default");
+            $("#Message-ok").blur();
+            $("#Message-cancel").blur();
+        }
+    });
+
+    $(".book-share").on('click', function (e) {
+        var parent = $($(this).parent());
+        var bookName = parent.children('.book-hid-name').val();
+        var bookId = parent.children('.book-hid-id').val();
+        var bookCoverUrl = parent.children('.book-hid-coverurl').val();
+        var bookBrief = parent.children('.book-hid-brief').val();
+        var shareUserId = '@userId';
+
+        $.ajax({
+            type: 'post',
+            url: "@Url.Action("GetCurrentLoginUserId", "ComicBooks")",
+            async: false,
+            success: function (data) {
+                shareUserId=data.UserId;
+            }
+        });
+
+        //分享要登录，可能会改
+        if(shareUserId==0)
+        {
+            alert("您还没有登录，不能进行拉票哦");
+            window.open("http://www.manhuadao.cn/Account/Index" + "?returnUrl=" + window.location.href);
+            return;
+        }
+
+        var shareUrl = '@Url.Action("GetBookDetailById", "ComicBooks")?bookId=' + bookId + '&userId=' + shareUserId;
+        jiathis_config.title = '《' + bookName + '》 超好的作品已加入金龙奖大赛！小伙伴们一起为TA投票助威吧！';
+        jiathis_config.url = "http://cacc.manhuadao.cn" + shareUrl;
+        jiathis_config.pic = bookCoverUrl;
+        //jiathis_config.summary = bookBrief.substr(0,200) ;//截取
+        $('#mask').show();
+        $('.jiathis-diy').show();
+        //$("#jiathis-dialog").dialog("open");
+    });
+
+    $('#mask,#alert-cancel,.jiathis-close').click(function () {
+        $('#mask,.alert-diy').hide();
+        $('.jiathis-diy').hide();
+    });
+
+
+    $(function () {
+        //$("div[id^=tabs-]").tabs();
+        $("div[id^=tabs-]").each(function (i, e) { $(this).tabs(); });
+        //stab.tabs();
+        var pageCount = '@Model.PageCount';
+
+        var awardType = $("#award-type").val();
+        $('#pagination').twbsPagination({
+            totalPages: pageCount,
+            visiblePages: 5,
+            first: "首页",
+            prev: "前一页",
+            next: "下一页",
+            last: "最后一页",
+            initiateStartPageClick: true,
+            href: '@Url.Action("SearchBookList","ComicBooks")?pagenumber={{number}}&type=' + '@Model.AwardType' + '&keywords=' + '@Model.Keywords'+"&isCurrentWeek="+'@isCurrentWeek',
+            onPageClick: function (event, page) {
+                // must add ajax attribute at here
+                $('#pagination').find("a").each(function (i, e) {
+                    $(e).attr({ "data-ajax": "true", "data-ajax-method": "Get", "data-ajax-mode": "replace", "data-ajax-update": "#tabledata" })
+                });
+            }
+        });
+    });
+</script>
+
+<style>
+    .pages li {
+        float: left;
+    }
+
+    .pages {
+        width: 934px;
+        padding: 33px;
+    }
+
+        .pages ul {
+            padding-left: 33%;
+        }
+
+    #pagination > .active > a {
+        color: #fff;
+    }
+</style>

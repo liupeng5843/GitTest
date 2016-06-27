@@ -1,0 +1,194 @@
+﻿@{
+    ViewBag.Title = "用户管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="@Url.Content("~/Content/Scripts/users.js")"></script>
+
+<div class="clearfix"  style="text-align: right; padding-right: 10px; padding-bottom: 10px; position: absolute; top: 90px; z-index: 99;">
+    <div class="clearfix" style="float:left;margin-right:15px;">
+        <span style="display:block;float:left;height:34px;line-height:34px;">状态：</span>
+        <select id="userStaus" class="form-control" style="float:left;width:120px;">
+            <option value=-1>全部</option>
+            <option value=0>启用</option>
+            <option value=2>禁用</option>
+            <option value=1>未激活</option>
+        </select>
+    </div>
+    <div class="clearfix" style="float:left;margin-right:15px;">
+        <sapn style="display:block;float:left;height:34px;line-height:34px;">性别：</sapn><select id="userGender" class="form-control" style="float:left;width:120px;">
+    <option value=-1>全部</option>
+    <option value=1>男</option>
+    <option value=2>女</option>
+    <option value=0>保密</option>
+</select>
+    </div>
+
+</div>
+<div id="users" style="margin-top:30px;width:98%;"></div>
+<div id="userDialog" role="dialog" title="编辑用户" style="display:none;">
+    <form id="userform">
+        <input id="Id" type="text" style="display:none" value="" />
+        <table>
+            <tr>
+                <th>
+                    头像：
+                </th>
+                <td>
+                    <div id="PortraitSilverLight" style="margin-left:-20px;"></div>
+                    <input id="PortraitId" name="PortraitId" type="hidden" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    背景封面：：
+                </th>
+                <td>
+                    <div id="BackgroundImageSilverLight" style="margin-left:-20px;"></div>
+                    <input id="BackgroundImageId" name="BackgroundImageId" type="hidden" />
+                </td>
+            </tr>
+           
+            <tr>
+                <th>
+                    昵称：
+                </th>
+                <td>
+                    <input id="NickName" name="NickName" maxlength="10" type="text" value="" />
+
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    个性签名：
+                </th>
+                <td>
+                    <textarea id="Signature" name="Signature" maxlength="150" type="text" value=""  rows="4" style="width:180px;"></textarea>
+                    @*<input id="Signature" name="Signature"  maxlength="150" type="text" value="" />*@
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    性别：
+                </th>
+                <td>
+                    <select id="Gender" name="Gender" style="width:100px;">
+                        <option value="Male">男</option>
+                        <option value="Female">女</option>
+                        <option value="Unknown">保密</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    地址:
+                </th>
+                <td>
+                    <input id="District" name="District" type="text" maxlength="30" />
+                </td>
+            </tr>
+        </table>
+        <input readonly="readonly" id="PhoneNumber" name="PhoneNumber" maxlength="11" type="text" value="" style="display:none" />
+        <input id="UserStatus" style="display:none" />
+        <input id="CreatedTime" style="display:none" />
+        <input id="SignUpTime" style="display:none" />
+    </form>
+</div>
+<script type="text/javascript">
+    Global.FirstLevelGridId = "";
+    var userStaus = -1;
+    var userGender = -1;
+    buildUsersGrid();
+
+    $("#userStaus").on("change", function () {
+        userStaus = $(this).val();
+        buildUsersGrid();
+    });
+
+    $("#userGender").on("change", function () {
+        userGender = $(this).val();
+        buildUsersGrid();
+    });
+
+    function buildUsersGrid() {
+        var now = new Date();
+        gridId = now.getFullYear().toString() + now.getMonth().toString() + now.getDate().toString() + now.getHours().toString() + now.getMinutes().toString() + now.getSeconds().toString() + now.getMilliseconds().toString();
+        $("#users").html("<div id='" + gridId + "'></div>");
+        Global.FirstLevelGridId = gridId;
+
+        $("#" + gridId).dataMatrix({
+            oDataUrl: baseServerUrl + "odata/UsersOData",
+            extraRequestData: { userStaus: userStaus,userGender:userGender },
+            implementationType: "bootGrid",
+            isRowNumbersVisible: true,
+            properties: [
+                { type: "datetime", name: "CreatedTime", displayName: "创建时间", isEditable: false, isSortable: false },
+                { type: "string", name: "Id", displayName: "Id", isEditable: false, isKey: true, isColumnHidden: true, isSearchable: false, isSortable: false },
+                { type: "string", name: "NickName", displayName: "名称", isSearchable: true, isSortable: true },
+                //{ type: "string", name: "Portrait", displayName: "头像", isSearchable: true, isS ortable: true },
+                { type: "imagehub", typeOptions: { imageUploadKitUrl: imageUploadKit, baseUrl: imageHubUrl, isMultiple: false, appIdOrName: 'timing' }, name: "Portrait", displayName: "头像", columnWidth: 100, isEditable: true, isSortable: false, isSearchable: false },
+                { type: "string", name: "PhoneNumber", displayName: "电话", isSearchable: true, isSortable: true },
+                { type: "enum", typeOptions: { "enumValues": { "Unknown": "保密", "Male": "男", "Female": "女" } }, name: "Gender", displayName: "性别", isEditable: true, isSortable: true, isSearchable: false },
+                { type: "enum", typeOptions: { "enumValues": { "Active": "启用", "Disabled": "禁用" ,"Inactive":"未激活"} }, name: "Status", displayName: "状态", isEditable: true, isSortable: true, isSearchable: false },
+                { type: "action", displayName: "操作", columnWidth: 240, isSortable: false, isSearchable: false },
+            ],
+            isHeaderBarShow: true,
+            rowCountPerPage: 50,
+            rowCountsPerPage: [ 50, 100, -1],
+            isRowNumbersVisible: true,
+            isCreateButtonVisible: false,
+            isEditButtonVisible: false,
+            isDeleteButtonVisible: false,
+            defaultSortAscending: false,
+            isMultipleSelection: false,
+            isColumnChooserEnabled: true,
+            defaultSortPropertyName: "CreatedTime",
+            actionButtons: [
+                 {
+                     displayName: "编辑",
+                     buttonType: DataMatrixRowActionButtonType.Link,
+                     buttonClass: "pd-left",
+                     onClick: function (button, rowId) {
+                         var row = $("#" + gridId).dataMatrix("getRow", rowId);
+                         Global.FormMethod = "put";
+                         Global.EditingEntityId = row.Id;
+                         editUser(row);
+                     }
+                 },
+
+                {
+                    displayName: "禁用",
+                    buttonType: DataMatrixRowActionButtonType.Link,
+                    onClick: function (button, rowId) {
+                        var row = $("#" + gridId).dataMatrix("getRow", rowId);
+                        Global.DeleteingEntityId = rowId;
+                        showMessage(MessageType.DeleteConfirm);
+                    }
+                },
+                {
+                    displayName: "启用",
+                    buttonType: DataMatrixRowActionButtonType.Link,
+                    onClick: function (button, rowId) {
+                        var row = $("#" + gridId).dataMatrix("getRow", rowId);
+                        Global.EditingEntityId = rowId;
+                        showMessage(MessageType.EnableConfirm);
+                    }
+                }
+            ],
+        });
+    }
+
+
+   
+</script>
+
+<style>
+    .pd-left {
+        padding-left: 0 !important;
+    }
+
+    td {
+        padding: 8px;
+        margin-left: 15px;
+    }
+</style>

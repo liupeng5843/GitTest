@@ -1,0 +1,116 @@
+﻿#changeSurveyDialog ul li {
+    list-style-type: none;
+}
+
+    #changeSurveyDialog ul li label {
+        font-weight: 300;
+    }
+
+#changeSurveyDialog {
+    padding-top: 20px;
+}
+
+#createSurveyDialog {
+    display: none;
+}
+
+#changeSurveyDialog {
+    display: none;
+}
+
+#questionSheetForm .form-group label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 85px;
+    font-weight: 500;
+}
+
+#questionForm .form-group label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 50px;
+    font-weight: 500;
+}
+
+#questionSheetForm .form-group input, #questionSheetForm .form-group textarea, #questionForm .form-group input, #questionForm .form-group textarea, #questionForm .form-group select {
+    width: 65%;
+    display:inline;
+}
+
+.participantsDiv .text-core {
+    width:65%;
+    padding:5px !important;
+}
+
+#questionForm .form-group select {
+    width: 15%;
+    display:inline;
+}
+
+.questionTypeRaido {
+    width:10px !important;
+}
+
+    .questionTypeRaido + label {
+        padding-left:3px;
+        padding-bottom:4px;
+    }
+
+#choiceTypeTable {
+    width:368px;
+}
+#choiceTypeTable tr {
+    height:40px;
+}
+#choiceTypeTable tr td:nth-child(2) {
+    width:27px;
+}
+#choiceTypeTable tr td:nth-child(1) {
+    width:27px;
+}
+#choiceTypeTable tr td:nth-child(3) {
+    width:250px;
+}
+#choiceTypeTable tr td:nth-child(4) {
+    vertical-align:central;
+}
+
+
+
+.participantsInput {
+    width:100% !important;
+}
+
+.multipleChoicePart, .textHintContainer {
+    display:none;
+}
+
+.input_calendar {
+    background:url("") !important;
+}
+
+.participantsLabel {
+    float:left;
+}
+
+.participantsInput {
+    max-height:110px !important;
+    /*height:100px !important;*/
+    /*padding-bottom:17px;*/
+    padding-top:10px !important;
+}
+
+.participantsDiv {
+    float:left;
+}
+
+.participantsDiv .select-ext-container {
+    float:left;
+}
+
+#choiceCountLimit {
+    display:none;
+    color:red;
+}
+
+.red-font {
+    color:red;
+}

@@ -1,0 +1,232 @@
+﻿@model ShiJu.Models.Party
+@using System.Json;
+<!DOCTYPE html>
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wx_share">
+        <div class="theme"><i class="tit_icon"></i><span>活动主题</span><a class="theme_arrow" href="javascript:;"><i class="arrow"></i></a></div>
+        <div class="theme_content">
+            <div class="title"><span class="back"></span>@Model.Title</div>
+            <div class="middle">
+                <div class="slide_box" id="slide_box" images=@Model.Images>
+                    <ul class="slide">
+                        @{
+                            var baseUrl = ViewData["ImageBaseUrl"].ToString();
+                            var portraitUrl=baseUrl+Model.CreatorUser.Portrait+"_2_30_30.jpg";
+                            var jsonArray = JsonValue.Parse(Model.Images) as JsonArray;
+                            foreach (var imageObj in jsonArray)
+                            {
+                                var imgId = imageObj.GetGuidValue("ImageId");
+                                var imageUrl = baseUrl + imgId + "_2_75_75.jpg";
+                                <li><img src=@imageUrl /></li>
+                            }
+                        }
+                        <li class="active"><img src="~/Content/images/rice1.jpg" /></li>
+
+                    </ul>
+
+                    <ul class="circle"></ul>
+                </div>
+                <div class="article">
+                    <div class="share_p">
+                        <span class="photo"><img src=@portraitUrl/></span>
+                        <p>发起人</p>
+                        <span class="name">@Model.CreatorUser.NickName</span>
+                    </div>
+                    <article>
+                        @Model.Description
+                    </article>
+                </div>
+                <div class="info">
+                    <div class="date">
+                        <i class="icon"></i>
+                        <span>@Model.BeginTime.ToString("yyyy/MM/dd HH:mm")</span>
+                        <span>~</span>
+                        <span>@Model.EndTime.ToString("yyyy/MM/dd HH:mm")</span>
+                    </div>
+                    <div class="address"><i class="icon"></i><span>@Model.Address</span></div>
+                    <div class="people"><i class="icon"></i><span>期望人数 x</span><span class="number">@Model.MaxUserCount</span></div>
+                </div>
+                <div class="join_p">
+                    <a class="more" href="javascript:;"></a>
+                    <div class="join_num">参与者 x<span>@Model.Participants.Count</span></div>
+                    <div class="p_photo">
+                        <ul>
+                            @{
+                                foreach (var participant in Model.Participants)
+                                {
+                                    var name = participant.User.NickName;
+                                    var imageId = participant.User.Portrait;
+                                    var imageUrl = baseUrl + imageId + "_2_75_75.jpg";
+                                    <li img src=@imageUrl></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+
+                    @*<div class="p_photo">
+                            <ul>
+                                <li><img src="images/photo_01.jpg" /></li>
+                                <li><img src="images/photo_01.jpg" /></li>
+                                <li><img src="images/photo_01.jpg" /></li>
+                                <li><img src="images/photo_01.jpg" /></li>
+                                <li><img src="images/photo_01.jpg" /></li>
+                            </ul>
+                        </div>*@
+                </div>
+
+            </div>
+            <div class="toolbar">
+                <a href="javascript:;"><i class="share"></i>分享</a><span></span>
+                <a href="javascript:;"><i class="wDate"></i>期望时间</a><span></span>
+                <a href="javascript:;"><i class="laud"></i>赞</a>
+            </div>
+        </div>
+        <div class="vote"><i class="tit_icon"></i><span>投票</span><a href="javascript:;" class="vote_arrow"><i class="arrow"></i></a></div>
+        <div class="vote_content">
+            <div class="title"><span class="back"></span>@Model.VoteTitle</div>
+            <div class="option_c">
+                <ul>
+                    @{
+                        var voteJsonArray = JsonValue.Parse(Model.VoteChoicesJson) as JsonArray;
+                        if (voteJsonArray == null)
+                        {
+                            <li>暂无投票</li>
+                        }
+                        else
+                        {
+                            foreach (var vote in voteJsonArray)
+                            {
+                                var option = vote.GetStringValue("Text");
+                                var position = vote.GetIntValue("Position");
+                                switch (position)
+                                {
+                                    case 1:
+                                        <li><b>A</b><span>@option</span></li>
+                                        break;
+                                    case 2:
+                                    <li><b>B</b><span>@option</span></li>
+                                        break;
+                                    case 3:
+                                    <li><b>C</b><span>@option</span></li>
+                                        break;
+                                    case 4:
+                                    <li><b>D</b><span>@option</span></li>
+                                        break;
+                                    case 5:
+                                    <li><b>E</b><span>@option</span></li>
+                                        break;
+                                    default:                                    
+                                        break;
+                                }
+                            }
+
+                        }
+
+                    }
+                </ul>
+
+                @*<div class="option_c">
+                        <ul>
+                            <li><b>A</b><span>美式咖啡</span></li>
+                            <li><b>B</b><span>白咖啡</span></li>
+                            <li><b>C</b><span>拿铁</span></li>
+                            <li><b>D</b><span>摩卡咖啡</span></li>
+                            <li><b>E</b><span>卡布咖啡</span></li>
+                        </ul>
+                    </div>*@
+                <div class="option">
+                    <img src="" />
+                </div>
+            </div>
+        </div>
+        <div class="comment"><i class="tit_icon"></i><span>评论（<span class="number">@Model.CommentCount</span>条）</span><a href="javascript:;" class="comm_arrow"><i class="arrow"></i></a></div>
+        <div class="comm_content">
+            <div class="comm_list">
+                @{
+                    foreach (var comment in Model.PartyComments)
+                    {
+                        var minute = (DateTime.Now - comment.CreatedTime).TotalMinutes;
+                        var imageUrl = baseUrl + comment.User.Portrait + "_2_75_75.jpg";
+                        <dl>
+                            <dt><span><img src=@imageUrl /></span></dt>
+                            <dd>
+                                <span class="name">@comment.User.NickName</span>
+                                @if (minute < 60)
+                                {
+                                    <span class="time"><b>@minute</b>分钟前</span>
+                                }
+                                else if (minute < 1440)
+                                {
+                                    <span class="time"><b>@((int)minute / 60)</b>小时前</span>
+                                }
+                                else
+                                {
+                                    <span class="time"><b>@((int)minute / 1440)</b>天前</span>
+                                }
+                                <p>@comment.Text</p>
+                            </dd>
+                        </dl>
+                    }
+                }
+
+                @*<dl>
+                        <dt><span><img src="images/photo_01.jpg" /></span></dt>
+                        <dd>
+                            <span class="name">随便</span><span class="time"><b>5</b>分钟前</span>
+                            <p>他做的咖啡太好了吃了，喜欢他做咖啡时的样子。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span><img src="images/photo_01.jpg" /></span></dt>
+                        <dd>
+                            <span class="name">随便</span><span class="time"><b>5</b>分钟前</span>
+                            <p>他做的咖啡太好了吃了，喜欢他做咖啡时的样子。</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span><img src="images/photo_01.jpg" /></span></dt>
+                        <dd>
+                            <span class="name">随便</span><span class="time"><b>5</b>分钟前</span>
+                            <p>他做的咖啡太好了吃了，喜欢他做咖啡时的样子。</p>
+                        </dd>
+                    </dl>*@
+            </div>
+            <div class="comm_btn">
+                <a style="display:none;" href="javascript:;"><i class="icon"></i>我来评论</a>
+                <div class="comm_more">
+                    <a href="javascript:;">查看全部</a>
+                    <a href="javascript:;">我来评论</a>
+                </div>
+            </div>
+            <button class="sign_up">报名</button>
+        </div>
+    </div>
+    <div class="prompt">
+        <div class="dl_box">
+            <div class="pt_text">
+                <h2>若需使用该功能</h2>
+                <h2>请下载 Timing App</h2>
+            </div>
+            <div class="dl_cl"><a class="close" href="javascript:;">再看看</a><a href="javascript:;">去下载</a></div>
+        </div>
+    </div>
+    <div class="dl_prompt">
+        <img class="top_arrow" src="~/Content/images/top_arrow.png" alt="图片出错" />
+        <p>微信内容无法下载，请点击<span>右上角...按钮</span></p>
+        <p>选择<span>（在浏览器打开）</span>即可正常打开/下载</p>
+        <figure>
+            <img src="~/Content/images/dh.png" alt="图片出错" />
+        </figure>
+    </div>
+    <script src="~/Content/js/jquery-1.11.3.min.js"></script>
+    <script src="~/Content/js/index.js"></script>
+</body>
+</html>

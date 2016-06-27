@@ -1,0 +1,286 @@
+﻿
+input[type="text"],input[type="password"] {
+    height:30px;
+    color: #000;
+}
+
+.div_actionbuttons {
+    width: 100%;
+    display: inline-block;
+    padding: 15px 0px 15px 0px;
+    border-bottom:1px solid #ccc;
+}
+.div_actionbuttons .btn {
+    margin-right:15px;
+}
+
+#tbl_groups > tbody > tr > td {
+    vertical-align: middle;
+}
+
+#tbl_groups tbody tr td .btn {
+    margin-right: 10px;
+}
+#dialog,
+#dialog_confirm {
+    display:none;
+    width:600px;
+    height:auto;
+    max-height:600px;
+}
+#dialog .subtitle,
+#dialog_groupMembers .subtitle,
+#dialog_confirm .subtitle {
+    border-bottom: 1px solid #ddd;padding:4px 0px;font-size:14px;
+}
+.clear-margin {
+    margin-left:0px !important;
+    margin-right:0px !important;
+}
+#form_groupdetail {
+    padding-left:15px;
+}
+#form_groupdetail label {
+    color: rgb(51, 51, 51);
+}
+#form_groupdetail label em {
+    color: red;
+}
+
+.form_row {
+    margin:4px 0px;
+    padding:2px;
+    width:100%;
+    height:40px;
+    display:block;
+}
+.form_row .form_label {
+    width: 80px; float:left;display:inline-block;padding-top:4px;
+}
+.form_row .form_label label {
+    font-size:12px;
+    font-weight:lighter;
+    color:#bbb;
+    top:2px;
+}
+.form_row .form_input {
+    width: 220px;display:inline-block;
+}
+.form_row .form_input input {
+    width: 220px;
+}
+.form_row .form_input .invalid {
+    border: 1px solid red;
+    box-shadow:#ff4646;
+}
+.form_row .form_input textarea {
+    width: 320px;
+}
+.input_tooltip {
+    background: black;
+    width:180px;
+}
+body .ui-tooltip {
+    border-width:1px;
+}
+.ui-tooltip{
+    padding:4px;
+    color:#a94442;
+    border:1px solid ##ebccd1;
+    background-color:#f2dede;
+}
+
+#dialog_groupMembers {
+    width:570px;
+    height:340px;
+    display:none;
+}
+
+#dialog_groupMembers #txtSearchKey,
+#dialog_addMember #txtSearchMemberToAdd {
+    display:inline-block;
+    height:32px;
+    top:2px;
+    position:relative;
+    width:200px;
+}
+
+#dialog_groupMembers #btnSearch,
+#dialog_addMember #btnSearchMemberToAdd {
+    width:60px;
+}
+
+#dialog_groupMembers ul.members,
+#dialog_addMember ul.members {
+    width: 100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+    border: 1px solid #ddd;
+    background-color:#fff;
+    list-style:none;
+    padding:0px;
+    margin:auto;
+}
+
+
+#dialog_groupMembers ul.members {
+    height: 380px;
+}
+#dialog_addMember ul.members {
+    height: 338px;
+}
+
+#dialog_groupMembers ul.members li,
+#dialog_addMember ul.members li {
+    list-style:none;
+    height: 42px;
+    padding: 4px;
+    margin: 4px;
+    border-radius:3px;
+}
+
+#dialog_groupMembers ul.members li.normal,
+#dialog_addMember ul.members li.normal {
+    
+}
+
+#dialog_groupMembers ul.members li.selected,
+#dialog_addMember ul.members li.selected {
+    background-color:rgb(66,120,179);
+}
+
+#dialog_groupMembers ul.members li .div_memberInfo,
+#dialog_addMember ul.members li .div_memberInfo {
+    max-width:500px;height:34px;
+}
+
+#dialog_groupMembers ul.members li .div_memberInfo img,
+#dialog_addMember ul.members li .div_memberInfo img {
+    display:inline-block;width:34px;height:34px;overflow:hidden;float:left;
+}
+
+#dialog_groupMembers ul.members li .div_memberInfo div,
+#dialog_addMember ul.members li .div_memberInfo div {
+    width: 80%; display:inline-block;overflow:hidden;float:left;margin-left:8px;
+}
+
+#dialog_groupMembers ul.members li .div_memberInfo div p,
+#dialog_addMember ul.members li .div_memberInfo div p {
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+    margin:0px;font-size:14px;color:rgb(110, 102, 88);
+}
+
+#dialog_groupMembers ul.members li.normal .div_memberInfo div p,
+#dialog_addMember ul.members li.normal .div_memberInfo div p {
+    color:rgb(110, 102, 88);
+}
+
+#dialog_groupMembers ul.members li.selected .div_memberInfo div p,
+#dialog_addMember ul.members li.selected .div_memberInfo div p {
+    color:#fff;
+}
+
+#dialog_groupMembers ul.members li .div_memberInfo div span,
+#dialog_addMember ul.members li .div_memberInfo div span {
+    display:block;margin-top:-2px;color:rgb(208, 192, 181);
+}
+
+#dialog_groupMembers ul.members li.normal .div_memberInfo div span,
+#dialog_addMember ul.members li.normal .div_memberInfo div span {
+    color:rgb(208, 192, 181);
+}
+
+#dialog_groupMembers ul.members li.selected .div_memberInfo div span,
+#dialog_addMember ul.members li.selected .div_memberInfo div span {
+    color:#fff;
+}
+
+#dialog_groupMembers ul.members li img.deleteMember,
+#dialog_addMember ul.members li img.deleteMember {
+    width:32px;height:32px;float:right;margin:-32px 0px 0px 0px;cursor:pointer;
+}
+
+#dialog_groupMembers ul.members li img.deleteMember {
+    display:none;
+}
+#dialog_addMember ul.members li img.deleteMember {
+    display:inline-block;
+}
+
+#dialog_groupMembers #btnAddUser,
+#dialog_groupMembers #btnAddGroup {
+    margin-right:6px;
+}
+
+#dialog_addMember {
+    display:none;
+}
+
+#dialog_addMember #div_searchMember {
+    display:none; position: absolute; background: #fff; width: 224px; border: 1px solid #bbb; margin-top: -6px;padding:0px;z-index:999;
+}
+#dialog_addMember #div_searchMember div.item,
+#dialog_addMember #div_searchMember div.normal,
+#dialog_addMember #div_searchMember div.selected {
+    display:block;
+    width: 100%;
+    cursor: pointer;
+    margin: 0px 0px 4px 0px;
+    border-radius:3px;
+    height:40px;
+    padding:4px;
+}
+
+#dialog_addMember #div_searchMember div.selected {
+    background-color:rgb(66,120,179);
+}
+
+#dialog_addMember #div_searchMember div.item img {
+    width:32px;height:32px;display:inline-block;
+}
+
+#dialog_addMember #div_searchMember div.item div{
+    width: 80%;            
+    display: inline-block;
+    margin-left: 4px;
+    position:absolute;
+    overflow:hidden;
+}
+
+#dialog_addMember #div_searchMember div.item div p {
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0px;
+    display: block;
+    font-size: 14px;
+}
+
+#dialog_addMember #div_searchMember div.selected div p {
+    color:#fff;
+}
+
+#dialog_addMember #div_searchMember div.item div span {
+    display:block;margin-top:-2px;color:rgb(110, 102, 88);
+}
+
+#dialog_addMember #div_searchMember div.selected div span {
+    color:#fff;
+}
+
+#form_groupdetail input[type="text"],
+#form_groupdetail input[type="password"]{
+    height:30px;
+}
+
+.searchInput {
+    display: block;
+    float: right;
+    margin-right: 0px;
+}

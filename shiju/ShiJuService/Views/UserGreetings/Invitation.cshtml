@@ -1,0 +1,94 @@
+﻿@model ShiJu.Models.Greeting
+
+@*@Model.Id
+    @Model.SourceUserId
+    @Model.TargetUserId
+    @Model.TargetPhoneNumber
+    @Model.IsAgreed
+    @ViewData["ServiceBaseUrl"]
+    @Model.SourceUser.Portrait
+    @Model.SourceUser.NickName
+    @ViewData["ImageBaseUrl"]
+    @
+*@
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body>
+    <input id="modelID" style="display:none;" type="text" value="@Model.Id" />
+    <input id="sourceUserId" style="display:none;" type="text" value="@Model.SourceUserId" />
+    <input id="targetUserId" style="display:none;" type="text" value="@Model.TargetUserId" />
+    <input id="targetPhoneNumber" style="display:none;" type="text" value="@Model.TargetPhoneNumber" />
+    <input id="baseUrl" style="display:none;" type="text" value="@ViewData["ServiceBaseUrl"]" />
+    <input id="imgBaseUrl" style="display:none;" type="text" value="@ViewData["ImageBaseUrl"]" />
+    <input id="imgId" style="display:none;" type="text" value="@Model.SourceUser.Portrait" />
+    <input id="bgImage" style="display:none;" type="text" value="@Model.SourceUser.BackgroundImage" />
+    <input id="hasSignup" style="display:none;" type="text" value=@ViewData["HasSignup"] />
+
+    <div class="yue_ma">
+        <div class="header">
+            <span class="photo">
+                <img id="photo" src="" />
+            </span>
+            <span class="name">@Model.SourceUser.NickName</span>
+        </div>
+        <div class="content">
+            <p><span class="name">@Model.SourceUser.NickName</span>找你玩</p>
+            <a class="ok" href="javascript:;">得嘞~</a>
+            <a class="cancel" href="javascript:;">哎，算了</a>
+            <p class="copyright">Copyright&copy;2015-2017</p>
+            <p class="narr">Newbe All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/jquery.cookie.js"></script>
+    <script src="~/Content/js/auto.js"></script>
+    <script>
+        ;(function (doc) {
+            var modelID = doc.querySelector("#modelID").value,
+                sourceUserId = doc.querySelector("#sourceUserId").value,
+                targetUserId = doc.querySelector("#targetUserId").value,
+                targetPhoneNumber = doc.querySelector("#targetPhoneNumber").value,
+                baseUrl = doc.querySelector("#baseUrl").value, 
+                imgBaseUrl = doc.querySelector("#imgBaseUrl").value,
+                imgId = doc.querySelector("#imgId").value,
+                bgImage = doc.querySelector("#bgImage").value,
+                hasSignup = doc.querySelector("#hasSignup").value,
+                header = doc.querySelector(".header"),
+                photo = doc.querySelector("#photo"),
+                ok = doc.querySelector(".ok"),
+                cancel = doc.querySelector(".cancel");
+            var shijuyue = '{"modelID":"' + modelID + '","sourceUserId":"' + sourceUserId + '","targetUserId":"' + targetUserId + '","targetPhoneNumber":"' + targetPhoneNumber + '","baseUrl":"' + baseUrl + '","hasSignup":"' + hasSignup + '"}';
+            $.cookie("shijuyue", shijuyue, { expires: 7, path: '/' });
+            if (hasSignup == 1) {
+                location.href = baseUrl + "UserGreetings/RegisterSuccess";
+            }
+            if (parseInt(bgImage.split("-").join("")) !== 0 && bgImage !== "") {
+                header.style.background = "url(" + imgBaseUrl + bgImage + "_2_640_360.jpg) no-repeat center / cover";
+            }
+            if (parseInt(imgId.split("-").join("")) == 0 || imgId == "") {
+                photo.setAttribute("src", baseUrl + "Content/images/d_photo.jpg");
+            }
+            else{
+                photo.setAttribute("src", imgBaseUrl + "/" + imgId + "_2_75_75.jpg");
+            }
+            ok.addEventListener("click", function () {
+                $.cookie("isRefuse", "", { expires: -1, path: '/' });
+                location.href = baseUrl + "UserGreetings/Register";
+            },false);
+            cancel.addEventListener("click", function () {
+                $.cookie("isRefuse", "0", { expires: 7, path: '/' });
+                location.href = baseUrl + "UserGreetings/Register";
+            }, false);
+        })(document);
+    </script>
+</body>
+</html>
+
+
+

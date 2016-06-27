@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ShiJuDbContextDb-Web.config Connection String" description="ShiJuDbContextDb 由应用程序在 web.config 中用来访问数据库的连接字符串。" defaultValue="Data Source=10.1.1.50;Initial Catalog=Shiju;User ID=brand;Pwd=Abc123!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJuDbContextDb']/@connectionString" />
+  </parameter>
+</parameters>

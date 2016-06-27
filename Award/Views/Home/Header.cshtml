@@ -1,0 +1,51 @@
+﻿@model MHD.Original.Award.ViewModels.HeaderViewModel
+@{
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+}
+
+<div class="topnav">
+    <div class="wrap cf">
+        <a href="@host">回到首页</a>
+        <a href="@string.Format("{0}/{1}/{2}", host, "Home", "DownLoad")">下载漫画岛</a>
+        <a href="@string.Format("{0}/{1}/{2}", host, "Home", "About")">关于漫画岛</a>
+    </div>
+</div>
+<!-- header start -->
+<div class="header">
+    <div class="wrap cf">
+
+        <div class="logo_jlj"><a href=""></a></div>
+        <div class="logo_join">×</div>
+        <div class="logo_mhd"><a href="@host"></a></div>
+
+        <div class="login-index">
+            @if (Model.IsLogOn)
+            {
+                <div class="login-after">
+
+                    <div class="pop-in-out fl">
+                        <img src="@Model.CoverUrl" alt="">
+
+                        <ul class="tip-pop">
+                            <li><a href="@string.Format("{0}/{1}/{2}", host, "AuthorHome", "Index")">进入后台</a></li>
+                            <li><a href="@string.Format("{0}/{1}/{2}", host, "Account", "LogOut")">退出登录</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="t-name ell fl">@Model.Name</div>
+
+                </div>
+            }
+            else
+            {
+                <div class="login-before">
+                    <a href="@string.Format("{0}/{1}/{2}", host, "Account", "Register")">注册</a><a href="@string.Format("{0}/{1}/{2}", host, "Account","Index")">登录</a>
+                </div>
+            }
+        </div>
+
+        <div class="btn-index-upload"><a href="@string.Format("{0}/{1}/{2}", host, "AuthorComic", "CreateComicView")"></a></div>
+
+    </div>
+</div>
+<!-- header end -->

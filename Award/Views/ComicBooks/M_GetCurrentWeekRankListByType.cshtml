@@ -1,0 +1,36 @@
+﻿@model  IEnumerable<MHD.Original.Award.ViewModels.VoteBookViewModel>
+@{
+    Layout = null;
+    ViewBag.Title = "M_GetCurrentWeekRankListByType";
+    var userId = ViewBag.UserId == null ? 0 : ViewBag.UserId;
+}
+@{
+    var position = 0;
+    foreach (var book in Model)
+    {
+        position++;
+        <div class="row-col">
+            <a href="@Url.Action("M_GetBookDetailById", "ComicBooks", new { bookId = book.BookId, userId = userId })">
+                <div class="col-pic" style="background-image: url('@book.BookCoverUrl')"></div>
+            </a>
+
+            <div class="col-group">
+                <p class="font-28 col-title">@book.BookName</p>
+                <p class="font-22 col-author">@book.Pseudonym</p>
+
+                @if (position <= 3)
+                {
+                    <p class="font-28 col-num"><span class="icon-flag"></span><span>@book.TotalScore</span>票</p>
+                    <div class="icon-cup-@(position)"></div>
+                }
+                else
+                {
+                    <p class="font-28 col-num"><span class="icon-flag-black"></span><span>@book.TotalScore</span>票</p>
+                    <div class="font-24 icon-nocup">@(position)</div>
+                }
+            </div>
+        </div>
+
+    }
+}
+

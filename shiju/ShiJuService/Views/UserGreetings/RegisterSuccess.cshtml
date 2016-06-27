@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body class="register_bg">
+    <div class="regt_success">
+        <div class="header">
+            <span class="logo">
+                <img src="~/Content/images/success_icon.png" />
+            </span>
+        </div>
+        <div class="content">
+            <h2 class="t1">注册成功</h2>
+            <h2 class="t2" style="display:none;"></h2>
+            <h2>请下载Newbe App，查看更多精彩活动</h2>
+            <a class="downloadBtn" href="javascript:;">下载Newbe App</a>
+            <p class="copyright">Copyright&copy;2015-2017</p>
+            <p class="narr">Newbe All Rights Reserved</p>
+        </div>
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="~/Content/js/jquery.cookie.js"></script>
+    <script src="~/Content/js/auto.js"></script>
+    <script>
+        (function () {
+            var hasSignup = $.parseJSON($.cookie("shijuyue")).hasSignup;
+            var registered = $.cookie("registered");
+            if (hasSignup == 1 || registered == 1) {
+                var t1 = document.querySelector(".t1"),
+                    t2 = document.querySelector(".t2");
+                t1.innerHTML = "你已经注册过了，不需要重复注册";
+                t2.style.display = "block";
+                t2.innerHTML = "账号为你的手机号码";
+            }
+            var browser = {
+                versions: function () {
+                    var u = navigator.userAgent, app = navigator.appVersion;
+                    return {// 移动终端浏览器版本信息
+                        trident: u.indexOf('Trident') > -1, // IE内核
+                        presto: u.indexOf('Presto') > -1, // opera内核
+                        webKit: u.indexOf('AppleWebKit') > -1, // 苹果、谷歌内核
+                        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, // 火狐内核
+                        mac: u.indexOf('Mac OS X') > -1,// 是否为Mac OS X
+                        mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), // 是否为移动终端
+                        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, // android终端或者uc浏览器
+                        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, // 是否为iPhone或者QQHD浏览器
+                        iPad: u.indexOf('iPad') > -1, // 是否iPad
+                        webApp: u.indexOf('Safari') == -1, // 是否web应该程序，没有头部与底部
+                        wp: u.indexOf("Windows Phone") > -1// 是否为winPhone
+                    };
+                }(),
+                language: (navigator.browserLanguage || navigator.language).toLowerCase()
+            }
+            var download = document.querySelector(".downloadBtn");
+            download.addEventListener("click", function () {
+                if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                    location.href = "https://itunes.apple.com/cn/app/newbe/id1071983155?l=zh&ls=1&mt=8"; // 时聚 scheme
+                    setTimeout(function () {
+                        location.href = "https://itunes.apple.com/cn/app/newbe/id1071983155?l=zh&ls=1&mt=8"; // IOS下载地址
+                    }, 250);
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1000);
+                }
+                else if (browser.versions.android) {
+                    // 安卓下载地址
+                    location.href = "";
+                }
+            }, false);
+        })();
+    </script>
+</body>
+</html>

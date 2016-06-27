@@ -1,0 +1,399 @@
+2015-10-14 15:24:36.7316|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=521801b1-bcf8-456f-9ce8-bef89f54253f&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:25:01.6270|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=675836d6-a5bb-4ca5-b0e1-dfd8989f0a7d&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: leading multiple zeros are not allowed. At line 1, column 2
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:27:07.2755|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=98f03e33-1a2c-48b1-bebd-340c6f275ae8&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:27:15.3386|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=12d05ddc-ae56-4a9e-bae4-8eb15aa48e23&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:27:19.0457|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=6ba45ac5-eddd-432d-8391-67937a1e249c&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:27:26.8238|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=2b54dd02-fcbe-4b7d-ac32-757dd9fd80d5&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:31:03.7808|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:31:26.6971|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:33:41.6614|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: Incomplete JSON input. At line 1, column 0
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:39:49.2413|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:41:23.3573|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:41:37.6367|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:41:52.6522|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:42:11.5123|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:47:09.7654|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:47:19.8996|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:47:31.2357|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:49:01.7892|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:50:17.6966|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: leading multiple zeros are not allowed. At line 1, column 2
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 15:56:07.9694|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/odata/PartyCommentsOData?partyId=b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb&$top=50&$inlinecount=allpages UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.ArgumentException: leading multiple zeros are not allowed. At line 1, column 2
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:41:59.3664|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.TypeInitializationException: The type initializer for 'Collaboration.TaskForce.Service.Models.AttachmentStorage' threw an exception. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage..cctor() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Models\AttachmentStorage.cs:line 39
+   --- End of inner exception stack trace ---
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage.GetAttachmentStream(Guid corporationId, Guid taskId, Guid attachmentId, String mimeType)
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:42:54.0633|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.TypeInitializationException: The type initializer for 'Collaboration.TaskForce.Service.Models.AttachmentStorage' threw an exception. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage..cctor() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Models\AttachmentStorage.cs:line 39
+   --- End of inner exception stack trace ---
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage.GetAttachmentStream(Guid corporationId, Guid taskId, Guid attachmentId, String mimeType)
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:43:33.5847|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.TypeInitializationException: The type initializer for 'Collaboration.TaskForce.Service.Models.AttachmentStorage' threw an exception. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage..cctor() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Models\AttachmentStorage.cs:line 39
+   --- End of inner exception stack trace ---
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage.GetAttachmentStream(Guid corporationId, Guid taskId, Guid attachmentId, String mimeType)
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:44:50.8055|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.TypeInitializationException: The type initializer for 'Collaboration.TaskForce.Service.Models.AttachmentStorage' threw an exception. ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage..cctor() in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Models\AttachmentStorage.cs:line 39
+   --- End of inner exception stack trace ---
+   at Collaboration.TaskForce.Service.Models.AttachmentStorage.GetAttachmentStream(Guid corporationId, Guid taskId, Guid attachmentId, String mimeType)
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 24
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:50:16.6560|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:50:16.8260|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-10-14 17:51:18.5620|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19668/Messages/b3f76b69-b2b1-4df5-a364-9ef0bf6a4fcb/Logs/Attachments/26b9df57-9a14-8d33-a242-683063fb8ad2 UserAgent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at ShiJu.Portal.Controllers.MessagesController.GetMessageAttachment(Guid partyId, Guid attachmentId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuPortal\Controllers\MessagesController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeUsingResultConverterAsync>d__8.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()

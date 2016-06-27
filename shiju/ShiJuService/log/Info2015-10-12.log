@@ -1,0 +1,21 @@
+2015-10-12 15:08:57.9697|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 16:04:54.9945|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 16:06:39.5424|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 16:10:07.5879|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 16:10:41.1073|Info|ThirdPartNotification.JPushNotification.JPushNotificationManager|JPush Configuration: appKey:blablabla, masterSecret:blablabla, isProductionEnvironment:False, androidTitle:Ê±¾Û, iosSound:default, appMessageContent:jpush_appMessageContent|
+2015-10-12 17:22:28.8352|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:26:00.3399|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:32:26.8487|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:35:19.1230|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:41:57.8294|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:43:29.1581|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:48:29.0346|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:51:38.5460|Info|ShiJu.Service.Controllers.UsersController|Send message return code:-9|
+2015-10-12 17:51:53.8229|Info|ShiJu.Service.Controllers.UsersController|Send message return code:-9|
+2015-10-12 17:53:30.8927|Info|ShiJu.Service.Controllers.UsersController|Send message return code:-9|
+2015-10-12 17:56:27.8714|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 17:59:16.6887|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 18:01:52.9994|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 18:03:10.8681|Info|ShiJu.Service.Controllers.UsersController|Send message return code:-9|
+2015-10-12 18:04:17.7156|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-10-12 18:04:38.9194|Info|ShiJu.Service.Controllers.UsersController|Send message return code:-9|

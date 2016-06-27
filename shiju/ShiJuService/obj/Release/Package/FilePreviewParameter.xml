@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ShiJu/ShiJuService" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="SACommon.Models.SADbContext-Web.config Connection String" description="" value="SACommon.Models.SADbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SACommon.Models.SADbContext']/@connectionString" />
+  </parameter>
+  <parameter name="ShiJu.Models.ShiJuDbContext-Web.config Connection String" description="" value="ShiJu.Models.ShiJuDbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJu.Models.ShiJuDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="ShiJuDb-Web.config Connection String" description="" value="Data Source=10.1.1.50;Initial Catalog=ShiJu;User ID=brand;Pwd=Abc123!" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJuDb']/@connectionString" />
+  </parameter>
+  <parameter name="ThirdPartNotification.JPush.Models.JPushNotificationDbContext-Web.config Connection String" description="" value="ThirdPartNotification.JPush.Models.JPushNotificationDbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ThirdPartNotification.JPush.Models.JPushNotificationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

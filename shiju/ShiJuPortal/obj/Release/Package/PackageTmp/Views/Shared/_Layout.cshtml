@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html style="height: 100%" ng-app="Fuma">
+<head>
+    <title>管理后台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    @*<link href="@Url.Content("~/Content/main/css/normalize.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/Content/main/css/base.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/Content/bootstrap-3.1.1/css/bootstrap.min.css")" rel="stylesheet">
+        <link href="@Url.Content("~/Content/jquery-ui-bootstrap-v0.5pre/css/custom-theme/jquery-ui-1.10.0.custom.css")" type="text/css" rel="stylesheet" />
+        <link href="@Url.Content("~/Content/jquery.bootgrid/jquery.bootgrid.css")" rel="stylesheet" />
+        <link href="@Url.Content("~/Content/DataMatrix/ui.datamatrix.css")" rel="stylesheet" type="text/css" />
+        <script src="@Url.Content("~/Scripts/jquery-1.11.0.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.10.4.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Content/jquery.bootgrid/jquery.bootgrid.js?t=635627108818402554")"></script>
+        <script src="@Url.Content("~/Content/DataMatrix/DataMatrix.js?t=635627108818402554")" type="text/javascript"></script>
+        <link href="@Url.Content("~/Content/DataMatrix/ui.datamatrix.blueoffice.css")" rel="stylesheet" />
+        <link href="~/Content/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet" />
+        <script src="~/Content/bootstrap-3.1.1/js/moment.js"></script>
+        <script src="~/Content/bootstrap-3.1.1/js/moment-with-locales.js"></script>
+        <link href="~/Content/bootstrap-3.1.1/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+        <script src="~/Content/bootstrap-3.1.1/js/bootstrap-datetimepicker.js"></script>
+        <script src="@Url.Content("~/Content/bootstrap-3.1.1/js/bootstrap.js")"></script>*@
+
+    <link href="~/Content/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap-3.1.1/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="~/Content/jquery-ui-bootstrap-v0.5pre/css/custom-theme/jquery-ui-1.10.0.custom.css" type="text/css" rel="stylesheet" />
+    <link href="~/Content/DataMatrix/ui.datamatrix.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/moment.js" type="text/javascript"></script>
+    <script src="~/Scripts/moment-with-locales.js" type="text/javascript"></script>
+    <link href="~/Content/bootstrap-3.1.1/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="~/Content/jquery.bootgrid/jquery.bootgrid.css" rel="stylesheet" />
+    <script src="@Url.Content("~/Content/bootstrap-3.1.1/js/bootstrap.js")"></script>
+    <script src="~/Scripts/jquery-ui-1.10.4.min.js" type="text/javascript"></script>
+    <script src="~/Content/jquery.bootgrid/jquery.bootgrid.js"></script>
+    <script src="~/Content/bootstrap-3.1.1/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <script src="~/Content/jqGrid-4.5.4/js/i18n/grid.locale-cn.js" type="text/javascript"></script>
+    <script src="~/Content/jqGrid-4.5.4/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+    <script src="~/Content/DataMatrix/DataMatrix.js" type="text/javascript"></script>
+    <link href="~/Content/DataMatrix/ui.datamatrix.blueoffice.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/date.format.js"></script>
+    <link href="@Url.Content("~/Content/main/css/base.css") " rel=" stylesheet" />
+    <link href="@Url.Content("~/Content/main/css/fuma-main.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/main/css/popup.min.css")" rel="stylesheet" />
+
+    <script>
+        var baseServerUrl = '@Url.Content("~")';
+        var imageUploadKit = '@Url.Content("~/ClientBin/ImageUploadKit.xap?1")';
+        var imageHubUrl = '@ViewData["ImageHubBaseUrl"]';
+        $(function () { 
+            var location = window.location;
+            var menu = Request.QueryString("menu");
+            $("#firstLevelMenuContainer li").removeClass("active");
+            $("#" + menu).addClass("active");
+
+            $("#momentLargeImageBg, #momentLargeImage").on('click', function () {
+                $("#momentLargeImageBg, #momentLargeImage").css("display", "none");
+            });           
+        });
+
+        var Request = {
+            QueryString: function (item) {
+                var svalue = location.search.match(new RegExp("[\?\&]" + item + "=([^\&]*)(\&?)", "i"));
+                return svalue ? svalue[1] : svalue;
+            }
+        }
+
+        function showLargeImage(imageUrl) {
+            $("#momentImageUrl").prop("src", imageUrl);
+            $("#momentLargeImageBg, #momentLargeImage").css("display", "block");
+        }
+    </script>
+    <script src="@Url.Content("~/Content/Scripts/common.js")"></script>
+</head>
+
+<body style="width:auto;">
+    <nav class="navbar navbar-default" id="navbar" role="navigation" style="margin:0px;width:auto;border-color:#ac3024;background-color:#ac3024;border-radius:0px;">
+
+        <div class="" id="bs-example-navbar-collapse-1" style="width:auto;">
+            <ul class="nav navbar-nav" id="firstLevelMenuContainer">
+                <li style="text-align:center;line-height:48px;font-size:23px;color:#ffffff;">
+                    @*<img src="~/Content/images/cornerlogo.png" height="50" width="100" />*@
+                    LOGO
+                </li>
+                <li id="menu0">
+                    <a href="@Url.Action("Users", "UI", new { menu = "menu0" })">用户管理</a>
+                </li>
+                <li id="menu1">
+                    <a href="@Url.Action("Parties", "UI", new { menu = "menu1" })">活动管理</a>
+                </li>
+                @*<li id="menu2">
+                        <a href="@Url.Action("AboutUs", "UI", new { menu = "menu2" })">关于我们</a>
+                    </li>*@
+            </ul>
+            <div style="float:right;height:50px;line-height:50px;padding-right:20px;">            
+                <a href="@Url.Action("Login", "Account")" style="color: white;">                   
+                    登出
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!--消息弹窗-->
+    <div id="MessageDialog">
+        <p id="message">
+        </p>
+    </div>
+
+    <div style="padding:10px 0 20px 20px;">
+        @RenderBody()
+    </div>
+    <style>
+        .navbar-default .navbar-nav > li > a {
+            color: white;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</body>
+</html>

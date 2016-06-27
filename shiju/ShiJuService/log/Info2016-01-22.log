@@ -1,0 +1,16 @@
+2016-01-22 09:56:49.5683|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 11:09:20.9552|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 11:11:28.8995|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 11:17:05.7105|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 11:29:51.6945|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 11:33:34.6492|Info|ThirdPartNotification.JPushNotification.JPushNotificationManager|JPush Configuration: appKey:fb892a269d3285e467a5066e, masterSecret:ebcb08578d1c6672f06023b5, isProductionEnvironment:False, androidTitle:HandsUp, iosSound:default, appMessageContent:jpush_appMessageContent|
+2016-01-22 11:37:49.3637|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 13:04:34.6938|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 13:11:53.5871|Info|ShiJu.Service.Controllers.UserGreetingsController|Send message return code:1|
+2016-01-22 13:13:13.5340|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 13:16:02.3180|Info|ShiJu.Service.Controllers.UserGreetingsController|Send message return code:1|
+2016-01-22 13:34:54.9537|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 13:36:07.9707|Info|ThirdPartNotification.JPushNotification.JPushNotificationManager|JPush Configuration: appKey:fb892a269d3285e467a5066e, masterSecret:ebcb08578d1c6672f06023b5, isProductionEnvironment:False, androidTitle:HandsUp, iosSound:default, appMessageContent:jpush_appMessageContent|
+2016-01-22 13:47:31.6345|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 14:03:57.5977|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-22 14:05:47.6745|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|

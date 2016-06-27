@@ -1,0 +1,4 @@
+2015-11-02 11:41:16.8171|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2015-11-02 14:29:36.8952|Info|Collaboration.TaskForce.Service.Models.AttachmentStorage|StorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentStorage|
+2015-11-02 14:29:36.9232|Info|Collaboration.TaskForce.Service.Models.AttachmentStorage|PreviewStorageRoot: D:\TFS\YPProjects\Projects\ShiJu\AttachmentPreviewStorage|
+2015-11-02 19:56:19.4387|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|

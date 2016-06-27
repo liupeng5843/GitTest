@@ -1,0 +1,49 @@
+2016-01-31 13:26:53.9910|Error|WindowsServer.Web.GlobalExceptionHandler|Uncaught exception is detected.[ClientIP:::1 RawUrl:/UserGreeting/SourceUser/d1c6f089-9d54-4eb7-a893-05ee340b1a0e/TargetUser/7b318a88-cdf1-481a-bde4-bf9ae86e04b5/AcceptGreeting?greetingId=3 UserAgent:Fiddler]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at ShiJu.Service.Controllers.UserGreetingsController.AcceptGreeting(Guid sourceUserId, Guid targetUserId, Int32 greetingId) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\UserGreetingsController.cs:line 181
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.ActionInvocation.InvokeSynchronousActionMethod()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__36(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass45.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3e()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass30.<BeginInvokeActionMethodWithFilters>b__2f(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<>c__DisplayClass28.<BeginInvokeAction>b__19()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass1e.<BeginInvokeAction>b__1b(IAsyncResult asyncResult)
+2016-01-31 14:17:26.6014|Error|ThirdPartNotification.JPushNotification.JPushNotificationManager|Failed to push notification.|cn.jpush.api.common.APIRequestException: The remote server returned an error: (400) Bad Request.
+   at cn.jpush.api.common.BaseHttpClient.sendRequest(String method, String url, String auth, String reqParams)
+   at cn.jpush.api.common.BaseHttpClient.sendPost(String url, String auth, String reqParams)
+   at cn.jpush.api.push.PushClient.sendPush(String payloadString)
+   at cn.jpush.api.push.PushClient.sendPush(PushPayload payload)
+   at cn.jpush.api.JPushClient.SendPush(PushPayload payload)
+   at ThirdPartNotification.JPushNotification.JPushNotificationManager.PushNotification(Guid appModuleId, List`1 userIds, Int32 number, String text, Dictionary`2 extraKeyValues) in d:\TFS\YPProjects\Projects\ProjectCommon\ThirdPartNotification\NotificationManager\JPushNotificationManager.cs:line 97
+2016-01-31 14:17:58.5348|Error|ThirdPartNotification.JPushNotification.JPushNotificationManager|Failed to push notification.|cn.jpush.api.common.APIRequestException: The remote server returned an error: (400) Bad Request.
+   at cn.jpush.api.common.BaseHttpClient.sendRequest(String method, String url, String auth, String reqParams)
+   at cn.jpush.api.common.BaseHttpClient.sendPost(String url, String auth, String reqParams)
+   at cn.jpush.api.push.PushClient.sendPush(String payloadString)
+   at cn.jpush.api.push.PushClient.sendPush(PushPayload payload)
+   at cn.jpush.api.JPushClient.SendPush(PushPayload payload)
+   at ThirdPartNotification.JPushNotification.JPushNotificationManager.PushNotification(Guid appModuleId, List`1 userIds, Int32 number, String text, Dictionary`2 extraKeyValues) in d:\TFS\YPProjects\Projects\ProjectCommon\ThirdPartNotification\NotificationManager\JPushNotificationManager.cs:line 97
+2016-01-31 14:19:19.7154|Error|ThirdPartNotification.JPushNotification.JPushNotificationManager|Failed to push notification.|cn.jpush.api.common.APIRequestException: The remote server returned an error: (400) Bad Request.
+   at cn.jpush.api.common.BaseHttpClient.sendRequest(String method, String url, String auth, String reqParams)
+   at cn.jpush.api.common.BaseHttpClient.sendPost(String url, String auth, String reqParams)
+   at cn.jpush.api.push.PushClient.sendPush(String payloadString)
+   at cn.jpush.api.push.PushClient.sendPush(PushPayload payload)
+   at cn.jpush.api.JPushClient.SendPush(PushPayload payload)
+   at ThirdPartNotification.JPushNotification.JPushNotificationManager.PushNotification(Guid appModuleId, List`1 userIds, Int32 number, String text, Dictionary`2 extraKeyValues) in d:\TFS\YPProjects\Projects\ProjectCommon\ThirdPartNotification\NotificationManager\JPushNotificationManager.cs:line 97
+2016-01-31 15:56:26.7676|Error|ShiJu.Service.Controllers.UserGreetingsController|Error on sending message to 15221316970|System.FormatException: Input string was not in a correct format.
+   at System.Text.StringBuilder.AppendFormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.FormatHelper(IFormatProvider provider, String format, ParamsArray args)
+   at System.String.Format(String format, Object arg0, Object arg1)
+   at ShiJu.Service.Controllers.UserGreetingsController.Greet(Guid sourceUserId, Nullable`1 targetUserId, String targetPhoneNumber) in d:\TFS\YPProjects\Projects\ShiJu\ShiJuService\Controllers\UserGreetingsController.cs:line 132

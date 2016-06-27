@@ -1,0 +1,109 @@
+2015-08-12 10:00:36.1865|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Parties/Create UserAgent:Fiddler]|System.NullReferenceException: Object reference not set to an instance of an object.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 10:58:09.1908|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Parties/Create UserAgent:Fiddler]|System.InvalidCastException: Unable to cast object of type 'System.Json.JsonArray' to type 'System.Json.JsonPrimitive'.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 10:59:53.9565|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Parties/Create UserAgent:Fiddler]|System.ArgumentException: Invalid JSON string literal format. At line 18, column 10
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 11:00:27.0692|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Parties/Create UserAgent:Fiddler]|System.ArgumentException: Invalid JSON string literal format. At line 16, column 10
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 11:15:07.8500|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Parties/Create UserAgent:Fiddler]|System.InvalidCastException: Unable to cast object of type 'System.Json.JsonArray' to type 'System.Json.JsonPrimitive'.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 11:15:57.3265|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Parties/Create UserAgent:Fiddler]|System.InvalidCastException: Unable to cast object of type 'System.Json.JsonArray' to type 'System.Json.JsonPrimitive'.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 16:00:34.2868|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Users/d137e6c4-8b9f-421b-8956-6359c5ffe02a/Friends/Parties/?fromTime=2014-8-11 10:10:10&toTime=2016-8-11 10:10:10&start=0&count=20 UserAgent:Fiddler]|System.InvalidOperationException: The context cannot be used while the model is being created. This exception may be thrown if the context is used inside the OnModelCreating method or if the same context instance is accessed by multiple threads concurrently. Note that instance members of DbContext and related classes are not guaranteed to be thread safe.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 16:06:58.2191|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Users/d137e6c4-8b9f-421b-8956-6359c5ffe02a/Friends/Parties/?fromTime=2014-8-11 10:10:10&toTime=2016-8-11 10:10:10&start=0&count=20 UserAgent:Fiddler]|System.NotSupportedException: The method 'Skip' is only supported for sorted input in LINQ to Entities. The method 'OrderBy' must be called before the method 'Skip'.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+2015-08-12 16:16:49.1115|Error|WindowsServer.Web.WebApiGlobalExceptionFilterAttribute|Uncaught exception is detected.[ClientIP:::1 RawUrl:http://localhost:19666/Users/d137e6c4-8b9f-421b-8956-6359c5ffe02a/AllFriends/Parties/?fromTime=2014-8-11 10:10:10&toTime=2016-8-11 10:10:10&start=0&count=20 UserAgent:Fiddler]|System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'TestFriend.dbo.Friends'.
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at System.Web.Http.ApiController.<InvokeActionWithExceptionFilters>d__1.MoveNext()
+ClientConnectionId:4e6d53f6-82d9-4a82-a3f5-8e642ce5d786

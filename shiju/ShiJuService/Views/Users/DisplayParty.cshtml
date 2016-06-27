@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="zh" style="font-size:20px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title></title>
+    <link href="~/Content/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wx_share">
+        <div class="theme">
+            <input style="display:none" id="GetPartyUrl" value=@(ViewData["GetPartyUrl"]) />
+            <input style="display:none" id="ImageBaseUrl" value=@(ViewData["ImageBaseUrl"]) />
+            <i class="tit_icon"></i><span>活动主题</span><a class="theme_arrow" href="javascript:;"><i class="arrow"></i></a>
+        </div>
+        <div class="theme_content">
+            <div class="title"><span class="back"></span><h2></h2></div>
+            <div class="middle">
+            </div>
+            <div class="toolbar">
+                <a class="first" href="javascript:;"><i class="share"></i>分享</a>
+                <a class="last" href="javascript:;"><i class="laud"></i><span class="like">赞(<em class="number">120</em>)</span></a>
+            </div>
+        </div>
+        <div class="vote"><i class="tit_icon"></i><span>投票</span><a href="javascript:;" class="vote_arrow"><i class="arrow"></i></a></div>
+        <div class="vote_content">
+            <div class="title"><span class="back"></span><h2></h2></div>
+            <div class="option_c">
+                <ul>
+                </ul>
+            </div>
+            <div class="option">
+                <img src="" />
+            </div>
+        </div>
+        <div class="comment">
+            <i class="tit_icon"></i><span>评论（<b class="number">125</b>人）</span><a href="javascript:;" class="comm_arrow"><i class="arrow"></i></a>
+        </div>
+        <div class="comm_content">
+            <div class="comm_list">
+            </div>
+            <div class="no_comment">
+                <p>暂时还没有评论哦~</p>
+            </div>
+            <div class="comm_btn">
+                <a style="display:none;" href="javascript:;"><i class="icon"></i>我来评论</a>
+                <div class="comm_more">
+                    <a href="javascript:;">查看全部</a>
+                    <a href="javascript:;">我来评论</a>
+                </div>
+            </div>
+            <button class="sign_up">报名</button>
+        </div>
+    </div>
+    <div class="prompt">
+        <div class="dl_box">
+            <div class="pt_text">
+                <h2>若需使用该功能</h2>
+                <h2>请下载 NewBe App</h2>
+            </div>
+            <div class="dl_cl"><a class="close" href="javascript:;">再看看</a><a id="dl_app" href="javascript:;">去下载</a></div>
+        </div>
+    </div>
+    <div class="dl_prompt">
+        <img class="top_arrow" src="~/Content/images/top_arrow.png" alt="图片出错" />
+        <p>微信内容无法下载，请点击<span>右上角...按钮</span></p>
+        <p>选择<span>（在浏览器打开）</span>即可正常打开/下载</p>
+    </div>
+    <script src="~/Content/js/jquery-2.1.4.min.js"></script>
+    <script src="http://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
+    <script src="~/Content/js/index.js"></script>
+</body>
+</html>
+

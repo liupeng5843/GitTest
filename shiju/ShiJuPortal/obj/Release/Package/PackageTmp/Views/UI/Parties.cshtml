@@ -1,0 +1,348 @@
+﻿@{
+    ViewBag.Title = "活动管理";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<link href="~/Content/bootstrap-3.1.1/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+<script src="~/Content/bootstrap-3.1.1/js/bootstrap-datetimepicker.js"></script>*@
+<script src="~/Scripts/audioamr.js"></script>
+<script src="~/Scripts/amrnb.js"></script>
+<script src="@Url.Content("~/Content/Scripts/parties.js")"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+
+<div style="width: 150px; text-align: right; padding-right: 10px; padding-bottom: 10px; position: absolute; top: 90px; z-index: 99;">
+    <select id="partyStaus" class="form-control">
+        <option value=-1>全部</option>
+        <option value=0>启用</option>
+        <option value=1>禁用</option>
+    </select>
+</div>
+
+<div style="padding-right: 10px; padding-bottom: 10px; position: absolute;left:200px; top: 90px; z-index: 98;">
+    <input type="button" id="btn_create" class="form-control btn btn-sm btn-default" value="创建活动">
+</div>
+<div id="paties" style="margin-top: 30px; width: 98%;"></div>
+<div id="commentsDialog">
+    <div id="comments"></div>
+    <div id="commentsDialog" role="dialog" title="评论管理" hidden style="height:900px;width:1200px;">
+        <form id="itemform">
+            <em style="color: red; ">*</em><b>图片</b>：
+            <div id="mainImageSilverLight" style="margin-left:40px;"></div>
+            <input type="hidden" name="commentMainImageId" id="commentMainImageId" />
+            <input id="foodTypeId" class="form-control" type="hidden" />
+            <label id="imageValidate" style="display:none;color:red;">请添加图片</label>
+            <table>
+                <tr>
+                    <th><a style="color:red">*</a>排序：</th>
+                    <td>
+                        <select name="position_comment" class="form-control" id="position"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><a style="color:red">*</a>名称：</th>
+                    <td>
+                        <input id="name_comment" maxlength="15" name="itemname" class="form-control" type="text" placeholder="菜品名称" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <a style="color:red">*</a>描述：
+                    </th>
+                    <td>
+                        <textarea id="description_comment" maxlength="100" name="itemdescription" class="form-control" rows="3" placeholder="描述"></textarea>
+                    </td>
+                </tr>
+            </table>
+            <input type="radio" id="isEnableItem_1" name="EnablePartyComment" value="true" checked="checked" />启用
+            <input type="radio" id="isEnableItem_2" name="EnablePartyComment" value="false" style="margin-left:20px;" />禁用
+            <input style="display:none" id="createdtime_comment" type="text" value="" />
+        </form>
+    </div>
+</div>
+
+<div id="partiesDialog" role="dialog" title="创建活动" hidden>
+    <form id="partyform">
+        <input id="Id" name="Id" type="hidden" />
+        <table>
+            <tr>
+                <th>
+                    图片：
+                </th>
+                <td>
+                    <div id="multipleSilverLight" style="margin-left:-17px;"></div>
+                    <input id="Images" name="Images" type="hidden" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    活动主题：
+                </th>
+                <td>
+                    <input id="Title"  maxlength="15" name="Title" class="form-control" type="text" placeholder="活动主题" />
+                </td>
+                <th  class="Sponsor">
+                    发起人：
+                </th>
+                <td class="Sponsor">
+                    <input id="Sponsor" maxlength="15" name="Sponsor" class="form-control" type="text" placeholder="发起人" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    开始时间：
+                </th>
+                <td>
+                    <div class='input-group date' id='addBeginTimediv' style="width:390px;">
+                        <input id='addBeginTime' name="BeginTime" type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </td>
+                <th>
+                    结束时间：
+                </th>
+                <td>
+                    <div class='input-group date' id='addEndTimediv' style="width:390px;">
+                        <input id='addEndTime' name="EndTime" type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    点赞人数：
+                </th>
+                <td>
+                    <input id="LikeCount" maxlength="15" name="LikeCount" class="form-control" type="text" placeholder="点赞人数" />
+                </td>
+                <th>
+                    评论数：
+                </th>
+                <td>
+                    <input id="CommentCount" maxlength="15" name="CommentCount" class="form-control" type="text" placeholder="评论数" />
+                </td>
+            </tr>
+            <tr>
+                <th class="participantCount">
+                    参与人数：
+                </th>
+                <td class="participantCount">
+                    <input id="ParticipantCount" maxlength="15" readonly="readonly" name="ParticipantCount" class="form-control" type="text" placeholder="发起人" />
+                </td>
+                <th class="expireCount">
+                    期望人数：
+                </th>
+                <td class="expireCount">
+                    <input id="MaxUserCount" maxlength="15" value="0" name="MaxUserCount" class="form-control" type="text" placeholder="请输入期望参与人数" />
+                </td>
+            </tr>
+            <tr class="voteTroggle">
+                <th>
+                    投票主题：
+                </th>
+                <td>
+                    <input id="VoteTitle" name="VoteTitle" class="form-control" type="text" placeholder="投票主题" />
+                </td>
+            </tr>
+            <tr class="voteTroggle" id="voteTroggle">
+                <th>
+                    投票选项：
+                </th>
+                <td id="vote">
+                    <div id="votediv1"><b style="margin-top: 7px;">1.</b><input name="vote1" id="vote1" placeholder="请输入选项" style="margin-left:10px; width:30%;height:30px;margin-top: 5px;" type="text" /></div>
+                    @*<div id="voteSilverLight1" style="width:60%;display:inline-block;height: 100px;"></div>
+        <input id="voteImageId1" type="hidden" />*@
+                    <div id="votediv2"><b style="margin-top: 7px;">2.</b><input name="vote2" id="vote2" placeholder="请输入选项" style="margin-left:10px; width:30%;height:30px;margin-top: 5px;" type="text" /></div>
+                    <div id="votediv3"><b style="margin-top: 7px;">3.</b><input name="vote3" id="vote3" placeholder="请输入选项" style="margin-left:10px; width:30%;height:30px;margin-top: 5px;" type="text" /></div>
+                    <label id="optionError" style="color:red;display:none">选项不能为空</label>
+                    <div>
+                        <a id="AddVote" href="javascript:addvote()">添加选项</a>
+                        <a id="DeleteVote" href="javascript:deletevote()"  hidden>删除选项</a>
+                    </div>
+                </td>
+            </tr>
+
+            <tr style="margin-top:10px;">
+                <th>
+                    地点：
+                </th>
+                <td>
+                    <input id="Address" maxlength="15" name="Address" class="form-control" type="text" placeholder="地点" />
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    简介：
+                </th>
+                <td>
+                    <textarea id="Description" maxlength="200" name="Description" class="form-control" rows="3" placeholder="简介"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    友圈可见：
+                </th>
+                <td>
+                    <input type="radio" id="directFriendVisible1" name="DirectFriendVisible" value="true" checked="checked" style="padding-left:12px;" />  是
+                    <input type="radio" id="directFriendVisible2" name="DirectFriendVisible" value="false" style="margin-left:34px;" />  否
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    状态：
+                </th>
+                <td>
+                    <input type="radio" id="isEnableType1" name="IsDisabled" value="true" checked="checked" style="padding-left:12px;" />  启用
+                    <input type="radio" id="isEnableType2" name="IsDisabled" value="false" style="margin-left:20px;" />  禁用
+                </td>
+            </tr>
+        </table>
+
+        <input style="display:none" id="Createdtime" name="Createdtime" type="text" value="" />
+        <input id="VoteChoicesJson" name="VoteChoicesJson" class="form-control" type="hidden" />
+        <input id="VoteCount" name="VoteCount" value="3" class="form-control" type="hidden" />
+    </form>
+</div>
+
+<script type="text/javascript">
+    var FirstLevelGridId = "";
+    var partyStaus = -1;
+    buildPartiesGrid();
+
+    var defaltDate = new Date();
+    var defaltStrDate = defaltDate.getFullYear() + "/" + (defaltDate.getMonth() + 1) + "/" + defaltDate.getDate();
+
+    $("#partyStaus").on("change", function () {
+        partyStaus = $(this).val();
+        buildPartiesGrid();
+    });
+
+    function buildPartiesGrid() {
+        $.ajaxSetup({ async: false });
+
+        var now = new Date();
+        gridId = now.getFullYear().toString() + now.getMonth().toString() + now.getDate().toString() + now.getHours().toString() + now.getMinutes().toString() + now.getSeconds().toString() + now.getMilliseconds().toString();
+        $("#paties").html("<div id='" + gridId + "'></div>");
+        FirstLevelGridId = gridId;
+
+        $("#" + gridId).dataMatrix({
+            oDataUrl: baseServerUrl + "odata/PartiesOData",
+            extraRequestData: { partyStaus: partyStaus },
+            implementationType: "bootGrid",
+            isRowNumbersVisible: true,
+            properties: [
+                { type: "string", name: "Id", displayName: "Id", isEditable: false, isKey: true, isColumnHidden: true, isSearchable: false, isSortable: false },
+                { type: "datetime", name: "CreatedTime", displayName: "创建时间", columnWidth: 150, isSortable: false, isSearchable: false },
+                { type: "string", name: "Title", displayName: "主题", isSearchable: true, isSortable: true },
+                { type: "string", name: "Description", displayName: "描述", columnWidth: 200, isSearchable: true, isSortable: true },
+                { type: "string", name: "Address", displayName: "地点", columnWidth: 200, isSearchable: true, isSortable: true },
+                { type: "string", name: "MaxUserCount", displayName: "期望人数", columnWidth: 200, isSearchable: false, isSortable: true },
+                { type: "string", name: "CommentCount", displayName: "评论数", columnWidth: 200, isSearchable: false, isSortable: true },
+                { type: "enum", typeOptions: { "enumValues": { true: "禁用", false: "启用" } }, name: "IsDisabled", displayName: "状态", isEditable: true, isSortable: false, isSearchable: false },
+                { type: "action", displayName: "操作", columnWidth: 240, isSortable: false, isSearchable: false },
+            ],
+            isHeaderBarShow: true,
+            rowCountPerPage: 50,
+            rowCountsPerPage: [50, 100, -1],
+            isRowNumbersVisible: true,
+            isCreateButtonVisible: false,
+            isEditButtonVisible: false,
+            isDeleteButtonVisible: false,
+            defaultSortAscending: false,
+            isMultipleSelection: false,
+            isColumnChooserEnabled: true,
+            defaultSortPropertyName: "CreatedTime",
+            actionButtons: [
+                {
+                    displayName: "编辑",
+                    buttonType: DataMatrixRowActionButtonType.Link,
+                    onClick: function (button, rowId) {
+                        var row = $("#" + gridId).dataMatrix("getRow", rowId);
+                        Global.FormMethod = "put";
+                        Global.EditingEntityId = row.Id;
+                        //  initScenarioPositionSelection(false);
+                        editParty(row);
+                    }
+                },
+                 {
+                     displayName: "评论",
+                     buttonClass: "pd-left",
+                     buttonType: DataMatrixRowActionButtonType.Link,
+                     onClick: function (button, rowId) {
+                         var row = $("#" + gridId).dataMatrix("getRow", rowId);
+                         Global.FormMethod = "put";
+                         Global.EditingEntityId = row.Id;
+                         showComments(row);
+                         //  initScenarioPositionSelection(false);
+                         // editScenario(row);
+                     }
+                 },
+            ],
+        });
+        $.ajaxSetup({ async: true })
+
+        for (var i = 0; i < $("#" + gridId + "paties-grid tr").length; i++) {
+            var td = $("td:nth(2)", $("#" + gridId + "paties-grid tr")[i]);
+            td.prop("title", td.text());
+        }
+
+
+    }
+
+
+    $('#addBeginTimediv').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm',
+        defaultDate: defaltStrDate,
+        locale: 'zh-cn'
+    });
+
+    $('#addEndTimediv').datetimepicker({
+        format: 'YYYY-MM-DD HH:mm',
+        defaultDate: defaltStrDate,
+        locale: 'zh-cn'
+    });
+        
+    function addvote() {
+        if (parseInt($("#VoteCount").val()) == 5) {
+            alert("最多设置五个选项");
+            return;
+        }
+        $('<div id="votediv' + (parseInt($("#VoteCount").val()) + 1) + '"><b style="margin-top: 7px;" >' + (parseInt($("#VoteCount").val()) + 1) + '.</b><input type="text" placeholder="请输入选项" style="margin-left:10px;width:30%;height:30px;margin-top:5px;" id="vote' + (parseInt($("#VoteCount").val()) + 1) + '"/></div>').insertAfter($("#votediv" + $("#VoteCount").val()));
+        //$("#vote").append('<div id="votediv' + (parseInt($("#VoteCount").val()) + 1) + '" style="width:100%;height: 100px;line-height: 100px;clear:left;"><b style="float: left;margin-top: 7px;" >' + (parseInt($("#VoteCount").val()) + 1) + '.</b><input type="text" placeholder="请输入选项" style="margin-left:10px;width:30%;height:30px;float:left;margin-top:40px;" id="Vote' + (parseInt($("#VoteCount").val()) + 1) + '"></input>');
+        //InitializeSiverlight('voteSilverLight' + (parseInt($("#VoteCount").val()) + 1), 'voteImageId' + (parseInt($("#VoteCount").val()) + 1), false);
+        $("#VoteCount").val(parseInt($("#VoteCount").val()) + 1);
+        if (parseInt($("#VoteCount").val()) > 3) {
+            $("#DeleteVote").show();
+        }
+    }
+
+    function deletevote() {
+        $("#votediv" + (parseInt($("#VoteCount").val()))).remove();
+        $("#VoteCount").val(parseInt($("#VoteCount").val()) - 1);
+        if (parseInt($("#VoteCount").val()) < 4) {
+            $("#DeleteVote").hide();
+        }
+    }
+
+ 
+</script>
+
+
+<style>
+    td {
+        padding: 5px;
+        width: 400px;
+    }
+
+    .pd-left {
+        padding-left: 0 !important;
+    }
+
+    
+</style>
+
+

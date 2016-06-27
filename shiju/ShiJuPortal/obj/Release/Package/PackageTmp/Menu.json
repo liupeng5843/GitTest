@@ -1,0 +1,47 @@
+﻿{
+    "Roles": "1,2,3,4",
+    "MenuItems": [
+        {
+            "Roles": "2,3,4",
+            "Name": "菜单A",
+            "MenuItems": [
+                {
+                    "Name": "菜单A-1",
+                    "MenuItems": [
+                        {
+                            "Name": "菜单A-1-1",
+                            "Url": "/"
+                        },
+                        {
+                            "Name": "菜单A-1-2",
+                            "Url": "/"
+                        }
+                    ]
+                },
+                {
+                    "Name": "菜单A-2",
+                    "MenuItems": [
+                        {
+                            "Name": "菜单A-2-1",
+                            "Url": "/"
+                        },
+                        {
+                            "Name": "菜单A-2-2",
+                            "Url": "/"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Roles": "2",
+            "Name": "菜单B",
+            "MenuItems": [
+                {
+                    "Name": "菜单B-1",
+                    "Url": "/"
+                }
+            ]
+        }
+    ]
+}

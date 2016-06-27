@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ShiJuDb-Web.config Connection String" description="ShiJuDb Connection String used in web.config by the application to access the database." defaultValue="Data Source=10.1.1.50;Initial Catalog=ShiJu;User ID=brand;Pwd=Abc123!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJuDb']/@connectionString" />
+  </parameter>
+  <parameter name="SACommon.Models.SADbContext-Web.config Connection String" description="SACommon.Models.SADbContext Connection String used in web.config by the application to access the database." defaultValue="SACommon.Models.SADbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SACommon.Models.SADbContext']/@connectionString" />
+  </parameter>
+  <parameter name="ShiJu.Models.ShiJuDbContext-Web.config Connection String" description="ShiJu.Models.ShiJuDbContext Connection String used in web.config by the application to access the database." defaultValue="ShiJu.Models.ShiJuDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJu.Models.ShiJuDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="ThirdPartNotification.JPush.Models.JPushNotificationDbContext-Web.config Connection String" description="ThirdPartNotification.JPush.Models.JPushNotificationDbContext Connection String used in web.config by the application to access the database." defaultValue="ThirdPartNotification.JPush.Models.JPushNotificationDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ThirdPartNotification.JPush.Models.JPushNotificationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,450 @@
+2015-07-01 18:53:39.7731|Debug|Shiju.Portal.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-07-01 18:53:39.7731|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7731|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:53:39 +08:00  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Completed in 2 ms with result: 9  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:53:39 +08:00  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Completed in 0 ms with result: SqlDataReader  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:53:39 +08:00  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:53:39 +08:00  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 18:53:39.7761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:55.3953|Debug|Shiju.Portal.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-07-01 18:58:55.3953|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:55.3953|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:55 +08:00  |
+2015-07-01 18:58:55.7841|Debug|Shiju.Portal.Heart|-- Completed in 386 ms with result: 9  |
+2015-07-01 18:58:55.7841|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:55.8461|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:58:55.8461|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:55.8461|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:55 +08:00  |
+2015-07-01 18:58:55.9141|Debug|Shiju.Portal.Heart|-- Completed in 68 ms with result: SqlDataReader  |
+2015-07-01 18:58:55.9141|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:55.9460|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 18:58:55.9460|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:55.9460|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 18:58:55.9500|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:55 +08:00  |
+2015-07-01 18:58:56.0790|Debug|Shiju.Portal.Heart|-- Completed in 128 ms with result: SqlDataReader  |
+2015-07-01 18:58:56.0790|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:56.1300|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:58:56.1300|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:56.1300|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:56 +08:00  |
+2015-07-01 18:58:56.1720|Debug|Shiju.Portal.Heart|-- Completed in 40 ms with result: SqlDataReader  |
+2015-07-01 18:58:56.1720|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:56.1720|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 18:58:56.1720|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:56.1720|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 18:58:56.1720|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:56 +08:00  |
+2015-07-01 18:58:56.2479|Debug|Shiju.Portal.Heart|-- Completed in 72 ms with result: SqlDataReader  |
+2015-07-01 18:58:56.2479|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:56.2479|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-07-01 18:58:56.2479|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:56.2479|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 18:58:56.2479|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:56 +08:00  |
+2015-07-01 18:58:56.2939|Debug|Shiju.Portal.Heart|-- Completed in 41 ms with result: SqlDataReader  |
+2015-07-01 18:58:56.2939|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:57.3505|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Users] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:58:57.3505|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:57.3505|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:57 +08:00  |
+2015-07-01 18:58:57.4285|Debug|Shiju.Portal.Heart|-- Completed in 74 ms with result: SqlDataReader  |
+2015-07-01 18:58:57.4285|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:57.6164|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 18:58:57.6164|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:57.6164|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 18:58:57.6164|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:57 +08:00  |
+2015-07-01 18:58:57.7903|Debug|Shiju.Portal.Heart|-- Completed in 170 ms with result: SqlDataReader  |
+2015-07-01 18:58:57.7903|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:58.8130|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:58:58.8130|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:58.8130|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:58 +08:00  |
+2015-07-01 18:58:58.8450|Debug|Shiju.Portal.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-07-01 18:58:58.8450|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:58.8569|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 18:58:58.8569|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:58:58.8569|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 18:58:58.8569|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:58:58 +08:00  |
+2015-07-01 18:58:58.8814|Debug|Shiju.Portal.Heart|-- Completed in 23 ms with result: SqlDataReader  |
+2015-07-01 18:58:58.8814|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:31.9171|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Users] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:59:31.9171|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:31.9171|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:59:31 +08:00  |
+2015-07-01 18:59:31.9661|Debug|Shiju.Portal.Heart|-- Completed in 45 ms with result: SqlDataReader  |
+2015-07-01 18:59:31.9661|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:31.9761|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 18:59:31.9761|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:31.9761|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 18:59:31.9761|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:59:31 +08:00  |
+2015-07-01 18:59:32.0121|Debug|Shiju.Portal.Heart|-- Completed in 35 ms with result: SqlDataReader  |
+2015-07-01 18:59:32.0121|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:36.5565|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 18:59:36.5565|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:36.5565|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:59:36 +08:00  |
+2015-07-01 18:59:36.5895|Debug|Shiju.Portal.Heart|-- Completed in 32 ms with result: SqlDataReader  |
+2015-07-01 18:59:36.5895|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:36.6135|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 18:59:36.6135|Debug|Shiju.Portal.Heart|  |
+2015-07-01 18:59:36.6135|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 18:59:36.6135|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 18:59:36 +08:00  |
+2015-07-01 18:59:36.6695|Debug|Shiju.Portal.Heart|-- Completed in 55 ms with result: SqlDataReader  |
+2015-07-01 18:59:36.6705|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.2961|Debug|Shiju.Portal.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-07-01 19:13:10.2961|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.2961|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|-- Completed in 11 ms with result: 9  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.3091|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.3450|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|-- Completed in 5 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.4490|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.4630|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-07-01 19:13:10.4630|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.4630|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 19:13:10.4630|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.4630|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.4630|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.5350|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 19:13:10.5350|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.5350|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.5350|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.5350|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.7929|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 19:13:10.7929|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:10.7929|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 19:13:10.7929|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:10 +08:00  |
+2015-07-01 19:13:10.8429|Debug|Shiju.Portal.Heart|-- Completed in 47 ms with result: SqlDataReader  |
+2015-07-01 19:13:10.8429|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:17 +08:00  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|-- Completed in 2 ms with result: SqlDataReader  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 19:13:17 +08:00  |
+2015-07-01 19:13:17.9064|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 19:13:17.9134|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:21:59 +08:00  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:21:59 +08:00  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 20:21:59.0943|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:22:52 +08:00  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|-- Completed in 2 ms with result: SqlDataReader  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 20:22:52.0342|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:22:52 +08:00  |
+2015-07-01 20:22:52.0412|Debug|Shiju.Portal.Heart|-- Completed in 2 ms with result: SqlDataReader  |
+2015-07-01 20:22:52.0412|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:26:16.5990|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:26:16.5990|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:26:16.5990|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:26:16 +08:00  |
+2015-07-01 20:26:16.5990|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 20:26:16.5990|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:26:16.6070|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 20:26:16.6070|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:26:16.6070|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 20:26:16.6070|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:26:16 +08:00  |
+2015-07-01 20:26:16.6070|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 20:26:16.6070|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:11.3858|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Users] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:39:11.3858|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:11.3858|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:39:11 +08:00  |
+2015-07-01 20:39:11.3858|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 20:39:11.3858|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:11.4008|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[Status] AS [Status],       [Extent1].[PhoneNumber] AS [PhoneNumber],       [Extent1].[NickName] AS [NickName],       [Extent1].[Signature] AS [Signature],       [Extent1].[Portrait] AS [Portrait],       [Extent1].[Gender] AS [Gender],       [Extent1].[District] AS [District],       [Extent1].[BackgroundImage] AS [BackgroundImage],       [Extent1].[CreatedTime] AS [CreatedTime],       [Extent1].[SignUpTime] AS [SignUpTime]      FROM [dbo].[Users] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 20:39:11.4008|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:11.4008|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 20:39:11.4008|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:39:11 +08:00  |
+2015-07-01 20:39:11.4008|Debug|Shiju.Portal.Heart|-- Completed in 1 ms with result: SqlDataReader  |
+2015-07-01 20:39:11.4008|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:16.8579|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:39:16.8579|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:16.8579|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:39:16 +08:00  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|-- Completed in 3 ms with result: SqlDataReader  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:39:16 +08:00  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|-- Completed in 3 ms with result: SqlDataReader  |
+2015-07-01 20:39:16.8619|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.0231|Debug|Shiju.Portal.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-07-01 20:43:09.0231|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.0231|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:09 +08:00  |
+2015-07-01 20:43:09.0581|Debug|Shiju.Portal.Heart|-- Completed in 32 ms with result: 9  |
+2015-07-01 20:43:09.0581|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.1331|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:43:09.1331|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.1331|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:09 +08:00  |
+2015-07-01 20:43:09.1860|Debug|Shiju.Portal.Heart|-- Completed in 52 ms with result: SqlDataReader  |
+2015-07-01 20:43:09.1860|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.1860|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 20:43:09.1860|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.1860|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 20:43:09.1860|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:09 +08:00  |
+2015-07-01 20:43:09.2400|Debug|Shiju.Portal.Heart|-- Completed in 50 ms with result: SqlDataReader  |
+2015-07-01 20:43:09.2400|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.2930|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:43:09.2930|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.2930|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:09 +08:00  |
+2015-07-01 20:43:09.6459|Debug|Shiju.Portal.Heart|-- Completed in 352 ms with result: SqlDataReader  |
+2015-07-01 20:43:09.6959|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.7009|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 20:43:09.7009|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.7009|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 20:43:09.7009|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:09 +08:00  |
+2015-07-01 20:43:09.9468|Debug|Shiju.Portal.Heart|-- Completed in 244 ms with result: SqlDataReader  |
+2015-07-01 20:43:09.9468|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.9528|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-07-01 20:43:09.9528|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:09.9528|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 20:43:09.9528|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:09 +08:00  |
+2015-07-01 20:43:09.9718|Debug|Shiju.Portal.Heart|-- Completed in 18 ms with result: SqlDataReader  |
+2015-07-01 20:43:09.9718|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:10.5596|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 20:43:10.5596|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:10.5606|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:10 +08:00  |
+2015-07-01 20:43:10.5975|Debug|Shiju.Portal.Heart|-- Completed in 36 ms with result: SqlDataReader  |
+2015-07-01 20:43:10.5975|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:10.6965|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 20:43:10.6965|Debug|Shiju.Portal.Heart|  |
+2015-07-01 20:43:10.6965|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 20:43:10.6965|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 20:43:10 +08:00  |
+2015-07-01 20:43:10.7265|Debug|Shiju.Portal.Heart|-- Completed in 29 ms with result: SqlDataReader  |
+2015-07-01 20:43:10.7265|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.2182|Debug|Shiju.Portal.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-07-01 21:02:14.2192|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.2192|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:14 +08:00  |
+2015-07-01 21:02:14.5381|Debug|Shiju.Portal.Heart|-- Completed in 255 ms with result: 9  |
+2015-07-01 21:02:14.5381|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.6621|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:02:14.6621|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.6621|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:14 +08:00  |
+2015-07-01 21:02:14.6821|Debug|Shiju.Portal.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-07-01 21:02:14.6821|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.6821|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 21:02:14.6821|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.6821|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 21:02:14.6821|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:14 +08:00  |
+2015-07-01 21:02:14.7000|Debug|Shiju.Portal.Heart|-- Completed in 15 ms with result: SqlDataReader  |
+2015-07-01 21:02:14.7000|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.7310|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:02:14.7310|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.7310|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:14 +08:00  |
+2015-07-01 21:02:14.7590|Debug|Shiju.Portal.Heart|-- Completed in 27 ms with result: SqlDataReader  |
+2015-07-01 21:02:14.7590|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.7590|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 21:02:14.7590|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.7590|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 21:02:14.7590|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:14 +08:00  |
+2015-07-01 21:02:14.7930|Debug|Shiju.Portal.Heart|-- Completed in 30 ms with result: SqlDataReader  |
+2015-07-01 21:02:14.7930|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.7970|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-07-01 21:02:14.7970|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:14.7970|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 21:02:14.7970|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:14 +08:00  |
+2015-07-01 21:02:14.8200|Debug|Shiju.Portal.Heart|-- Completed in 22 ms with result: SqlDataReader  |
+2015-07-01 21:02:14.8200|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:15.6377|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:02:15.6377|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:15.6377|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:15 +08:00  |
+2015-07-01 21:02:15.6857|Debug|Shiju.Portal.Heart|-- Completed in 47 ms with result: SqlDataReader  |
+2015-07-01 21:02:15.6857|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:15.8936|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:02:15.8936|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:15.8936|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:02:15.8936|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:15 +08:00  |
+2015-07-01 21:02:15.9536|Debug|Shiju.Portal.Heart|-- Completed in 58 ms with result: SqlDataReader  |
+2015-07-01 21:02:15.9536|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:34.8057|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-07-01 21:02:34.8057|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:02:34.8057|Debug|Shiju.Portal.Heart|-- p__linq__0: 'cd3e2b9d-7b9e-4dfa-adc5-fc48e69feb83' (Type = Guid)  |
+2015-07-01 21:02:34.8057|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:02:34 +08:00  |
+2015-07-01 21:02:35.3215|Debug|Shiju.Portal.Heart|-- Completed in 509 ms with result: SqlDataReader  |
+2015-07-01 21:02:35.3215|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:04:03.9606|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-07-01 21:04:03.9926|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:04:03.9955|Debug|Shiju.Portal.Heart|-- p__linq__0: 'cd3e2b9d-7b9e-4dfa-adc5-fc48e69feb83' (Type = Guid)  |
+2015-07-01 21:04:03.9955|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:04:03 +08:00  |
+2015-07-01 21:04:04.1385|Debug|Shiju.Portal.Heart|-- Completed in 134 ms with result: SqlDataReader  |
+2015-07-01 21:04:04.1385|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:04:04.4474|Debug|Shiju.Portal.Heart|UPDATE [dbo].[Parties]  SET [LikeCount] = @0, [CommentCount] = @1  WHERE ([Id] = @2)  |
+2015-07-01 21:04:04.4474|Debug|Shiju.Portal.Heart|-- @0: '45' (Type = Int64)  |
+2015-07-01 21:04:04.4474|Debug|Shiju.Portal.Heart|-- @1: '2' (Type = Int64)  |
+2015-07-01 21:04:04.4474|Debug|Shiju.Portal.Heart|-- @2: 'cd3e2b9d-7b9e-4dfa-adc5-fc48e69feb83' (Type = Guid)  |
+2015-07-01 21:04:04.4474|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:04:04 +08:00  |
+2015-07-01 21:04:04.6873|Debug|Shiju.Portal.Heart|-- Completed in 234 ms with result: 1  |
+2015-07-01 21:04:04.6873|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:04:28.9722|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      WHERE ([Extent1].[Id] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)|
+2015-07-01 21:04:28.9722|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:04:28.9722|Debug|Shiju.Portal.Heart|-- p__linq__0: 'cd3e2b9d-7b9e-4dfa-adc5-fc48e69feb83' (Type = Guid)  |
+2015-07-01 21:04:28.9722|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:04:28 +08:00  |
+2015-07-01 21:04:29.0811|Debug|Shiju.Portal.Heart|-- Completed in 100 ms with result: SqlDataReader  |
+2015-07-01 21:04:29.0811|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:04:47.8589|Debug|Shiju.Portal.Heart|UPDATE [dbo].[Parties]  SET [LikeCount] = @0, [CommentCount] = @1  WHERE ([Id] = @2)  |
+2015-07-01 21:04:47.8589|Debug|Shiju.Portal.Heart|-- @0: '12' (Type = Int64)  |
+2015-07-01 21:04:47.8589|Debug|Shiju.Portal.Heart|-- @1: '12' (Type = Int64)  |
+2015-07-01 21:04:47.8589|Debug|Shiju.Portal.Heart|-- @2: 'cd3e2b9d-7b9e-4dfa-adc5-fc48e69feb83' (Type = Guid)  |
+2015-07-01 21:04:47.8589|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:04:47 +08:00  |
+2015-07-01 21:04:47.9709|Debug|Shiju.Portal.Heart|-- Completed in 104 ms with result: 1  |
+2015-07-01 21:04:47.9709|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:24.2621|Debug|Shiju.Portal.Heart|  SELECT Count(*)  FROM INFORMATION_SCHEMA.TABLES AS t  WHERE t.TABLE_TYPE = 'BASE TABLE'      AND (t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.Accounts','dbo.FriendRequests','dbo.Friends','dbo.Participants','dbo.Parties','dbo.PartyComments','dbo.PartyLikes','dbo.Users','dbo.VerificationCodes')          OR t.TABLE_NAME = 'EdmMetadata')|
+2015-07-01 21:05:24.2621|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:24.2621|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:24 +08:00  |
+2015-07-01 21:05:24.7438|Debug|Shiju.Portal.Heart|-- Completed in 479 ms with result: 9  |
+2015-07-01 21:05:24.7438|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.0355|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:05:25.0355|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.0355|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:25 +08:00  |
+2015-07-01 21:05:25.2514|Debug|Shiju.Portal.Heart|-- Completed in 216 ms with result: SqlDataReader  |
+2015-07-01 21:05:25.2514|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.2914|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 21:05:25.2914|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.2914|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 21:05:25.2914|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:25 +08:00  |
+2015-07-01 21:05:25.3743|Debug|Shiju.Portal.Heart|-- Completed in 81 ms with result: SqlDataReader  |
+2015-07-01 21:05:25.3853|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.5012|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:05:25.5012|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.5012|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:25 +08:00  |
+2015-07-01 21:05:25.5742|Debug|Shiju.Portal.Heart|-- Completed in 73 ms with result: SqlDataReader  |
+2015-07-01 21:05:25.5742|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.6101|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT(1) AS [A1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [GroupBy1]|
+2015-07-01 21:05:25.6101|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.6101|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 21:05:25.6101|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:25 +08:00  |
+2015-07-01 21:05:25.6501|Debug|Shiju.Portal.Heart|-- Completed in 39 ms with result: SqlDataReader  |
+2015-07-01 21:05:25.6501|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.6561|Debug|Shiju.Portal.Heart|SELECT TOP (1)       [Project1].[C1] AS [C1],       [Project1].[MigrationId] AS [MigrationId],       [Project1].[Model] AS [Model]      FROM ( SELECT           [Extent1].[MigrationId] AS [MigrationId],           [Extent1].[Model] AS [Model],           1 AS [C1]          FROM [dbo].[__MigrationHistory] AS [Extent1]          WHERE ([Extent1].[ContextKey] = @p__linq__0) AND (@p__linq__0 IS NOT NULL)      )  AS [Project1]      ORDER BY [Project1].[MigrationId] DESC|
+2015-07-01 21:05:25.6561|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:25.6561|Debug|Shiju.Portal.Heart|-- p__linq__0: 'ShiJu.Models.ShiJuDbContext' (Type = String, Size = 4000)  |
+2015-07-01 21:05:25.6561|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:25 +08:00  |
+2015-07-01 21:05:25.7141|Debug|Shiju.Portal.Heart|-- Completed in 57 ms with result: SqlDataReader  |
+2015-07-01 21:05:25.7141|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:26.3826|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:05:26.3826|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:26.3826|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:26 +08:00  |
+2015-07-01 21:05:26.4026|Debug|Shiju.Portal.Heart|-- Completed in 19 ms with result: SqlDataReader  |
+2015-07-01 21:05:26.4026|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:26.5775|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:05:26.5775|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:05:26.5775|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:05:26.5775|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:05:26 +08:00  |
+2015-07-01 21:05:26.6004|Debug|Shiju.Portal.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-07-01 21:05:26.6004|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:10:31.4868|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:10:31.4868|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:10:31.4868|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:10:31 +08:00  |
+2015-07-01 21:10:31.5997|Debug|Shiju.Portal.Heart|-- Completed in 109 ms with result: SqlDataReader  |
+2015-07-01 21:10:31.5997|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:10:31.5997|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:10:31.5997|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:10:31.5997|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:10:31.5997|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:10:31 +08:00  |
+2015-07-01 21:10:31.6637|Debug|Shiju.Portal.Heart|-- Completed in 61 ms with result: SqlDataReader  |
+2015-07-01 21:10:31.6637|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:11.9148|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:16:11.9148|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:11.9148|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:16:11 +08:00  |
+2015-07-01 21:16:11.9847|Debug|Shiju.Portal.Heart|-- Completed in 69 ms with result: SqlDataReader  |
+2015-07-01 21:16:11.9847|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:11.9847|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:16:11.9847|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:11.9847|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:16:11.9847|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:16:11 +08:00  |
+2015-07-01 21:16:12.0207|Debug|Shiju.Portal.Heart|-- Completed in 33 ms with result: SqlDataReader  |
+2015-07-01 21:16:12.0207|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:15.2186|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:16:15.2186|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:15.2186|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:16:15 +08:00  |
+2015-07-01 21:16:15.2516|Debug|Shiju.Portal.Heart|-- Completed in 31 ms with result: SqlDataReader  |
+2015-07-01 21:16:15.2516|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:15.2516|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:16:15.2516|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:16:15.2516|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:16:15.2516|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:16:15 +08:00  |
+2015-07-01 21:16:15.2866|Debug|Shiju.Portal.Heart|-- Completed in 31 ms with result: SqlDataReader  |
+2015-07-01 21:16:15.2866|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:17:56.5812|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:17:56.5812|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:17:56.5812|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:17:56 +08:00  |
+2015-07-01 21:17:56.8791|Debug|Shiju.Portal.Heart|-- Completed in 290 ms with result: SqlDataReader  |
+2015-07-01 21:17:56.8791|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:17:56.8791|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:17:56.8791|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:17:56.8791|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:17:56.8791|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:17:56 +08:00  |
+2015-07-01 21:17:56.9031|Debug|Shiju.Portal.Heart|-- Completed in 21 ms with result: SqlDataReader  |
+2015-07-01 21:17:56.9031|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:20:15.7249|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:20:15.7249|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:20:15.7249|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:20:15 +08:00  |
+2015-07-01 21:20:15.9598|Debug|Shiju.Portal.Heart|-- Completed in 233 ms with result: SqlDataReader  |
+2015-07-01 21:20:15.9598|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:20:15.9598|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:20:15.9598|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:20:15.9598|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:20:15.9598|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:20:15 +08:00  |
+2015-07-01 21:20:15.9808|Debug|Shiju.Portal.Heart|-- Completed in 18 ms with result: SqlDataReader  |
+2015-07-01 21:20:15.9818|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:21:09.7569|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:21:09.7569|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:21:09.7569|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:21:09 +08:00  |
+2015-07-01 21:21:09.9868|Debug|Shiju.Portal.Heart|-- Completed in 227 ms with result: SqlDataReader  |
+2015-07-01 21:21:09.9868|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:21:09.9868|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:21:09.9868|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:21:09.9868|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:21:09.9868|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:21:09 +08:00  |
+2015-07-01 21:21:10.0028|Debug|Shiju.Portal.Heart|-- Completed in 13 ms with result: SqlDataReader  |
+2015-07-01 21:21:10.0028|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:23:24.4334|Debug|Shiju.Portal.Heart|SELECT       [GroupBy1].[A1] AS [C1]      FROM ( SELECT           COUNT_BIG(1) AS [A1]          FROM [dbo].[Parties] AS [Extent1]      )  AS [GroupBy1]|
+2015-07-01 21:23:24.4334|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:23:24.4334|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:23:24 +08:00  |
+2015-07-01 21:23:24.4884|Debug|Shiju.Portal.Heart|-- Completed in 51 ms with result: SqlDataReader  |
+2015-07-01 21:23:24.4884|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:23:24.4884|Debug|Shiju.Portal.Heart|SELECT TOP (@p__linq__0)       [Extent1].[Id] AS [Id],       [Extent1].[CreatorUserId] AS [CreatorUserId],       [Extent1].[Sponsor] AS [Sponsor],       [Extent1].[BeginTime] AS [BeginTime],       [Extent1].[EndTime] AS [EndTime],       [Extent1].[Title] AS [Title],       [Extent1].[Description] AS [Description],       [Extent1].[Address] AS [Address],       [Extent1].[Images] AS [Images],       [Extent1].[Kind] AS [Kind],       [Extent1].[MaxUserCount] AS [MaxUserCount],       [Extent1].[DirectFriendVisible] AS [DirectFriendVisible],       [Extent1].[IsHot] AS [IsHot],       [Extent1].[LikeCount] AS [LikeCount],       [Extent1].[CommentCount] AS [CommentCount],       [Extent1].[VoteTitle] AS [VoteTitle],       [Extent1].[VoteChoicesJson] AS [VoteChoicesJson],       [Extent1].[VoteResult0Count] AS [VoteResult0Count],       [Extent1].[VoteResult1Count] AS [VoteResult1Count],       [Extent1].[VoteResult2Count] AS [VoteResult2Count],       [Extent1].[VoteResult3Count] AS [VoteResult3Count],       [Extent1].[VoteResult4Count] AS [VoteResult4Count],       [Extent1].[IsDisabled] AS [IsDisabled],       [Extent1].[CreatedTime] AS [CreatedTime]      FROM [dbo].[Parties] AS [Extent1]      ORDER BY [Extent1].[CreatedTime] DESC, [Extent1].[Id] ASC|
+2015-07-01 21:23:24.4884|Debug|Shiju.Portal.Heart|  |
+2015-07-01 21:23:24.4884|Debug|Shiju.Portal.Heart|-- p__linq__0: '40' (Type = Int32)  |
+2015-07-01 21:23:24.4884|Debug|Shiju.Portal.Heart|-- Executing at 2015/7/1 21:23:24 +08:00  |
+2015-07-01 21:23:24.5153|Debug|Shiju.Portal.Heart|-- Completed in 24 ms with result: SqlDataReader  |
+2015-07-01 21:23:24.5153|Debug|Shiju.Portal.Heart|  |

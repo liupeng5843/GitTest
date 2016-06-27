@@ -1,0 +1,10 @@
+2016-01-19 14:19:00.5037|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-19 14:34:47.2052|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-19 14:35:40.2041|Info|ShiJu.Service.Controllers.SecurityController|send message: dwCorpId:501148730001|nResult:1nStaffId:1001fRemain:5.4|
+2016-01-19 14:35:40.3111|Info|ShiJu.Service.Controllers.SecurityController|send message return code:1|
+2016-01-19 15:21:08.4607|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-19 15:24:16.0492|Info|ShiJu.Service.Controllers.UsersController|Send message return code:1|
+2016-01-19 15:37:23.3768|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|
+2016-01-19 15:37:34.4094|Info|ShiJu.Service.Controllers.UsersController|Send message return code:1|
+2016-01-19 15:38:48.6645|Info|ShiJu.Service.Controllers.UsersController|Send message return code:1|
+2016-01-19 16:07:51.7223|Info|WindowsServer.Configuration.ConfigurationCenter|ConfigurationCenter.Global is Container:WindowsServer.Configuration.FileConfigurationContainer Fallback:null|

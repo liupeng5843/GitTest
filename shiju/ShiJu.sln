@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiJuCommon", "ShiJuCommon\ShiJuCommon.csproj", "{E865A22E-15D6-4069-9173-4C0B67DDB41F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiJuService", "ShiJuService\ShiJuService.csproj", "{9433F607-F6F9-4D12-A238-8D2A527C9BC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShiJuPortal", "ShiJuPortal\ShiJuPortal.csproj", "{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerCommon", "..\..\..\YPWare\Dev\Server\WindowsServer\ServerCommon\ServerCommon.csproj", "{3BAEE551-341F-41E4-908C-D41EE397A597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCommon", "..\..\..\YPWare\Dev\Server\WindowsServer\MvcCommon\MvcCommon.csproj", "{E089BB78-A701-4A93-93E2-9EF28A7A489C}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ShijuDiagram", "ShijuDiagram\ShijuDiagram.modelproj", "{9EE17432-988C-4149-95CC-DA10F06FCC3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalCommon", "..\ProjectCommon\PortalCommon\PortalCommon.csproj", "{3E0415EC-4D2C-4DB9-B855-333695FF6218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPartNotification", "..\ProjectCommon\ThirdPartNotification\ThirdPartNotification.csproj", "{772EFAD5-0E4A-4432-9B88-64778AB106F6}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.1.32:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\..\\..\\YPWare\\Dev\\Server\\WindowsServer\\ServerCommon\\ServerCommon.csproj
+		SccProjectName1 = ../../../YPWare/Dev/Server/WindowsServer/ServerCommon
+		SccLocalPath1 = ..\\..\\..\\YPWare\\Dev\\Server\\WindowsServer\\ServerCommon
+		SccProjectUniqueName2 = ShiJuCommon\\ShiJuCommon.csproj
+		SccProjectName2 = ShiJuCommon
+		SccLocalPath2 = ShiJuCommon
+		SccProjectUniqueName3 = ShiJuPortal\\ShiJuPortal.csproj
+		SccProjectName3 = ShiJuPortal
+		SccLocalPath3 = ShiJuPortal
+		SccProjectUniqueName4 = ShiJuService\\ShiJuService.csproj
+		SccProjectName4 = ShiJuService
+		SccLocalPath4 = ShiJuService
+		SccProjectUniqueName5 = ..\\..\\..\\YPWare\\Dev\\Server\\WindowsServer\\MvcCommon\\MvcCommon.csproj
+		SccProjectName5 = ../../../YPWare/Dev/Server/WindowsServer/MvcCommon
+		SccLocalPath5 = ..\\..\\..\\YPWare\\Dev\\Server\\WindowsServer\\MvcCommon
+		SccProjectUniqueName6 = ShijuDiagram\\ShijuDiagram.modelproj
+		SccProjectName6 = ShijuDiagram
+		SccLocalPath6 = ShijuDiagram
+		SccProjectUniqueName7 = ..\\ProjectCommon\\PortalCommon\\PortalCommon.csproj
+		SccProjectName7 = ../ProjectCommon/PortalCommon
+		SccLocalPath7 = ..\\ProjectCommon\\PortalCommon
+		SccProjectUniqueName8 = ..\\ProjectCommon\\ThirdPartNotification\\ThirdPartNotification.csproj
+		SccProjectName8 = ../ProjectCommon/ThirdPartNotification
+		SccLocalPath8 = ..\\ProjectCommon\\ThirdPartNotification
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DEV|Any CPU = DEV|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E865A22E-15D6-4069-9173-4C0B67DDB41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E865A22E-15D6-4069-9173-4C0B67DDB41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E865A22E-15D6-4069-9173-4C0B67DDB41F}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{E865A22E-15D6-4069-9173-4C0B67DDB41F}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{E865A22E-15D6-4069-9173-4C0B67DDB41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E865A22E-15D6-4069-9173-4C0B67DDB41F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9433F607-F6F9-4D12-A238-8D2A527C9BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9433F607-F6F9-4D12-A238-8D2A527C9BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9433F607-F6F9-4D12-A238-8D2A527C9BC2}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{9433F607-F6F9-4D12-A238-8D2A527C9BC2}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{9433F607-F6F9-4D12-A238-8D2A527C9BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9433F607-F6F9-4D12-A238-8D2A527C9BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{351D0859-907A-4EFB-92D3-DF2BF66A1DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BAEE551-341F-41E4-908C-D41EE397A597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BAEE551-341F-41E4-908C-D41EE397A597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BAEE551-341F-41E4-908C-D41EE397A597}.DEV|Any CPU.ActiveCfg = DEV|Any CPU
+		{3BAEE551-341F-41E4-908C-D41EE397A597}.DEV|Any CPU.Build.0 = DEV|Any CPU
+		{3BAEE551-341F-41E4-908C-D41EE397A597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BAEE551-341F-41E4-908C-D41EE397A597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E089BB78-A701-4A93-93E2-9EF28A7A489C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E089BB78-A701-4A93-93E2-9EF28A7A489C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E089BB78-A701-4A93-93E2-9EF28A7A489C}.DEV|Any CPU.ActiveCfg = DEV|Any CPU
+		{E089BB78-A701-4A93-93E2-9EF28A7A489C}.DEV|Any CPU.Build.0 = DEV|Any CPU
+		{E089BB78-A701-4A93-93E2-9EF28A7A489C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E089BB78-A701-4A93-93E2-9EF28A7A489C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE17432-988C-4149-95CC-DA10F06FCC3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE17432-988C-4149-95CC-DA10F06FCC3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE17432-988C-4149-95CC-DA10F06FCC3B}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE17432-988C-4149-95CC-DA10F06FCC3B}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{9EE17432-988C-4149-95CC-DA10F06FCC3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE17432-988C-4149-95CC-DA10F06FCC3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E0415EC-4D2C-4DB9-B855-333695FF6218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0415EC-4D2C-4DB9-B855-333695FF6218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0415EC-4D2C-4DB9-B855-333695FF6218}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0415EC-4D2C-4DB9-B855-333695FF6218}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{3E0415EC-4D2C-4DB9-B855-333695FF6218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0415EC-4D2C-4DB9-B855-333695FF6218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{772EFAD5-0E4A-4432-9B88-64778AB106F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{772EFAD5-0E4A-4432-9B88-64778AB106F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{772EFAD5-0E4A-4432-9B88-64778AB106F6}.DEV|Any CPU.ActiveCfg = Debug|Any CPU
+		{772EFAD5-0E4A-4432-9B88-64778AB106F6}.DEV|Any CPU.Build.0 = Debug|Any CPU
+		{772EFAD5-0E4A-4432-9B88-64778AB106F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{772EFAD5-0E4A-4432-9B88-64778AB106F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

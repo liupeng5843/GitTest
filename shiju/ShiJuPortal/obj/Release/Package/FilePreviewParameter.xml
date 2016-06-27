@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="ShiJu/Portal" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Portal.Common.Models.PortalDbContext-Web.config Connection String" description="" value="Portal.Common.Models.PortalDbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Portal.Common.Models.PortalDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="ShiJu.Models.ShiJuDbContext-Web.config Connection String" description="" value="ShiJu.Models.ShiJuDbContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJu.Models.ShiJuDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="ShiJuDbContextDb-Web.config Connection String" description="" value="Data Source=10.1.1.50;Initial Catalog=Shiju;User ID=brand;Pwd=Abc123!" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\TFS\\YPProjects\\Projects\\ShiJu\\ShiJuPortal\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ShiJuDbContextDb']/@connectionString" />
+  </parameter>
+</parameters>

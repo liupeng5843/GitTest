@@ -1,0 +1,563 @@
+﻿@{
+    ViewBag.Title = "中国动漫金龙奖 × 漫画岛";
+    string host = MHD.Original.Award.AppConfig.OriginalHost;
+    var lastWeekNumber = (DateTime.Now.Month - 5) * 4 + ((DateTime.Now.Day - 1) / 7 > 3 ? 3 : ((DateTime.Now.Day - 1) / 7));
+    var lastMonthNumber = DateTime.Now.Month - 1 > 5 ? DateTime.Now.Month - 1 : 5;
+}
+@using EFDal.Models.Enums;
+
+<link href="~/Content/css/style.css" rel="stylesheet" />
+<link href="~/Content/css/style.ex.css" rel="stylesheet" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=4203128993&debug=true" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript"
+        src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101291311" data-redirecturi="http://cacc.manhuadao.cn/Home/Vote" charset="utf-8"></script>
+<!-- banner start -->
+<div id="banner" class="banner" style="height: 432px;">
+    <div class="banner_image">
+        <ul>
+            <li>
+                @*<a href="@string.Format("{0}/{1}/{2}", host, "AuthorComic", "CreateComicView")">*@
+                    <a href="#">
+                        <span class="img_3"
+                              style="background-image: url('../Content/img/banner_jlj_ad.jpg'); height: 432px;"></span>
+                    </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- banner end -->
+
+<div class="tabs_jlj">
+    <div class="tab_hd">
+        <ul class="wrap cf">
+            <li><a href="@Url.Action("Index","Home")" class="tb1"></a></li>
+            <li><a href="@Url.Action("News", "Home")" class="tb2"></a></li>
+            <li class="active"><a href="@Url.Action("Vote","Home")" class="tb-ex-1"></a></li>
+            <li><a href="@Url.Action("Faq","Home")" class="tb3"></a></li>
+        </ul>
+    </div>
+    <div class="tab_bd">
+        <div class="main_tab1">
+            <!--周五上线-->
+            <div class="item_cont item_c2" id="vote-top-10">
+                <div class="box type1 cf bg-fff">
+                    <div class="vote-title">
+                        <div class="title-pic"></div>
+                        <div class="selector">
+                            <div class="date">6月1日-6月7日</div>
+                            <div class="date-list">
+                                <input id="week-rank-number" value="@lastWeekNumber" type="hidden" />
+                                <p id="week-number5" data-hid="5">6月1日-6月7日</p>
+                                <p id="week-number6" data-hid="6">6月8日-6月14日</p>
+                                <p id="week-number7" data-hid="7">6月15日-6月21日</p>
+                                <p id="week-number8" data-hid="8">6月22日-6月30日</p>
+
+                                <p id="week-number9" data-hid="9">7月1日-7月7日</p>
+                                <p id="week-number10" data-hid="10">7月8日-7月14日</p>
+                                <p id="week-number11" data-hid="11">7月15日-7月21日</p>
+                                <p id="week-number12" data-hid="12">7月22日-7月31日</p>
+                            </div>
+                        </div>
+                        <div class="tab">
+                            <input id="week-rank-type" value="@DragonAwardType.BestStory" hidden />
+                            <div class="tab-item tab-active" id="beststory-btn">最佳剧情漫画奖</div>
+                            <div class="tab-item" id="bestinset-btn" href="#">最佳插画奖</div>
+                            <div class="tab-item no-border" id="bestdrawing-btn">最佳绘本漫画奖</div>
+                        </div>
+                    </div>
+                    <div id="week-rank">
+                        @Html.Action("GetBookWeekRankList", "ComicBooks", new { awardType = DragonAwardType.BestStory, weekNumber = lastWeekNumber })
+                    </div>
+                    <p class="vote-tip">▲票数统计周期为7天（即周榜单时间段）</p>
+                </div>
+            </div>
+            <div class="item_cont item_c2" id="vote-item">
+                <div class="vote-group">
+                    <div class="chinacomic box type1 cf bg-fff">
+                        <div>
+                            <p class="vote-title">
+                                <span class="title-pic-2"></span>
+                                <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestStory, isCurrentWeek = true })" class="vote-more">
+                                    全部<span class="icon-more"></span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="vote-row-tab">
+                            <span class="tab-item period-btn tab-active" data-hid-period="week" data-hid-type="BestStory">本月</span>
+                            <span class="tab-item period-btn" data-hid-period="month" data-hid-type="BestStory">热门</span>
+                        </div>
+                        @Html.Action("GetBookListByType", "ComicBooks", new { type = DragonAwardType.BestStory, isCurrentWeek = true, count = 8 })
+                    </div>
+
+                    <!-- 六月份加入 -->
+                    <div class="vote-list-jq">
+                        <div class="list-title">
+                            <span class="vote-icon-date"></span>最佳剧情奖人气榜
+                        </div>
+                        <div class="date-tab">
+                            <span class="tab-item tab-active" data-hid-month-number="5" data-hid-period="week" data-hid-type="BestStory" hidden>本周作品</span>
+                            <span class="tab-item tab-right-none" data-hid-month-number="6" data-hid-period="month" data-hid-type="BestStory">六月作品</span>
+                        </div>
+                        @*@Html.Action("GetCurrentWeekRankListByType", "ComicBooks", new { awardType = DragonAwardType.BestStory })*@
+                        @Html.Action("GetLastDayRankList", "ComicBooks", new { type = DragonAwardType.BestStory })
+
+
+                    </div>
+                </div>
+                <div class="vote-group">
+                    <div class="chinacomic box type1 cf bg-fff">
+                        @*<div>
+                            <p class="vote-title">
+                                <span class="title-pic-3"></span>
+                                <span class="period-btn" data-hid-period="week" data-hid-type="BestInset">本月</span>
+                                <span class="period-btn" data-hid-period="month" data-hid-type="BestInset">热门</span>
+                                <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestInset, isCurrentWeek = false })" class="vote-more" style="color:#c62505;">更多&gt;</a>
+                            </p>
+                        </div>*@
+
+                        <div>
+                            <p class="vote-title">
+                                <span class="title-pic-3"></span>
+                                <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestInset, isCurrentWeek = true })" class="vote-more">
+                                    全部<span class="icon-more"></span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="vote-row-tab">
+                            <span class="tab-item period-btn tab-active" data-hid-period="week" data-hid-type="BestInset">本月</span>
+                            <span class="tab-item period-btn" data-hid-period="month" data-hid-type="BestInset">热门</span>
+                        </div>
+
+                        @Html.Action("GetBookListByType", "ComicBooks", new { type = DragonAwardType.BestInset, isCurrentWeek = true, count = 8 })
+                    </div>
+                    <!-- 六月份加入 -->
+                    <div class="vote-list-ch">
+                        <div class="list-title">
+                            <span class="vote-icon-date"></span>最佳插画奖人气榜
+                        </div>
+                        <div class="date-tab">
+                            <span class="tab-item tab-active" data-hid-month-number="5" data-hid-period="week" data-hid-type="BestInset" hidden>本周作品</span>
+                            <span class="tab-item tab-right-none" data-hid-month-number="6" data-hid-period="month" data-hid-type="BestInset">六月作品</span>
+                        </div>
+                        @*@Html.Action("GetCurrentWeekRankListByType", "ComicBooks", new { awardType = DragonAwardType.BestInset })*@
+                        @Html.Action("GetLastDayRankList", "ComicBooks", new { type = DragonAwardType.BestInset })
+                    </div>
+                </div>
+
+                <div class="vote-group">
+                    <div class="chinacomic box type1 cf bg-fff">
+                        <div>
+                            <p class="vote-title">
+                                <span class="title-pic-4"></span>
+                                <a href="@Url.Action("SearchBookList", "ComicBooks", new { type = DragonAwardType.BestDrawing, isCurrentWeek = true })" class="vote-more">
+                                    全部<span class="icon-more"></span>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="vote-row-tab">
+                            <span class="tab-item period-btn tab-active" data-hid-period="week" data-hid-type="BestDrawing">本月</span>
+                            <span class="tab-item period-btn" data-hid-period="month" data-hid-type="BestDrawing">热门</span>
+                        </div>
+                        @Html.Action("GetBookListByType", "ComicBooks", new { type = DragonAwardType.BestDrawing, isCurrentWeek = true, count = 8 })
+                    </div>
+
+                    <!-- 六月份加入 -->
+                    <div class="vote-list-hb">
+                        <div class="list-title">
+                            <span class="vote-icon-date"></span>最佳绘本奖人气榜
+                        </div>
+                        <div class="date-tab">
+                            <span class="tab-item tab-active" data-hid-month-number="5" data-hid-period="week" data-hid-type="BestDrawing" hidden>本周作品</span>
+                            <span class="tab-item tab-right-none" data-hid-month-number="6" data-hid-period="month" data-hid-type="BestDrawing">六月作品</span>
+                        </div>
+                        @*@Html.Action("GetCurrentWeekRankListByType", "ComicBooks", new { awardType = DragonAwardType.BestDrawing })*@
+                        @Html.Action("GetLastDayRankList", "ComicBooks", new { type = DragonAwardType.BestDrawing })
+
+                    </div>
+                </div>
+
+                <div class="vote-group">
+                    <div class="box type1 cf bg-fff">
+                        <p class="vote-tip">▲ 所有参赛作品均为随机排序</p>
+                        <div class="item_cont item_c3" id="rule-text">
+                            <div class="box title" style="width: 600px !important;">
+                                <h2 class="rule-text"></h2>
+                            </div>
+                            <div class="box">
+                                <div class="cont">
+                                    <p>1）周赛制-每月按分类进行作品人气投票，前三周，作品将在周一进行上线并发起投票，投票期为7天，逾期将停止投票通道；【每周前三将得到漫画岛重点推广】</p>
+                                    <p>2）前三周的作品将会在最后一周统一开启投票通道（即每部作品拥有同等的14天投票时间）</p>
+                                    <p>3）月榜每月第一名冠军可以得到由漫画岛原创平台给出的人气作品“一等奖”，5000元的奖金福利。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item_cont item_c3" id="vote-comment">
+                <div id="comment-box">
+                    @Html.Action("GetCommentList", "Comments", new { pageNumber = 1 })
+                </div>
+                <div class="pages box type1 cf bg-fff">
+                    <ul id="pagination" class="pagination-sm pagination"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- JiaThis Button BEGIN -->
+
+        <div class="jiathis-diy">
+            <div class="jiathis-close"></div>
+            <p class="jiathis-title">点击下方按钮开始拉票！</p>
+            <div class="jiathis_style_32x32" style="margin: 30px 0 0 60px;">
+                <a class="jiathis_button_qzone"></a>
+                <a class="jiathis_button_tsina"></a>
+                <a class="jiathis_button_weixin"></a>
+                <a class="jiathis_button_cqq"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed_nav">
+    <div class="nav_list" style="background-image: url('../Content/img/fixed_nav_1.png')">
+        <ul>
+            <li class="li5"></li>
+            <li class="li6"></li>
+        </ul>
+    </div>
+    <div class="open hide"></div>
+</div>
+
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<script src="~/Scripts/jquery-ui-1.8.24.min.js"></script>
+<script src="~/Content/js/tool.js"></script>
+
+
+<script type="text/javascript">
+    //新月榜点击逻辑
+    $(".tab-item").on('click',function(){
+        var monthNumber=$(this).attr("data-hid-month-number");
+        var period=$(this).attr("data-hid-period");
+
+        var type=$(this).attr("data-hid-type");
+        var url='@Url.Action("GetCurrentWeekRankListByType", "ComicBooks")'+ '?awardType=' +type;
+
+        if(period=='month'){
+            url='@Url.Action("GetLastDayRankList", "ComicBooks")'+ '?type=' +type;
+        }
+        var htmlStr=getWeekRank(url);
+        $(this).parent().next().replaceWith(htmlStr);
+    });
+
+    //本周及热门点击逻辑
+    $(".period-btn").on('click',function(){
+        $($($(this).parent()).children()).removeClass('tab-active');
+        $($(this)).addClass('tab-active');
+
+        var period=$(this).attr("data-hid-period");
+        var type=$(this).attr("data-hid-type");
+        var url='@Url.Action("GetBookListByType", "ComicBooks")'+ '?type=' +type+'&count=8&isCurrentWeek=true';
+        if(period=='month'){
+            url='@Url.Action("GetBookListByType", "ComicBooks")'+ '?type=' +type+'&count=8';
+        }
+        var htmlStr=getWeekRank(url);
+        $(this).parent().next().replaceWith(htmlStr);
+        UpdateVoteStatus();
+    });
+
+    //周榜点击逻辑
+    function getWeekRank(url) {
+        var htmlStr=""
+        $.ajax({
+            url: url,
+            type: 'get',
+            async: false,
+            success: function (data) {
+                htmlStr=data;
+            }
+        });
+        return htmlStr;
+    }
+    //初始化日期
+    $("#week-number" + '@lastWeekNumber').addClass('active');
+    for(var i=12;i>@lastWeekNumber;i--)
+    {
+        $("#week-number"+i).hide();
+    }
+
+    $("#bestinset-btn").on("click", function () {
+        $("#week-rank-type").val('@DragonAwardType.BestInset');
+        var weekNumber = $(".date-list").children('.active').attr('data-hid');
+        var url = '@Url.Action("GetBookWeekRankList", "ComicBooks")' + '?awardType=' +'@DragonAwardType.BestInset' +'&weekNumber=' + weekNumber;
+        $("#week-rank").html(getWeekRank(url));
+    });
+
+    $("#beststory-btn").on("click", function () {
+        $("#week-rank-type").val('@DragonAwardType.BestStory');
+        var weekNumber = $(".date-list").children('.active').attr('data-hid');
+        var weekAwardType = $("#week-rank-type").val();
+        var url = '@Url.Action("GetBookWeekRankList", "ComicBooks")' + '?awardType=' +'@DragonAwardType.BestStory' +'&weekNumber=' + weekNumber;
+        $("#week-rank").html(getWeekRank(url));
+    });
+
+    $("#bestdrawing-btn").on("click", function () {
+        $("#week-rank-type").val('@DragonAwardType.BestDrawing');
+        var weekNumber = $(".date-list").children('.active').attr('data-hid');
+        var weekAwardType = $("#week-rank-type").val();
+        var url = '@Url.Action("GetBookWeekRankList", "ComicBooks")' + '?awardType=' + '@DragonAwardType.BestDrawing' + '&weekNumber=' + weekNumber;;
+        $("#week-rank").html(getWeekRank(url));
+    });
+
+    function UpdateVoteStatus() {
+        //已投票限制
+        var voteList = getCookie('CBIDS').split(',');
+        var bookIdElemList = $(".book-hid-id");
+
+        for (var i = 0; i < bookIdElemList.length; i++) {
+            var bookId = $(bookIdElemList[i]).val();
+
+            if ($.inArray(bookId, voteList) > -1) {
+                $(bookIdElemList[i]).parent().children('.vote-item-vote-hollow').hide();
+                $(bookIdElemList[i]).parent().children('.vote-item-vote-solid').show();
+            }
+        }
+    }
+    UpdateVoteStatus();
+    //手机版跳转
+    var testResult = browserRedirect();
+    if (testResult == 'phone') {
+        window.location.href = "@Url.Action("M_Vote","ComicBooks")";
+    } else {
+        console.log(testResult);
+    }
+    //手机版跳转
+
+    var jiathis_config = {
+        url: "http://cacc.manhuadao.cn/",
+        title: "",
+        pic: "",
+        summary: "",
+        shortUrl: false,
+        hideMore: false
+    }
+
+    var MessageDialog = $("#jiathis-dialog").dialog({
+        autoOpen: false,
+        title: '',
+        width: 400,
+        height: 150,
+        modal: false,
+        resizable: false,
+        buttons: [],
+        open: function () {
+        }
+    });
+
+    $(".book-share").on('click', function (e) {
+        var parent = $($(this).parent().parent());
+        var bookName = parent.children('.book-hid-name').val();
+        var bookId = parent.children('.book-hid-id').val();
+        var bookCoverUrl = parent.children('.book-hid-coverurl').val();
+        var bookBrief = parent.children('.book-hid-brief').val();
+        var shareUserId = parent.children('.book-hid-currentUserId').val();
+
+        $.ajax({
+            type: 'post',
+            url: "@Url.Action("GetCurrentLoginUserId", "ComicBooks")",
+            async: false,
+            success: function (data) {
+                shareUserId = data.UserId;
+            }
+        });
+
+        //分享要登录，可能会改
+        if (shareUserId == 0) {
+            alert("您还没有登录，不能进行拉票哦");
+            window.open("http://www.manhuadao.cn/Account/Index" + "?returnUrl=" + window.location.href);
+            return;
+        }
+
+        var shareUrl = '@Url.Action("GetBookDetailById", "ComicBooks")?bookId=' + bookId + '&userId=' + shareUserId;
+        jiathis_config.title = '《' + bookName + '》 超好的作品已加入金龙奖大赛！小伙伴们一起为TA投票助威吧！';
+        jiathis_config.url = "http://cacc.manhuadao.cn" + shareUrl;
+        jiathis_config.pic = bookCoverUrl;
+        $('#mask').show();
+        $('.jiathis-diy').show();
+    });
+
+    $('#mask,#alert-cancel,.jiathis-close').click(function () {
+        $('#mask,.alert-diy').hide();
+        $('.jiathis-diy').hide();
+    });
+
+    function VoteBook(e){
+        var parent = $($(e).parent());
+        var bookId = parent.children('.book-hid-id').val();
+        var url = '@Url.Action("CreateVote", "ComicBooks")?bookId=' + bookId;
+        if (BookVote(url) == 0) {
+            $(e).hide();
+            $(e).prev().show();
+            var currentScore = new Number(parent.find('.vote-score').text());
+            parent.find('.vote-score').text(currentScore + 1 + '');
+        }
+    }
+
+    $('#alert-ok').on('click', function () {
+        $('#mask,.alert-diy').hide();
+    });
+
+
+    QC.Login({
+        btnId: "qqLoginBtn"	//插入按钮的节点id
+
+    });
+    WB2.anyWhere(function (W) {
+        W.widget.connectButton({
+            id: "wb_connect_btn",
+            type: '3,2',
+            callback: {
+                login: function (o) { //登录后的回调函数
+                    alert("login: " + o.screen_name)
+                },
+                logout: function () { //退出后的回调函数
+                    alert('logout');
+                }
+            }
+        });
+    });
+
+    //接入效果js
+    $.fn.extend({
+        setFixed: function (position) {
+            var defaults = { top: 0 };
+            if (position) {
+                $.extend(defaults, position);
+            }
+            var isIe6 = !window.XMLHttpRequest;
+            if (isIe6) {
+                $("html").css({
+                    "backgroundAttachment": "fixed",
+                    "backgroundImage": "url(about:blank)"
+                })
+                $(this).css("position", "absolute");
+
+                $(this).get(0).style.setExpression('top', 'eval((document.documentElement).scrollTop + ' + defaults.top + ') + "px"');
+
+            } else {
+                $(this).css({ "position": "fixed", top: defaults.top });
+            }
+        }
+    });
+    $(function () {
+        $(".fixed_nav").setFixed({ top: 200 });
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 200) {
+                $(".fixed_nav").fadeIn(400)
+            } else {
+                $(".fixed_nav").fadeOut(400)
+            }
+        });
+        // 返回顶部
+        $('.fixed_nav .li5').click(function () {
+            $('html,body').animate({ scrollTop: '0' }, 800);
+        });
+        // 收起
+        $(".fixed_nav .li6").click(function () {
+            $(".fixed_nav").stop(true, false).animate({ "margin-left": 0 }, function () {
+                $(".open").removeClass("hide");
+                $(".open").stop(true, false).animate({ "margin-left": -54 })
+            })
+        });
+        // 展开
+        $(".fixed_nav .open").click(function () {
+            $(this).stop(true, false).animate({ "margin-left": 0 }, function () {
+                $(this).addClass("hide");
+                $(".fixed_nav").stop(true, false).animate({ "margin-left": -170 })
+            })
+        });
+
+        $('.fixed_nav .li1').click(function () {
+            $('html,body').animate({ scrollTop: $(".item_c1").offset().top }, 200);
+        });
+        $('.fixed_nav .li2').click(function () {
+            $('html,body').animate({ scrollTop: $(".item_c2").offset().top }, 200);
+        });
+        $('.fixed_nav .li3').click(function () {
+            $('html,body').animate({ scrollTop: $(".item_c3 .title").eq(0).offset().top }, 200);
+        });
+        $('.fixed_nav .li4').click(function () {
+            $('html,body').animate({ scrollTop: $(".item_c3 .title").eq(1).offset().top }, 200);
+        });
+
+        //日期选择
+        var date = $('.selector>.date');
+        var dateList = $('.selector>.date-list');
+        var selected = $('.selector>.date-list>p');
+        date.text($("#week-number" + '@lastWeekNumber').text());
+
+        date.click(function () {
+            dateList.toggle();
+        });
+        selected.click(function () {
+            dateList.hide();
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            date.text($(this).text());
+
+            var clickWeekNumber = $(this).attr("data-hid");
+            var clickWeekAwardType = $("#week-rank-type").val();
+            var url = '@Url.Action("GetBookWeekRankList", "ComicBooks")' + '?awardType=' + clickWeekAwardType + '&weekNumber=' + clickWeekNumber;
+            $("#week-rank").html(getWeekRank(url));
+
+        });
+
+        //tab切换
+        var tabItem = $('.vote-title>.tab>.tab-item');
+        tabItem.click(function () {
+            $(this).siblings().removeClass('tab-active');
+            $(this).addClass('tab-active');
+        });
+
+        //榜单tab切换
+        var tabItemList = $('.date-tab>.tab-item');
+        tabItemList.click(function () {
+            $(this).siblings().removeClass('tab-active');
+            $(this).addClass('tab-active');
+        });
+
+        //粉丝榜
+        //var fans = $('.vote-fans');
+        //fans.hover(function () {
+        //    $(this).next().show();
+        //});
+        //fans.mouseleave(function () {
+        //    $(this).next().hide();
+        //});
+    });
+    var pageCount=$("#PageCount").val();
+    var currentPage=$("#CurrentPage").val();
+
+
+
+</script>
+
+<style>
+    .pages li {
+        float: left;
+    }
+
+    .pages {
+        width: 934px;
+        padding: 33px;
+    }
+
+        .pages ul {
+            padding-left: 33%;
+        }
+
+    #pagination > .active > a {
+        color: #fff;
+    }
+</style>
